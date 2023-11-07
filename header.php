@@ -21,5 +21,5 @@
   <a href="index.php?op=mijnschool">Mijn School</a> 
   <a href="index.php?op=overmij">Over Mij</a>
   <a href="index.php?op=contact">Contact</a>
-  <a href="index.php?op=contact">Contact</a>
+  <a href="index.php?op=admin" style="float: right;">Admin</a>
 </div>
