@@ -4,7 +4,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require './vendor/autoload.php'; // Adjust the path as needed to autoload.php
+require './misc/vendor/autoload.php'; // Adjust the path as needed to autoload.php
 require_once 'Datahandler.php';
 class ContentController
 {
@@ -334,7 +334,7 @@ class ContentController
         $mail->SMTPAuth = true;
         $mail->Username = 'thijs0302@gmail.com';
         //umal pqpd jxor xlkv
-        $mail->Password = ''; // Use the App Password
+        $mail->Password = 'umal pqpd jxor xlkv'; // Use the App Password
         $mail->SMTPSecure = 'tls'; // or 'ssl' for SSL
         $mail->Port = 587;
 
