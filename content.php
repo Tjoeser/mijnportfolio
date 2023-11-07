@@ -333,7 +333,8 @@ class ContentController
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'thijs0302@gmail.com';
-        $mail->Password = 'umal pqpd jxor xlkv'; // Use the App Password
+        //umal pqpd jxor xlkv
+        $mail->Password = ''; // Use the App Password
         $mail->SMTPSecure = 'tls'; // or 'ssl' for SSL
         $mail->Port = 587;
 
