@@ -4,8 +4,10 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require './misc/vendor/autoload.php'; // Adjust the path as needed to autoload.php
+require './misc/phpmailer/vendor/autoload.php'; // Adjust the path as needed to autoload.php
 require_once 'Datahandler.php';
+require 'config.php';
+
 class ContentController
 {
     private $DataHandler;
@@ -277,8 +279,8 @@ class ContentController
 
     public function loginprocess($username, $password)
     {
-        $adminusername = 'admin';
-        $adminpassword = 'admin';
+        $adminusername = ADMIN_UN;
+        $adminpassword = ADMIN_PW;
 
         if ($username == $adminusername && $password == $adminpassword) {
             $html = '';
@@ -325,6 +327,7 @@ class ContentController
     public function Sendemail($email, $fullname, $content)
     {
         $mail = new PHPMailer();
+        $AppPassword = APP_PW;
 
         // Enable debugging (optional)
         //$mail->SMTPDebug = SMTP::DEBUG_SERVER;
@@ -333,8 +336,7 @@ class ContentController
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'thijs0302@gmail.com';
-        //umal pqpd jxor xlkv
-        $mail->Password = 'umal pqpd jxor xlkv'; // Use the App Password
+        $mail->Password = $AppPassword; // Use the App Password
         $mail->SMTPSecure = 'tls'; // or 'ssl' for SSL
         $mail->Port = 587;
 
