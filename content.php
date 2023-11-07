@@ -36,12 +36,12 @@ class ContentController
                 case 'contact':
                     $this->contact();
                     break;
-                case 'contactprocess':
-                    $this->contactprocess();
-                    break;
                 case 'admin':
                     $admincheck = $case;
                     $this->admin($admincheck);
+                    break;
+                case 'contactprocess':
+                    $this->contactprocess();
                     break;
                 case 'loginprocess':
                     $username = $_REQUEST['username'];
@@ -349,7 +349,8 @@ class ContentController
         }
     }
 
-    public function readDataAndPutInTable(){
+    public function readDataAndPutInTable()
+    {
         $sql = "SELECT * FROM contact_subs";
         $this->DataHandler->readsData($sql);
         $result = $this->DataHandler->readsData($sql);
@@ -360,10 +361,10 @@ class ContentController
         $html .= "<br>";
         $html .= "<br>";
         $html .= "<br>";
-        foreach ($result as $row){
-            if ($tableheader == false){
+        foreach ($result as $row) {
+            if ($tableheader == false) {
                 $html .= "<tr>";
-                foreach ($row as $key => $value){
+                foreach ($row as $key => $value) {
                     $html .= "<th data-title='{$key}'>" . $key . "</th>";
                 }
                 $html .= "<th data-title='actions'>actions</th>";
@@ -371,7 +372,7 @@ class ContentController
                 $tableheader = true;
             }
             $html .= "<tr>";
-            foreach ($row as $key => $value){
+            foreach ($row as $key => $value) {
                 $html .= "<td data-title='{$key}'>" . $value . "</td>";
             }
             // $html .= "<td><a class=\"crudfunctionbutton\" href='index.php?op={$controller}&act=read&id={$row[$uniquecolumn]}'><i class='fa fa-pencil'></i> Read</a>";
