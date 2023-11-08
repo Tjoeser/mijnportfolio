@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\Exception;
 
 require './misc/phpmailer/vendor/autoload.php'; // Adjust the path as needed to autoload.php
 require_once 'Datahandler.php';
-require 'config.php';
+require 'misc/config.php';
 
 class ContentController
 {
@@ -28,12 +28,13 @@ class ContentController
 
             $op = isset($_GET['op']) ? $_GET['op'] : '';
             $case = isset($_GET['case']) ? $_GET['case'] : '';
+
             switch ($op) {
-                case 'overmij':
-                    $this->overmij();
-                    break;
                 case 'mijnwerk':
                     $this->mijnwerk();
+                    break;
+                case 'overmij':
+                    $this->overmij();
                     break;
                 case 'contact':
                     $this->contact();
@@ -75,6 +76,116 @@ class ContentController
         echo $html;
     }
 
+    public function mijnwerk()
+    {
+        $html = '';
+        $html .= '     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>';
+        $html .= '<div class="row">';
+        $html .= '<div class="leftcolumn">';
+        $html .= '  <div class="card">';
+        $html .= '    <h2>Mijn Werk</h2>';
+        $html .= '    <p>Ik zal op deze pagina uitleg geven over wat ik allemaal gedaan heb voor werk en oprdachten.</p>';
+        $html .= '  </div>';
+        $html .= '  <div class="card">';
+        $html .= '    <h2>Github Projecten</h2>';
+        $html .= '  <div class="nestedcard">';
+        $html .= '    <h3>Mijn Portfolio Website</h3>';
+        $html .= '    <p>Ik wil graag beginnen met u mijn nieuwste project te laten zien, namelijk mijn eigen portfolio website.<br>
+                        Hier kunt u bekijken wat ik heb gemaakt en een kijkje nemen in de achterliggende code.<br>
+                        </p>';
+        $html .= '    <div class="link"><a target="_blank" href="https://github.com/Tjoeser/mijnportfolio">Mijn Portfolio bekijken op Github</a></div>';
+        $html .= '    <p>
+                        Dit project is tot stand gekomen met de kennis die ik tijdens mijn lessen heb opgedaan.<br>
+                        Ik heb hulp gezocht door het doorlichten van mijn eigen code en een eenvoudigere versie ervan gemaakt voor een simpele "low traffic" site.<br><br>
+                        Daarnaast heeft Chat GPT me geholpen om mijn mailsysteem werkend te krijgen (dat bleek wat ingewikkelder dan gedacht).<br>
+                        Het heeft zelfs wat CSS-styling bedacht voor mijn website, wat ik een leuke uitdaging vond.<br><br>
+                        Al met al was dit project niet alleen leuk om te doen, maar het bracht ook onverwachte uitdagingen met zich mee.<br>
+                        Ik hoop dat u ervan geniet!
+                        </p>';
+        $html .= '  </div>';
+        $html .= '  <div class="nestedcard">';
+        $html .= '    <h3>Examen jaar op school</h3>';
+        $html .= '    <p>
+                        Ik wil graag de opdrachten met u delen die ik heb bewaard voor mijn derde en tevens examenjaar.<br>
+                        </p>';
+        $html .= '    <div class="link"><a target="_blank" href="https://github.com/Tjoeser/3eJaarSchool">Mijn examen jaar opdrachten bekijken op Github</a></div>';
+        $html .= '  <div class="nestedinnestedcard">';
+        $html .= '    <h4>MVC</h4>';
+        $html .= '    <p>
+                        Als eerste bied ik u een map met MVC-opdrachten aan.<br><br>
+                        Hier ziet u onze klassikale poging om een MVC-website te maken. MVC staat voor Model, View, Controller, en het is een structuur om websites te bouwen.<br>
+                        Hoewel de meeste code door mij is geschreven, kreeg ik zo nu en dan wat hulp van medeleerlingen (want van mijn docent kon ik dat niet echt verwachten).<br><br>
+                        De code in deze repository heeft als inspiratie gediend voor de code van de website waarop u zich nu bevindt.<br>
+                        Daarom kan ik met zekerheid zeggen dat dit een leerzame opdracht was.
+                        </p>';
+        $html .= '  </div>';
+        $html .= '  </div>';
+        $html .= '  <div class="nestedcard">';
+        $html .= '    <h3>Stenniz workshop stage</h3>';
+        $html .= '    <p>
+                        Hier deel ik de code van een oude stage die ik heb gelopen bij Stenniz Workshops.<br>
+                        </p>';
+        $html .= '    <div class="link"><a target="_blank" href="https://github.com/Tjoeser/mvc_stagesite">Mijn werk aan de stage repository bekijken op Github</a></div>';
+        $html .= '    <p>
+                        Deze repository is niet van mij, maar bevat wel enkele sporen van mijn code.<br><br>
+                        De repository is gemaakt door een mede-stagiair die al vertrokken was voordat ik begon.<br>
+                        De website was nogal rommelig en de code was verre van perfect. <br>
+                        De repository zelf was ook behoorlijk chaotisch.<br><br>
+                        Ik en twee klasgenoten, die ook mijn mede-stagiairs waren, hebben ons uiterste best gedaan om het geheel wat te verbeteren.<br>
+                        </p>';
+        $html .= '    <div class="link"><a href="https://mail.google.com/mail/u/0/#inbox">Voor meer informatie over deze stage kunt u hier kijken!</a></div>';
+        $html .= '    <p>Ik ben niet bijzonder trots op deze repository, maar het was toch een belangrijke stap in mijn ontwikkeling</p>';
+        $html .= ' </div>';
+        $html .= '</div>';
+        $html .= '  <div class="card">';
+        $html .= '    <h2>Stage</h2>';
+        $html .= '  <div class="nestedcard">';
+        $html .= '    <h3>Mijn VMBO stages</h3>';
+        $html .= '  <div class="nestedinnestedcard">';
+        $html .= '    <h4>Doppio Espresso</h4>';
+        $html .= '    <p>
+                        Mijn allereerste stage op het VMBO was gericht op de horeca. <br><br>
+                        Dat kwam doordat ik zelf nog niet zeker wist of ik de ICT in wilde of de horeca.<br>
+                        Nu kan ik met zekerheid zeggen dat ik dat nu wel weet (een tip: het is niet de horeca). <br><br>
+                        Maar desalniettemin heb ik nu wel ervaring opgedaan met klanten, kassa-gebruik, hygiëne, en andere basisprincipes.<br><br>
+                        Dus ik ben toch dankbaar voor de ervaring die ik hier heb opgedaan. <br><br>
+                        Er is me zelfs een baan aangeboden die ik echter niet lang heb gehouden vanwege de coronasituatie.<br>
+                        </p>';
+        $html .= '    <div class="link"><a target="_blank" href="https://www.doppio-espresso.nl/">Bezoek de website!</a></div>';
+        $html .= '  </div>';
+        $html .= '  <div class="nestedinnestedcard">';
+        $html .= '    <h4>Movactor/Buurtplein Doorslag</h4>';
+        $html .= '    <p>
+                        Mijn tweede stage heeft zich volledig gericht op het gebied van ICT.<br><br>
+                        In deze stage begon ik met het assisteren van mijn begeleider bij het draaiende houden van het "buurtplein".<br><br>
+                        Voor de duidelijkheid, ik en mijn baas werkten voor een bedrijf genaamd Movactor, dat samenwerkte met het bedrijf Buurtpleinen om locaties te creëren en te onderhouden. <br><br>
+                        Buurtpleinen was als het ware de body, terwijl Movactor de brain was.<br><br>
+                        Nadat ik mijn baas een tijdje had geholpen en tegelijkertijd mijn eigen workshop genaamd "Computerhulp" had opgezet, begon ik eindelijk met mijn eigen taken.<br><br>
+                        In deze workshop was mijn hoofdtaak om mensen, voornamelijk ouderen, te helpen met hun ICT-gerelateerde problemen.<br>
+                        En met "mensen" bedoel ik eigenlijk één persoon.<br><br>
+                        Desondanks had ik na verloop van tijd een leuk aantal terugkerende gezichten in mijn workshop. <br>
+                        Dus, met zekerheid kan ik zeggen dat ik veel heb geleerd over geduldig omgaan met oudere mensen en hen helpen met hun ICT-problemen.<br><br>
+                        Ook hier kreeg ik een aanbod voor een terugkerende stageplek, maar helaas is dit vanwege de tweede golf van de coronapandemie niet doorgegaan.
+                        </p>';
+        $html .= '  </div>';
+        $html .= '  <div class="nestedinnestedcard">';
+        $html .= '    <h4>Kruidvat</h4>';
+        $html .= '    <p>
+                        Als eerste bied ik u een map met MVC-opdrachten aan.<br><br>
+                        Hier ziet u onze klassikale poging om een MVC-website te maken. MVC staat voor Model, View, Controller, en het is een structuur om websites te bouwen.<br>
+                        Hoewel de meeste code door mij is geschreven, kreeg ik zo nu en dan wat hulp van medeleerlingen (want van mijn docent kon ik dat niet echt verwachten).<br><br>
+                        De code in deze repository heeft als inspiratie gediend voor de code van de website waarop u zich nu bevindt.<br>
+                        Daarom kan ik met zekerheid zeggen dat dit een leerzame opdracht was.
+                        </p>';
+        $html .= '  </div>';
+        $html .= '  </div>';
+        $html .= ' </div>';
+        $html .= '</div>';
+        $html .= '</div>';
+        $html .= '</div>';
+        echo $html;
+    }
+
     public function overmij()
     {
         $html = '';
@@ -107,46 +218,14 @@ class ContentController
         echo $html;
     }
 
-    public function mijnwerk()
-    {
-        $html = '';
-        $html .= '<div class="row">';
-        $html .= '<div class="leftcolumn">';
-        $html .= '  <div class="card">';
-        $html .= '    <h2>Mijn Werk</h2>';
-        $html .= '    <h5>Title description, Dec 7, 2017</h5>';
-        $html .= '    <div class="fakeimg" style="height:200px;">Image</div>';
-        $html .= '    <p>Some text..</p>';
-        $html .= '    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>';
-        $html .= '  </div>';
-        $html .= '</div>';
-        $html .= '<div class="rightcolumn">';
-        $html .= '  <div class="card">';
-        $html .= '    <h2>About Me</h2>';
-        $html .= '    <div class="fakeimg" style="height:100px;">Image</div>';
-        $html .= '    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>';
-        $html .= '  </div>';
-        $html .= '  <div class="card">';
-        $html .= '    <h3>Popular Post</h3>';
-        $html .= '    <div class="fakeimg"><p>Image</p></div>';
-        $html .= '    <div class="fakeimg"><p>Image</p></div>';
-        $html .= '    <div class="fakeimg"><p>Image</p></div>';
-        $html .= '  </div>';
-        $html .= '  <div class="card">';
-        $html .= '    <h3>Follow Me</h3>';
-        $html .= '    <p>Some text..</p>';
-        $html .= '  </div>';
-        $html .= '</div>';
-        $html .= '</div>';
-        echo $html;
-    }
+
 
     public function contact()
     {
         $html = '';
         $html .= '<div class="row">';
         $html .= '<div class="leftcolumn">';
-        $html .= '  <div class="homecard">';
+        $html .= '  <div class="card">';
         $html .= '    <h2>De contact pagina</h2>';
         $html .= '      <form action="index.php?op=contactprocess" method="post">';
         $html .= '          <label for="fname">Voornaam</label>';

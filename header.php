@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="media/style.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <title>Mijn Portfolio</title>
+    <title>Thijs Rietveld</title>
 </head>
 <body>
 
 
 <div class="header">
-  <h1>My Website</h1>
-  <p>Resize the browser window to see the effect.</p>
+  <h1>Mijn Portfolio Website</h1>
+  <p>Van Thijs Rietveld</p>
 </div>
 
 <div class="topnav">

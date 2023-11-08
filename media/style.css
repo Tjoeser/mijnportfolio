@@ -1,3 +1,10 @@
+/* Warm Gray: #B4A39A
+Soft Beige: #E9DCC7
+Muted Gold: #DAA520
+Dusty Rose: #E6B8A2
+Sage Green: #A8B68D */
+
+
 * {
   box-sizing: border-box;
 }
@@ -24,7 +31,7 @@ body {
   text-align: center;
   background: #E9DCC7;
   margin-top: 20px;
-  flex-shrink: 0; 
+  flex-shrink: 0;
 }
 
 
@@ -87,10 +94,28 @@ body {
   background-color: #E9DCC7;
   padding: 20px;
   margin-top: 20px;
-
+  width: 98vw;
 }
 
-.row{
+.nestedcard {
+  background-color: #B4A39A;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border: solid #DAA520;
+}
+
+.nestedinnestedcard {
+  background-color: #A8B68D;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border: solid transparent;
+}
+
+.row {
   flex: 1;
 
 }
@@ -122,7 +147,7 @@ body {
   }
 }
 
-.link{
+.link {
   background-color: #333;
   width: 100%;
   text-decoration: none;
@@ -146,13 +171,10 @@ body {
   border: solid #DAA520;
 }
 
-/* Warm Gray: #B4A39A
-Soft Beige: #E9DCC7
-Muted Gold: #DAA520
-Dusty Rose: #E6B8A2
-Sage Green: #A8B68D */
 
-input[type=text], select, textarea {
+input[type=text],
+select,
+textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -185,7 +207,7 @@ input[type=submit]:hover {
   padding: 20px;
 }
 
-.emailbutton{
+.emailbutton {
   background-color: #333;
   display: block;
   color: #f2f2f2;
@@ -201,11 +223,18 @@ input[type=submit]:hover {
   border: solid #DAA520;
 }
 
-.emailbutton:focus{
+.emailbutton:focus {
   background-color: #DAA520;
   display: block;
   color: #f2f2f2;
   text-align: center;
   text-decoration: none;
   padding: 17px;
+}
+
+.githublinks{
+  background-color: #E9DCC7;
+  padding: 20px;
+  margin-top: 20px;
+  position:fixed;
 }
