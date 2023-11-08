@@ -80,20 +80,29 @@ class ContentController
     {
         $html = '';
         $html .= '     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>';
-        $html .= '<div class="row">';
-        $html .= '<div class="leftcolumn">';
-        $html .= '  <div class="card">';
-        $html .= '    <h2>Mijn Werk</h2>';
-        $html .= '    <p>Ik zal op deze pagina uitleg geven over wat ik allemaal gedaan heb voor werk en oprdachten.</p>';
+        $html .= '<div class="row1">';
+        $html .= '      <div class="column-container1">';
+        $html .= '      <div class="leftcolumn1">';
+        $html .= '          <div class="card">';
+        $html .= '              <h2>Mijn Werk</h2>';
+        $html .= '              <p>Ik zal op deze pagina uitleg geven over wat ik allemaal gedaan heb voor werk en oprdachten.</p>';
+        $html .= '          </div>';
+        $html .= '      </div>';
+        $html .= '  <div class="rightcolumn1">';
+        $html .= '      <div class="rightcard">';
+        $html .= "         <p>De links naar alle pagina's die zijn genoemd in deze tekst bevinden zich in de volgende kaartjes.</p>";
+        $html .= '      </div>';
         $html .= '  </div>';
+        $html .= '  </div>';
+        $html .= '      <div class="column-container1">';
+        $html .= '      <div class="leftcolumn1">';
         $html .= '  <div class="card">';
-        $html .= '    <h2>Github Projecten</h2>';
+        $html .= '    <h2 id="githubcard">Github Projecten</h2>';
         $html .= '  <div class="nestedcard">';
         $html .= '    <h3>Mijn Portfolio Website</h3>';
         $html .= '    <p>Ik wil graag beginnen met u mijn nieuwste project te laten zien, namelijk mijn eigen portfolio website.<br>
                         Hier kunt u bekijken wat ik heb gemaakt en een kijkje nemen in de achterliggende code.<br>
                         </p>';
-        $html .= '    <div class="link"><a target="_blank" href="https://github.com/Tjoeser/mijnportfolio">Mijn Portfolio bekijken op Github</a></div>';
         $html .= '    <p>
                         Dit project is tot stand gekomen met de kennis die ik tijdens mijn lessen heb opgedaan.<br>
                         Ik heb hulp gezocht door het doorlichten van mijn eigen code en een eenvoudigere versie ervan gemaakt voor een simpele "low traffic" site.<br><br>
@@ -108,7 +117,6 @@ class ContentController
         $html .= '    <p>
                         Ik wil graag de opdrachten met u delen die ik heb bewaard voor mijn derde en tevens examenjaar.<br>
                         </p>';
-        $html .= '    <div class="link"><a target="_blank" href="https://github.com/Tjoeser/3eJaarSchool">Mijn examen jaar opdrachten bekijken op Github</a></div>';
         $html .= '  <div class="nestedinnestedcard">';
         $html .= '    <h4>MVC</h4>';
         $html .= '    <p>
@@ -125,7 +133,6 @@ class ContentController
         $html .= '    <p>
                         Hier deel ik de code van een oude stage die ik heb gelopen bij Stenniz Workshops.<br>
                         </p>';
-        $html .= '    <div class="link"><a target="_blank" href="https://github.com/Tjoeser/mvc_stagesite">Mijn werk aan de stage repository bekijken op Github</a></div>';
         $html .= '    <p>
                         Deze repository is niet van mij, maar bevat wel enkele sporen van mijn code.<br><br>
                         De repository is gemaakt door een mede-stagiair die al vertrokken was voordat ik begon.<br>
@@ -133,16 +140,28 @@ class ContentController
                         De repository zelf was ook behoorlijk chaotisch.<br><br>
                         Ik en twee klasgenoten, die ook mijn mede-stagiairs waren, hebben ons uiterste best gedaan om het geheel wat te verbeteren.<br>
                         </p>';
-        $html .= '    <div class="link"><a href="https://mail.google.com/mail/u/0/#inbox">Voor meer informatie over deze stage kunt u hier kijken!</a></div>';
         $html .= '    <p>Ik ben niet bijzonder trots op deze repository, maar het was toch een belangrijke stap in mijn ontwikkeling</p>';
         $html .= ' </div>';
         $html .= '</div>';
+        $html .= '</div>';
+        $html .= '  <div class="rightcolumn1">';
+        $html .= '      <div class="rightcard">';
+        $html .= '    <div class="link"><a target="_blank" href="https://github.com/Tjoeser/mijnportfolio">Mijn Portfolio bekijken op Github</a></div>';
+        $html .= '    <div class="link"><a target="_blank" href="https://github.com/Tjoeser/3eJaarSchool">Mijn examen jaar opdrachten bekijken op Github</a></div>';
+        $html .= '    <div class="link"><a target="_blank" href="https://github.com/Tjoeser/mvc_stagesite">Mijn werk aan de stage repository bekijken op Github</a></div>';
+        $html .= '    <div class="link"><a href="#stennizworkshops">Voor meer informatie over de Stenniz Workshop stage kunt u hier kijken!</a></div>';
+        $html .= '      </div>';
+        $html .= '  </div>';
+        $html .= '  </div>';
+        $html .= '      <div class="column-container1">';
+        $html .= '      <div class="leftcolumn1">';
         $html .= '  <div class="card">';
-        $html .= '    <h2>Stage</h2>';
+        $html .= '    <h2 id="stagecard">Stage</h2>';
         $html .= '  <div class="nestedcard">';
         $html .= '    <h3>Mijn VMBO stages</h3>';
         $html .= '  <div class="nestedinnestedcard">';
         $html .= '    <h4>Doppio Espresso</h4>';
+        $html .= '    <h6>september 2019 tot januari 2020 - januari 2020 tot juni 2020</h6>';
         $html .= '    <p>
                         Mijn allereerste stage op het VMBO was gericht op de horeca. <br><br>
                         Dat kwam doordat ik zelf nog niet zeker wist of ik de ICT in wilde of de horeca.<br>
@@ -151,10 +170,10 @@ class ContentController
                         Dus ik ben toch dankbaar voor de ervaring die ik hier heb opgedaan. <br><br>
                         Er is me zelfs een baan aangeboden die ik echter niet lang heb gehouden vanwege de coronasituatie.<br>
                         </p>';
-        $html .= '    <div class="link"><a target="_blank" href="https://www.doppio-espresso.nl/">Bezoek de website!</a></div>';
         $html .= '  </div>';
         $html .= '  <div class="nestedinnestedcard">';
         $html .= '    <h4>Movactor/Buurtplein Doorslag</h4>';
+        $html .= '    <h6>september 2020 tot juli 2021</h6>';
         $html .= '    <p>
                         Mijn tweede stage heeft zich volledig gericht op het gebied van ICT.<br><br>
                         In deze stage begon ik met het assisteren van mijn begeleider bij het draaiende houden van het "buurtplein".<br><br>
@@ -162,7 +181,7 @@ class ContentController
                         Buurtpleinen was als het ware de body, terwijl Movactor de brain was.<br><br>
                         Nadat ik mijn baas een tijdje had geholpen en tegelijkertijd mijn eigen workshop genaamd "Computerhulp" had opgezet, begon ik eindelijk met mijn eigen taken.<br><br>
                         In deze workshop was mijn hoofdtaak om mensen, voornamelijk ouderen, te helpen met hun ICT-gerelateerde problemen.<br>
-                        En met "mensen" bedoel ik eigenlijk één persoon.<br><br>
+                        De mensen stroomde nou niet perse binnen maar het was genoeg om elke dag wat te doen.<br><br>
                         Desondanks had ik na verloop van tijd een leuk aantal terugkerende gezichten in mijn workshop. <br>
                         Dus, met zekerheid kan ik zeggen dat ik veel heb geleerd over geduldig omgaan met oudere mensen en hen helpen met hun ICT-problemen.<br><br>
                         Ook hier kreeg ik een aanbod voor een terugkerende stageplek, maar helaas is dit vanwege de tweede golf van de coronapandemie niet doorgegaan.
@@ -170,6 +189,21 @@ class ContentController
         $html .= '  </div>';
         $html .= '  <div class="nestedinnestedcard">';
         $html .= '    <h4>Kruidvat</h4>';
+        $html .= '    <h6>januari 2020 tot feburauri 2020</h6>';
+        $html .= '    <p>
+                        Mijn derde stage werd enigszins chaotisch geregeld vanwege de tweede golf van de coronapandemie.<br><br>
+                        Daardoor kon ik deze stage slechts voor een korte periode volgen, wat me niet heel erg stoorde.<br><br> 
+                        Het betrof namelijk voornamelijk saai vakkenvulwerk met een slecht management, zowel van medewerkers als van producten.<br>
+                        Ik heb niet veel positiefs te melden over deze stage, maar toch vind ik dat elke leerervaring waardevol is. <br><br>
+                        Deze stage was dan ook kort en werd beëindigd toen we rond februari 2021 voor de tweede keer alles moesten sluiten vanwege de coronasituatie.<br>
+                        </p>';
+        $html .= '  </div>';
+        $html .= '  </div>';
+        $html .= '  <div class="nestedcard">';
+        $html .= '    <h3>Mijn MBO stages</h3>';
+        $html .= '  <div class="nestedinnestedcard">';
+        $html .= '    <h4 id="stennizworkshops">Stenniz Workshops</h4>';
+        $html .= '    <h6>29 augustus 2022 tot 3 februari 2023</h6>';
         $html .= '    <p>
                         Als eerste bied ik u een map met MVC-opdrachten aan.<br><br>
                         Hier ziet u onze klassikale poging om een MVC-website te maken. MVC staat voor Model, View, Controller, en het is een structuur om websites te bouwen.<br>
@@ -179,8 +213,15 @@ class ContentController
                         </p>';
         $html .= '  </div>';
         $html .= '  </div>';
-        $html .= ' </div>';
-        $html .= '</div>';
+        $html .= '  </div>';
+        $html .= '  </div>';
+        $html .= '  <div class="rightcolumn1">';
+        $html .= '      <div class="rightcard">';
+        $html .= '    <div class="link"><a target="_blank" href="https://www.doppio-espresso.nl/">Bezoek de website van Doppio Espresso!</a></div>';
+        $html .= '    <div class="link"><a target="_blank" href="https://www.movactor.nl/">Bezoek de website van Movactor!</a></div>';
+        $html .= '      </div>';
+        $html .= '  </div>';
+        $html .= '  </div>';
         $html .= '</div>';
         $html .= '</div>';
         echo $html;

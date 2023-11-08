@@ -17,7 +17,15 @@
 
 <div class="topnav">
   <a href="index.php?">Home</a>
-  <a href="index.php?op=mijnwerk">Mijn Werk</a> 
+  <div class="dropdown">
+    <button onclick="window.location.href='index.php?op=mijnwerk'" class="dropbtn">Mijn werk 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="index.php?op=mijnwerk&#githubcard">Github Projecten</a>
+      <a href="index.php?op=mijnwerk&#stagecard">Stage</a>
+    </div>
+  </div> 
   <a href="index.php?op=mijnschool">Mijn School</a> 
   <a href="index.php?op=overmij">Over Mij</a>
   <a href="index.php?op=contact">Contact</a>

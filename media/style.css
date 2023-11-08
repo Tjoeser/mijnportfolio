@@ -4,6 +4,17 @@ Muted Gold: #DAA520
 Dusty Rose: #E6B8A2
 Sage Green: #A8B68D */
 
+/* Rusty Red: #A33E40
+Weathered Gray: #7F8C8D
+Vintage Brown: #70462A
+Charcoal Black: #333333
+Industrial Green: #5B704B
+Burnt Orange: #A84827
+Antique Brass: #B88A3D
+Steel Blue: #556E7C
+Faded Denim: #6A7B9F
+Creamy White: #F2EFE6 */
+
 
 * {
   box-sizing: border-box;
@@ -76,6 +87,38 @@ body {
   padding-left: 20px;
 }
 
+.row {
+  flex: 1;
+
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn1 {
+  flex: 3;
+  /* Grow to fill available space */
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn1 {
+  flex: 1;
+  /* Don't grow, maintain original width */
+  background-color: #A8B68D;
+  padding-left: 20px;
+}
+
+.row1 {
+  /* display: flex; */
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.column-container1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /* Fake image */
 .fakeimg {
   background-color: #aaa;
@@ -85,6 +128,12 @@ body {
 
 /* Add a card effect for articles */
 .card {
+  background-color: #E9DCC7;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.rightcard {
   background-color: #E9DCC7;
   padding: 20px;
   margin-top: 20px;
@@ -115,27 +164,23 @@ body {
   border: solid transparent;
 }
 
-.row {
-  flex: 1;
-
-}
 
 /* Clear floats after the columns */
-.row::after {
+/* .row::after {
   content: "";
   display: table;
   clear: both;
   flex: 1;
-}
+} */
 
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
 
   .leftcolumn,
   .rightcolumn {
-    width: 100%;
-    padding: 0;
+    flex: 100%;
+    /* Full width on smaller screens */
   }
 }
 
@@ -232,9 +277,66 @@ input[type=submit]:hover {
   padding: 17px;
 }
 
-.githublinks{
+.githublinks {
   background-color: #E9DCC7;
   padding: 20px;
   margin-top: 20px;
-  position:fixed;
+  position: fixed;
+}
+
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+.dropbtn:hover {
+  background-color: #ddd;
+  color: black;
+  cursor: pointer;
 }
