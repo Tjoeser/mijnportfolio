@@ -18,3 +18,5 @@ $('.emailbutton').on('click', function (e) {
   document.body.removeChild(textarea);
   succesmessage.style.display = 'block'; // Show the paragraph
 })
+
+

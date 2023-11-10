@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="media/style.css">
+    <link rel="stylesheet" href="media/stylelight.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Thijs Rietveld</title>
 </head>
@@ -29,5 +29,4 @@
   <a href="index.php?op=mijnschool">Mijn School</a> 
   <a href="index.php?op=overmij">Over Mij</a>
   <a href="index.php?op=contact">Contact</a>
-  <a href="index.php?op=admin" style="float: right;">Admin</a>
 </div>

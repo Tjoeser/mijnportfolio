@@ -26,7 +26,7 @@ window.addEventListener("scroll", function () {
                 // Reset the currently "stuck" element index
                 currentStuckIndex = -1;
             }
-        } else if (rect.top <= 0 && !isMoving[i]) {
+        } else if (rect.top <= 20 && !isMoving[i]) {
             // If the element is at the top of or above the viewport and not already "moving"
             // Mark it as "moving"
             isMoving[i] = true;

@@ -1,20 +1,20 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
 
 require './misc/phpmailer/vendor/autoload.php'; // Adjust the path as needed to autoload.php
-require_once 'Datahandler.php';
+
+require_once 'functions.php';
 require 'misc/config.php';
 
 class ContentController
 {
-    private $DataHandler;
+
+    private $Functions;
 
     public function __construct()
     {
-        $this->DataHandler = new DataHandler("localhost", "mysql", "mijnportfolio_db", "root", "");
+
+        $this->Functions = new Functions("localhost", "mysql", "mijnportfolio_db", "root", "");
     }
 
     public function __destruct()
@@ -36,6 +36,9 @@ class ContentController
                 case 'overmij':
                     $this->overmij();
                     break;
+                case 'mijnschool':
+                    $this->mijnschool();
+                    break;
                 case 'contact':
                     $this->contact();
                     break;
@@ -44,18 +47,19 @@ class ContentController
                     $this->admin($admincheck);
                     break;
                 case 'contactprocess':
-                    $this->contactprocess();
+                    $this->Functions->contactprocess();
                     break;
                 case 'loginprocess':
                     $username = $_REQUEST['username'];
                     $password = $_REQUEST['password'];
-                    $this->loginprocess($username, $password);
+                    $this->Functions->loginprocess($username, $password);
                     break;
                 default:
                     $this->home();
             }
         } catch (Exception $e) {
             throw $e;
+            echo "tragisch";
         }
     }
 
@@ -205,12 +209,27 @@ class ContentController
         $html .= '    <h4 id="stennizworkshops">Stenniz Workshops</h4>';
         $html .= '    <h6>29 augustus 2022 tot 3 februari 2023</h6>';
         $html .= '    <p>
-                        Als eerste bied ik u een map met MVC-opdrachten aan.<br><br>
-                        Hier ziet u onze klassikale poging om een MVC-website te maken. MVC staat voor Model, View, Controller, en het is een structuur om websites te bouwen.<br>
-                        Hoewel de meeste code door mij is geschreven, kreeg ik zo nu en dan wat hulp van medeleerlingen (want van mijn docent kon ik dat niet echt verwachten).<br><br>
-                        De code in deze repository heeft als inspiratie gediend voor de code van de website waarop u zich nu bevindt.<br>
-                        Daarom kan ik met zekerheid zeggen dat dit een leerzame opdracht was.
-                        </p>';
+                        Mijn stage bij Stenniz Workshops (ook bekend als Stenniz Music en Stenniz Games) was een interessante stage op meerdere vlakken.<br><br>
+                        Ik liep deze stage samen met 2 klasgenoten en een mede-softwareontwikkelaar van een andere opleiding.<br>
+                        We hadden geluk dat we deze stage nog op het laatste moment konden regelen, want we zaten al in de zomervakantie en niemand leek ons aan te nemen.<br>
+                        Toen gaf een docent ons een nieuw telefoonnummer dat we nog niet hadden geprobeerd. <br><br>
+                        Nou ja, the rest was history, zullen we maar zeggen.<br><br>
+                        Na de zomervakantie ben ik meteen aan de stage begonnen. <br><br>
+                        Deze stage bestond uit 4 dagen thuiswerken en 1 dag per week op "kantoor".<br>
+                        "Kantoor" was eigenlijk zijn eigen appartement, maar dat was ook helemaal prima.<br><br>
+                        Desondanks was het altijd een fijne en schone plek om te werken, en ook nog eens slechts 5 minuten fietsen, dus dat was een leuke afwisseling.<br><br>
+                        In het begin was ik een beetje teleurgesteld in het werk, ik had er namelijk meer van verwacht.<br><br>
+                        Maar bij nader inzien heb ik er toch best wel van genoten en was het vooral prettig dat ik mijn programmeerkunsten kon laten zien bij een laagdrempelig bedrijf.<br><br>
+                        Mijn stagebegeleider was een interessant figuur, maar ik ben toch blij met de tijd die ik met hem heb kunnen doorbrengen. <br>
+                        Communiceren met hem was namelijk best lastig en hij was gek genoeg heel achterdochtig over mij en mijn werk.<br><br>
+                        Uiteindelijk heb ik behoorlijk wat geleerd en mogen uitproberen. <br><br>
+                        Dus ik ben tevreden.</p>';
+        $html .= '  </div>';
+        $html .= '  <div class="nestedinnestedcard">';
+        $html .= '    <h4 id="stennizworkshops">Mijn volgende stage</h4>';
+        $html .= '    <h6>5 februari tot 14 juni</h6>';
+        $html .= '    <p>
+                             Als u overweegt om mij als stagiair aan te nemen voor uw bedrijf, kan ik slechts één ding zeggen: als u het niet probeert, zult u het nooit weten...</p>';
         $html .= '  </div>';
         $html .= '  </div>';
         $html .= '  </div>';
@@ -219,6 +238,7 @@ class ContentController
         $html .= '      <div class="rightcard">';
         $html .= '    <div class="link"><a target="_blank" href="https://www.doppio-espresso.nl/">Bezoek de website van Doppio Espresso!</a></div>';
         $html .= '    <div class="link"><a target="_blank" href="https://www.movactor.nl/">Bezoek de website van Movactor!</a></div>';
+        $html .= '    <div class="link"><a target="_blank" href="https://www.stennizworkshops.nl/">Bezoek de Stenniz Workshops website!</a></div>';
         $html .= '      </div>';
         $html .= '  </div>';
         $html .= '  </div>';
@@ -234,8 +254,8 @@ class ContentController
         $html .= '<div class="leftcolumn">';
         $html .= '  <div class="card">';
         $html .= '    <h2>Over mij</h2>';
-        $html .= '    <p>Some text..</p>';
-        $html .= '    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>';
+        $count = $this->Functions->currentAgeCount();
+        $html .= '    <p>ik ben momenteel '. $count.' jaar oud</p>';
         $html .= '  </div>';
         $html .= '</div>';
 
@@ -254,6 +274,28 @@ class ContentController
         $html .= '    <h3>Mijn CV</h3>';
         $html .= '    <div class="link"><a href="media\Curriculum Vitae Thijs Rietveld.pdf" download>Download mijn CV</a></div>';
         $html .= '  </div>';
+        $html .= '</div>';
+        $html .= '</div>';
+        echo $html;
+    }
+
+    public function mijnschool()
+    {
+        $html = '';
+        $html .= '<div class="row">';
+        $html .= '<div class="leftcolumn">';
+        $html .= '  <div class="card">';
+        $html .= '    <h2>Over mij</h2>';
+        $html .= '    <p>Some text..</p>';
+        $html .= '    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>';
+        $html .= '  </div>';
+        $html .= '</div>';
+
+        $html .= '<div class="rightcolumn">';
+        $html .= '  <div class="card">';
+        $html .= '    <img class="fakeimg" src="media/fotos/Afbeelding1.jpg" alt="Een foto van mij die niet kon inladen">';
+        $html .= '  </div>';
+
         $html .= '</div>';
         $html .= '</div>';
         echo $html;
@@ -308,7 +350,7 @@ class ContentController
             $html .= '<div class="leftcolumn">';
             $html .= '  <div class="homecard">';
             $html .= '    <h2>welkom admin</h2>';
-            $html .= $this->readDataAndPutInTable();
+            $html .= $this->Functions->readDataAndPutInTable();
             $html .= '  </div>';
             $html .= '</div>';
             $html .= '</div>';
@@ -338,172 +380,5 @@ class ContentController
     }
 
 
-    public function contactprocess()
-    {
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $fname = $_REQUEST['fname'];
-            $preposition = $_REQUEST['preposition'];
-            $lname = $_REQUEST['lname'];
-            $email = $_REQUEST['email'];
-            $company = $_REQUEST['company'];
-            $subject = $_REQUEST['subject'];
 
-            if (empty($email)) {
-                $emailErr = "Email is vereist";
-                $html = '';
-                $html .= '<div class="row">';
-                $html .= '<div class="leftcolumn">';
-                $html .= '  <div class="homecard">';
-                $html .= '    <p>' . $emailErr . '</p>';
-                $html .= '    <div class="link"><a href="index.php?op=contact">Terug</a></div>';
-                $html .= '  </div>';
-                $html .= '</div>';
-                $html .= '</div>';
-                $html .= '</div>';
-                $html .= '</div>';
-                echo $html;
-            } else {
-                $email = $this->test_input($email);
-                // check if e-mail address is well-formed
-                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                    $emailErr = "Geen geldig e-mailadres";
-                } else {
-                    $emailErr = "Email is succesvol verzonden";
-                    if (empty($fname) or empty($lname) or empty($email) or empty($company) or empty($subject)) {
-                        $emailErr = "U mist een of meerdere velden";
-                    } else {
-                        $sql = "INSERT INTO contact_subs (fname, preposition, lname, email, company, subject) VALUES('$fname', '$preposition', '$lname', '$email', '$company', '$subject')";
-                        $this->DataHandler->createData($sql);
-                    }
-                }
-                if ($emailErr == "Email is succesvol verzonden") {
-                    $fullname = $fname . ' ' . $preposition . ' ' . $lname;
-                    $content = 'Bedrijf: ' . $company . "\n" . 'Vraag: ' . $subject;
-                    $this->Sendemail($email, $fullname, $content);
-                }
-                $html = '';
-                $html .= '<div class="row">';
-                $html .= '<div class="leftcolumn">';
-                $html .= '  <div class="homecard">';
-                $html .= '    <p>' . $emailErr . '</p>';
-                $html .= '    <div class="link"><a href="index.php?op=contact">Terug</a></div>';
-                $html .= '  </div>';
-                $html .= '</div>';
-                $html .= '</div>';
-                $html .= '</div>';
-                $html .= '</div>';
-                echo $html;
-            }
-        }
-    }
-
-    public function loginprocess($username, $password)
-    {
-        $adminusername = ADMIN_UN;
-        $adminpassword = ADMIN_PW;
-
-        if ($username == $adminusername && $password == $adminpassword) {
-            $html = '';
-            $html .= '<div class="row">';
-            $html .= '<div class="leftcolumn">';
-            $html .= '  <div class="homecard">';
-            $html .= '    <p>U bent succesvol ingelogd admin</p>';
-            $html .= '      <form action="index.php?op=admin&case=true" method="post">';
-            $html .= '          <input type="submit" value="verder">';
-            $html .= '      </form>';
-            $html .= '  </div>';
-            $html .= '</div>';
-            $html .= '</div>';
-            $html .= '</div>';
-            $html .= '</div>';
-            echo $html;
-        } else {
-            $html = '';
-            $html .= '<div class="row">';
-            $html .= '<div class="leftcolumn">';
-            $html .= '  <div class="homecard">';
-            $html .= '    <p>U bent geen admin</p>';
-            $html .= '      <form action="index.php?op=admin" method="post">';
-            $html .= '          <input type="submit" value="terug">';
-            $html .= '      </form>';
-            $html .= '  </div>';
-            $html .= '</div>';
-            $html .= '</div>';
-            $html .= '</div>';
-            $html .= '</div>';
-            echo $html;
-        }
-    }
-
-
-    public function test_input($data)
-    {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
-
-    public function Sendemail($email, $fullname, $content)
-    {
-        $mail = new PHPMailer();
-        $AppPassword = APP_PW;
-
-        // Enable debugging (optional)
-        //$mail->SMTPDebug = SMTP::DEBUG_SERVER;
-
-        $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
-        $mail->SMTPAuth = true;
-        $mail->Username = 'thijs0302@gmail.com';
-        $mail->Password = $AppPassword; // Use the App Password
-        $mail->SMTPSecure = 'tls'; // or 'ssl' for SSL
-        $mail->Port = 587;
-
-        $mail->setFrom($email, $fullname); // Set "From" to your Gmail address
-        $mail->addAddress('thijs0302@gmail.com', 'Thijs Rietveld'); // Recipient's address
-
-        $mail->isHTML(false); // Set to true for HTML emails
-        $mail->Subject = 'Contact Form Submission from ' . $email;
-        $mail->Body = $content;
-
-        if ($mail->send()) {
-        } else {
-        }
-    }
-
-    public function readDataAndPutInTable()
-    {
-        $sql = "SELECT * FROM contact_subs";
-        $this->DataHandler->readsData($sql);
-        $result = $this->DataHandler->readsData($sql);
-        $result->setFetchMode(PDO::FETCH_ASSOC);
-        $tableheader = false;
-        $html = "<div class='content'>";
-        $html .= "<table>";
-        $html .= "<br>";
-        $html .= "<br>";
-        $html .= "<br>";
-        foreach ($result as $row) {
-            if ($tableheader == false) {
-                $html .= "<tr>";
-                foreach ($row as $key => $value) {
-                    $html .= "<th data-title='{$key}'>" . $key . "</th>";
-                }
-                $html .= "<th data-title='actions'>actions</th>";
-                $html .= "</tr>";
-                $tableheader = true;
-            }
-            $html .= "<tr>";
-            foreach ($row as $key => $value) {
-                $html .= "<td data-title='{$key}'>" . $value . "</td>";
-            }
-            // $html .= "<td><a class=\"crudfunctionbutton\" href='index.php?op={$controller}&act=read&id={$row[$uniquecolumn]}'><i class='fa fa-pencil'></i> Read</a>";
-            // $html .= "<a class=\"crudfunctionbutton\" href='index.php?op={$controller}&act=update&id={$row[$uniquecolumn]}'><i class='fa fa-wrench'></i>Update</a>";
-            // $html .= "<a class=\"crudfunctionbutton\" href='index.php?op={$controller}&act=delete&id={$row[$uniquecolumn]}'><i class='fa fa-trash'></i> Delete</a></td>";
-            $html .= "<tr>";
-        }
-        $html .= "</table></div><br>";
-        return $html;
-    }
 }
