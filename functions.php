@@ -129,6 +129,9 @@ class Functions{
     {
         $mail = new PHPMailer();
         $AppPassword = APP_PW;
+        $username = APP_UN;
+        var_dump($AppPassword);
+        var_dump($username);
 
         // Enable debugging (optional)
         //$mail->SMTPDebug = SMTP::DEBUG_SERVER;
@@ -136,7 +139,7 @@ class Functions{
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'thijs0302@gmail.com';
+        $mail->Username = $username;
         $mail->Password = $AppPassword; // Use the App Password
         $mail->SMTPSecure = 'tls'; // or 'ssl' for SSL
         $mail->Port = 587;
