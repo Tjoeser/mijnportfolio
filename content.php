@@ -14,7 +14,7 @@ class ContentController
     public function __construct()
     {
 
-        $this->Functions = new Functions("localhost", "mysql", "mijnportfolio_db", "root", "");
+        $this->Functions = new Functions();
     }
 
     public function __destruct()
@@ -53,6 +53,21 @@ class ContentController
                     $username = $_REQUEST['username'];
                     $password = $_REQUEST['password'];
                     $this->Functions->loginprocess($username, $password);
+                    break;
+                case 'actions':
+                    $act = isset($_GET['act']) ? $_GET['act'] : '';
+                    $id = isset($_GET['id']) ? $_GET['id'] : '';
+                    switch ($act) {
+                        case 'read':
+                            $this->adminread($id);
+                            break;
+                        case 'update':
+                            $this->Functions->update($id);
+                            break;
+                        case 'delete':
+                            $this->Functions->delete($id);
+                            break;
+                    }
                     break;
                 default:
                     $this->home();
@@ -255,7 +270,7 @@ class ContentController
         $html .= '  <div class="card">';
         $html .= '    <h2>Over mij</h2>';
         $count = $this->Functions->currentAgeCount();
-        $html .= '    <p>ik ben momenteel '. $count.' jaar oud</p>';
+        $html .= '    <p>ik ben momenteel ' . $count . ' jaar oud</p>';
         $html .= '  </div>';
         $html .= '</div>';
 
@@ -350,7 +365,8 @@ class ContentController
             $html .= '<div class="leftcolumn">';
             $html .= '  <div class="homecard">';
             $html .= '    <h2>welkom admin</h2>';
-            $html .= $this->Functions->readDataAndPutInTable();
+            $res = $this->Functions->readall();
+            $html .= $this->Functions->adminreadfunction($res);
             $html .= '  </div>';
             $html .= '</div>';
             $html .= '</div>';
@@ -378,7 +394,21 @@ class ContentController
             echo $html;
         }
     }
+    
 
-
-
+    public function adminread($id)
+    {
+            $res = $this->Functions->read($id);
+            $html = '';
+            $html .= '<div class="row">';
+            $html .= '<div class="leftcolumn">';
+            $html .= '  <div class="homecard">';
+            $html .= $this->Functions->adminreadfunction($res);
+            $html .= '  </div>';
+            $html .= '</div>';
+            $html .= '</div>';
+            $html .= '</div>';
+            $html .= '</div>';
+            echo $html;
+    }
 }

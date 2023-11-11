@@ -6,17 +6,23 @@ use PHPMailer\PHPMailer\Exception;
 
 require_once 'Datahandler.php';
 
-class Functions{
+class Functions
+{
 
     private $DataHandler;
 
-	public function __construct()
-	{
-        $this->DataHandler = new DataHandler("localhost", "mysql", "mijnportfolio_db", "root", "");
-	}
+    public function __construct()
+    {
+        $currentUrl = $_SERVER['REQUEST_URI'];
+        if (strpos($currentUrl, 'mijnportfolio') == true) {
+            $this->DataHandler = new DataHandler("localhost", "mysql", "mijnportfolio_db", "root", "");
+        } else {
+            $this->DataHandler = new DataHandler("localhost", "mysql", "ideweshv_mijnportfolio_db", "ideweshv_ThijsRietveld", "a)lIH6z.mX0V81");
+        }
+    }
 
-	public function __destruct(){
-
+    public function __destruct()
+    {
     }
 
     public function contactprocess()
@@ -130,22 +136,17 @@ class Functions{
         $mail = new PHPMailer();
         $AppPassword = APP_PW;
         $username = APP_UN;
-        var_dump($AppPassword);
-        var_dump($username);
-
-        // Enable debugging (optional)
-        //$mail->SMTPDebug = SMTP::DEBUG_SERVER;
 
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
+        $mail->Host = 'ams21.stablehost.com';
         $mail->SMTPAuth = true;
-        $mail->Username = $username;
-        $mail->Password = $AppPassword; // Use the App Password
-        $mail->SMTPSecure = 'tls'; // or 'ssl' for SSL
+        $mail->Username = "contactmail@thijsrietveld.com";
+        $mail->Password = "a)lIH6z.mX0V81"; // Use the App Password
+        $mail->SMTPSecure = 'ssl/tls'; // or 'ssl' for SSL
         $mail->Port = 587;
 
         $mail->setFrom($email, $fullname); // Set "From" to your Gmail address
-        $mail->addAddress('thijs0302@gmail.com', 'Thijs Rietveld'); // Recipient's address
+        $mail->addAddress('contactmail@thijsrietveld.com', 'Thijs Rietveld'); // Recipient's address
 
         $mail->isHTML(false); // Set to true for HTML emails
         $mail->Subject = 'Contact Form Submission from ' . $email;
@@ -156,12 +157,9 @@ class Functions{
         }
     }
 
-    public function readDataAndPutInTable()
+    public function adminreadfunction($result)
     {
-        $sql = "SELECT * FROM contact_subs";
-        $this->DataHandler->readsData($sql);
-        $result = $this->DataHandler->readsData($sql);
-        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $uniquecolumn = "id";
         $tableheader = false;
         $html = "<div class='content'>";
         $html .= "<table>";
@@ -182,9 +180,14 @@ class Functions{
             foreach ($row as $key => $value) {
                 $html .= "<td data-title='{$key}'>" . $value . "</td>";
             }
-            // $html .= "<td><a class=\"crudfunctionbutton\" href='index.php?op={$controller}&act=read&id={$row[$uniquecolumn]}'><i class='fa fa-pencil'></i> Read</a>";
-            // $html .= "<a class=\"crudfunctionbutton\" href='index.php?op={$controller}&act=update&id={$row[$uniquecolumn]}'><i class='fa fa-wrench'></i>Update</a>";
-            // $html .= "<a class=\"crudfunctionbutton\" href='index.php?op={$controller}&act=delete&id={$row[$uniquecolumn]}'><i class='fa fa-trash'></i> Delete</a></td>";
+            $currentUrl = $_SERVER['REQUEST_URI'];
+            if (strpos($currentUrl, 'id') == true) {
+                $html .= "<td><a class=\"crudfunctionbutton\" href='index.php?op=actions&act=copyemail&id={$row[$uniquecolumn]}'><i class='fa fa-pencil'></i> E-mail</a>";
+                $html .= "<a class=\"crudfunctionbutton\" href='index.php?op=actions&act=update&id={$row[$uniquecolumn]}'><i class='fa fa-wrench'></i>Update</a>";
+            } else {
+                $html .= "<td><a class=\"crudfunctionbutton\" href='index.php?op=actions&act=read&id={$row[$uniquecolumn]}'><i class='fa fa-pencil'></i> Read</a>";
+            }
+            $html .= "<a class=\"crudfunctionbutton\" href='index.php?op=actions&act=delete&id={$row[$uniquecolumn]}'><i class='fa fa-trash'></i> Delete</a></td>";
             $html .= "<tr>";
         }
         $html .= "</table></div><br>";
@@ -194,10 +197,10 @@ class Functions{
 
     public function currentAgeCount()
     {
-        $datetime = new DateTime(); 
+        $datetime = new DateTime();
 
-        $birtdatea = $datetime->setDate(2005, 03, 02); 
-        
+        $birtdatea = $datetime->setDate(2005, 03, 02);
+
         $birtdateb = new DateTime($birtdatea->format('Y-m-d'));
         $currentdate = new DateTime(date("Y-m-d"));
         $interval = $birtdateb->diff($currentdate);
@@ -206,6 +209,50 @@ class Functions{
         return $diffInYears;
     }
 
+    public function read($id)
+    {
+        $sql = "SELECT * FROM contact_subs WHERE id = $id";
+        $result = $this->DataHandler->readsData($sql);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $res = $result->fetchAll();
+        return $res;
+    }
 
+    public function readall()
+    {
+        $sql = "SELECT * FROM contact_subs";
+        $result = $this->DataHandler->readsData($sql);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $res = $result->fetchAll();
+        return $res;
+    }
+
+    public function update()
+    {
+    }
+
+    public function delete($id)
+    {
+        $sql = "DELETE  FROM contact_subs WHERE id = $id";
+        $result = $this->DataHandler->deleteData($sql);
+
+        $html = '';
+        $html .= '<div class="row">';
+        $html .= '<div class="leftcolumn">';
+        $html .= '  <div class="homecard">';
+        $html .= '    <h2>Succesvol verwijderd u wordt zo terug gestuurd</h2>';
+        $html .= '  </div>';
+        $html .= '</div>';
+        $html .= '</div>';
+        $html .= '</div>';
+        echo $html;
+        ?>
+      <script>
+         setTimeout(function(){
+            window.location.href = 'index.php?op=admin&case=true';
+         }, 1500);
+      </script>
+         <?php
+    }
 }
 ?>

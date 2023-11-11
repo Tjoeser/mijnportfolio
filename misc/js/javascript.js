@@ -29,3 +29,10 @@ function isOnAdminPage() {
     // Check if the current URL indicates that the user is on the admin page
     return window.location.href.indexOf("admin") !== -1;
 }
+
+function sendback(){
+    setTimeout(() => {
+        window.location.href = 'https://url.com';
+     }, 2000);
+}
+
