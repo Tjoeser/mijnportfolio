@@ -340,3 +340,9 @@ input[type=submit]:hover {
   color: black;
   cursor: pointer;
 }
+
+#testje{
+  flex: 1;
+  background-color: #A8B68D;
+  padding-left: 0px;
+}

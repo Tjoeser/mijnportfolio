@@ -103,8 +103,7 @@ class ContentController
         $html .= '      <div class="column-container1">';
         $html .= '      <div class="leftcolumn1">';
         $html .= '          <div class="card">';
-        $html .= '              <h2>Mijn Werk</h2>';
-        $html .= '              <p>Ik zal op deze pagina uitleg geven over wat ik allemaal gedaan heb voor werk en oprdachten.</p>';
+        $html .= '              <h1>Hier zal ik vertellen wat ik voor opdacrhten, stages en werk heb gedaan.</h1>';
         $html .= '          </div>';
         $html .= '      </div>';
         $html .= '  <div class="rightcolumn1">';
@@ -256,6 +255,36 @@ class ContentController
         $html .= '    <div class="link"><a target="_blank" href="https://www.stennizworkshops.nl/">Bezoek de Stenniz Workshops website!</a></div>';
         $html .= '      </div>';
         $html .= '  </div>';
+        $html .= '  </div>';
+        $html .= '      <div class="column-container1">';
+        $html .= '      <div class="leftcolumn1">';
+        $html .= '          <div class="card">';
+        $html .= '              <h2 id=werkcard>Werk</h2>';
+        $html .= '              <div class="nestedcard">';
+        $html .= '                  <h3>Krantenwijk</h3>';
+        $html .= '                  <p>
+                                    Mijn eerste baan was vrij bekend.<br>
+                                    De krantenwijk was een eenvoudige klus die ik elke donderdag met mijn vader en mijn zusje deed. <br><br>
+                                    Het was geen inspirerend werk, maar toch viel het wel mee.<br><br>
+                                    Helaas heb ik niet veel boeiends te vertellen.<br><br>
+                                    Ik heb dit 3 jaar volgehouden, en het is tot nu toe mijn langstlopende baan.<br>
+                                    </p>';
+        $html .= '  </div>';
+        $html .= '              <div class="nestedcard">';
+        $html .= '                  <h3 id=doppioinfo>Doppio Espress</h3>';
+        $html .= '                  <p>
+                                    Mijn eerste baan was vrij bekend.<br>
+                                    De krantenwijk was een eenvoudige klus die ik elke donderdag met mijn vader en mijn zusje deed. <br><br>
+                                    Het was geen inspirerend werk, maar toch viel het wel mee.<br><br>
+                                    Helaas heb ik niet veel boeiends te vertellen.<br><br>
+                                    Ik heb dit 3 jaar volgehouden, en het is tot nu toe mijn langstlopende baan.<br>
+                                    </p>';
+        $html .= '  </div>';
+        $html .= '  </div>';
+        $html .= '  </div>';
+        $html .= '  <div class="rightcolumn1">';
+        $html .= '      <div class="rightcard">';
+        $html .= '      </div>';
         $html .= '  </div>';
         $html .= '</div>';
         $html .= '</div>';

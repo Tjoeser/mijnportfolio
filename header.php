@@ -24,6 +24,7 @@
     <div class="dropdown-content">
       <a href="index.php?op=mijnwerk&#githubcard">Github Projecten</a>
       <a href="index.php?op=mijnwerk&#stagecard">Stage</a>
+      <a href="index.php?op=mijnwerk&#werkcard">Werk</a>
     </div>
   </div> 
   <a href="index.php?op=mijnschool">Mijn School</a> 
