@@ -84,12 +84,10 @@ class ContentController
     {
         $html = '';
         $html .= '<div class="row">';
-        $html .= '<div class="leftcolumn">';
         $html .= '  <div class="homecard">';
         $html .= '    <h2>Welkom op mijn website</h2>';
         $html .= '    <p>Ik heet u graag welkom en kijk gerust rond naar mijn vele prestaties en geschiedenis</p>';
         $html .= '  </div>';
-        $html .= '</div>';
         $html .= '</div>';
         $html .= '</div>';
         echo $html;
@@ -98,7 +96,6 @@ class ContentController
     public function mijnwerk()
     {
         $html = '';
-        $html .= '     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>';
         $html .= '<div class="row1">';
         $html .= '      <div class="column-container1">';
         $html .= '      <div class="leftcolumn1">';
@@ -271,24 +268,27 @@ class ContentController
                                     </p>';
         $html .= '  </div>';
         $html .= '              <div class="nestedcard">';
-        $html .= '                  <h3 id=doppioinfo>Doppio Espress</h3>';
+        $html .= '                  <h3 id=doppioinfo>Doppio Espresso</h3>';
         $html .= '                  <p>
-                                    Mijn eerste baan was vrij bekend.<br>
-                                    De krantenwijk was een eenvoudige klus die ik elke donderdag met mijn vader en mijn zusje deed. <br><br>
-                                    Het was geen inspirerend werk, maar toch viel het wel mee.<br><br>
-                                    Helaas heb ik niet veel boeiends te vertellen.<br><br>
-                                    Ik heb dit 3 jaar volgehouden, en het is tot nu toe mijn langstlopende baan.<br>
+                                    </p>';
+        $html .= '  </div>';
+        $html .= '              <div class="nestedcard">';
+        $html .= '                  <h3 id=>Pathe Utrecht Leidscherijn</h3>';
+        $html .= '                  <p>
                                     </p>';
         $html .= '  </div>';
         $html .= '  </div>';
         $html .= '  </div>';
         $html .= '  <div class="rightcolumn1">';
         $html .= '      <div class="rightcard">';
+        $html .= '      <p>
+                            heloo
+                            </p>';
         $html .= '      </div>';
         $html .= '  </div>';
         $html .= '</div>';
         $html .= '</div>';
-        echo $html;
+        echo $html; 
     }
 
     public function overmij()
@@ -329,7 +329,7 @@ class ContentController
         $html .= '<div class="row">';
         $html .= '<div class="leftcolumn">';
         $html .= '  <div class="card">';
-        $html .= '    <h2>Over mij</h2>';
+        $html .= '    <h2>Mijn school</h2>';
         $html .= '    <p>Some text..</p>';
         $html .= '    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>';
         $html .= '  </div>';

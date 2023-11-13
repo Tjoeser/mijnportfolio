@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="media/stylelight.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" href="media/fotos/logo-no-background2-removebg-preview.png" type="image/x-icon"/>
     <title>Thijs Rietveld</title>
 </head>
 <body>

@@ -1,19 +1,7 @@
-/* Warm Gray: #B4A39A
-Soft Beige: #E9DCC7
-Muted Gold: #DAA520
-Dusty Rose: #E6B8A2
-Sage Green: #A8B68D */
-
-/* Rusty Red: #A33E40
-Weathered Gray: #7F8C8D
-Vintage Brown: #70462A
-Charcoal Black: #333333
-Industrial Green: #5B704B
-Burnt Orange: #A84827
-Antique Brass: #B88A3D
-Steel Blue: #556E7C
-Faded Denim: #6A7B9F
-Creamy White: #F2EFE6 */
+/* 
+green #92B19F
+gold #D09632
+dark green #13472E */
 
 
 * {
@@ -23,7 +11,7 @@ Creamy White: #F2EFE6 */
 body {
   font-family: Arial;
   padding: 10px;
-  background: #A8B68D;
+  background: black;
   min-height: 98vh;
   display: flex;
   flex-direction: column;
@@ -33,14 +21,16 @@ body {
 .header {
   padding: 30px;
   text-align: center;
-  background: #E9DCC7;
+  background: #13472E;
+  color: #D09632;
 }
 
 /* Footer */
 .footer {
   padding: 20px;
   text-align: center;
-  background: #E9DCC7;
+  background: #13472E;
+  color: #D09632;
   margin-top: 20px;
   flex-shrink: 0;
 }
@@ -83,7 +73,7 @@ body {
 .rightcolumn {
   float: left;
   width: 25%;
-  background-color: #A8B68D;
+  /* background-color: #A8B68D; */
   padding-left: 20px;
 }
 
@@ -104,7 +94,7 @@ body {
 .rightcolumn1 {
   flex: 1;
   /* Don't grow, maintain original width */
-  background-color: #A8B68D;
+  /* background-color: #A8B68D; */
   padding-left: 20px;
 }
 
@@ -123,36 +113,35 @@ body {
 .fakeimg {
   background-color: #aaa;
   width: 100%;
-  padding: 20px;
 }
 
 /* Add a card effect for articles */
 .card {
-  background-color: #E9DCC7;
+  background-color: #F1DAC4;
   padding: 20px;
   margin-top: 20px;
 }
 
 .rightcard {
-  background-color: #E9DCC7;
+  background-color: #F1DAC4;
   padding: 20px;
   margin-top: 20px;
+  /* z-index: 1; */
 }
 
 .homecard {
-  background-color: #E9DCC7;
+  background-color: #F1DAC4;
   padding: 20px;
   margin-top: 20px;
-  width: 98vw;
 }
 
 .nestedcard {
-  background-color: #B4A39A;
+  background-color: #A69CAC;
   margin-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
-  border: solid #DAA520;
+  border: solid #CCBBB8;
 }
 
 .nestedinnestedcard {
