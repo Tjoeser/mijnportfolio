@@ -163,9 +163,6 @@ class Functions
         $tableheader = false;
         $html = "<div class='content'>";
         $html .= "<table>";
-        $html .= "<br>";
-        $html .= "<br>";
-        $html .= "<br>";
         foreach ($result as $row) {
             if ($tableheader == false) {
                 $html .= "<tr>";
@@ -182,7 +179,7 @@ class Functions
             }
             $currentUrl = $_SERVER['REQUEST_URI'];
             if (strpos($currentUrl, 'id') == true) {
-                $html .= "<td><a class=\"crudfunctionbutton\" href='index.php?op=actions&act=copyemail&id={$row[$uniquecolumn]}'><i class='fa fa-pencil'></i> E-mail</a>";
+                $html .= '     <td><button data-text="thijs0302@gmail.com" class="emailbutton">Kopieer mijn e-mailadres</button>';
                 $html .= "<a class=\"crudfunctionbutton\" href='index.php?op=actions&act=update&id={$row[$uniquecolumn]}'><i class='fa fa-wrench'></i>Update</a>";
             } else {
                 $html .= "<td><a class=\"crudfunctionbutton\" href='index.php?op=actions&act=read&id={$row[$uniquecolumn]}'><i class='fa fa-pencil'></i> Read</a>";
@@ -191,6 +188,10 @@ class Functions
             $html .= "<tr>";
         }
         $html .= "</table></div><br>";
+        // var_dump($row['email']);
+        // var_dump($key);
+        // var_dump($value);
+        // var_dump($uniquecolumn);
         return $html;
     }
 

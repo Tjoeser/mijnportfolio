@@ -21,16 +21,16 @@ body {
 .header {
   padding: 30px;
   text-align: center;
-  background: #13472E;
-  color: #D09632;
+  background: #D09632;
+  color: #000;
 }
 
 /* Footer */
 .footer {
   padding: 20px;
   text-align: center;
-  background: #13472E;
-  color: #D09632;
+  background: #D09632;
+  color: #000;
   margin-top: 20px;
   flex-shrink: 0;
 }
@@ -120,12 +120,14 @@ body {
   background-color: #F1DAC4;
   padding: 20px;
   margin-top: 20px;
+  border-radius: 20px;
 }
 
 .rightcard {
   background-color: #F1DAC4;
   padding: 20px;
   margin-top: 20px;
+  border-radius: 20px;
   /* z-index: 1; */
 }
 
@@ -133,6 +135,7 @@ body {
   background-color: #F1DAC4;
   padding: 20px;
   margin-top: 20px;
+  border-radius: 20px;
 }
 
 .nestedcard {
@@ -145,7 +148,7 @@ body {
 }
 
 .nestedinnestedcard {
-  background-color: #A8B68D;
+  background-color: #D09632;
   margin-top: 10px;
   padding-left: 10px;
   padding-right: 10px;

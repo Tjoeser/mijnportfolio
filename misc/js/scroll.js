@@ -14,7 +14,8 @@ window.addEventListener("scroll", function () {
         var element = elements[i];
         // Get the position of the element relative to the viewport
         var rect = element.getBoundingClientRect();
-        
+        // var bottom = $(window).height() - top - rect.height();
+     
 
         // Check if the current element is the same as the previously "stuck" element
         if (i === currentStuckIndex) {

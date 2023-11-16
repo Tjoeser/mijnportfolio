@@ -99,8 +99,8 @@ class ContentController
         $html .= '<div class="row1">';
         $html .= '      <div class="column-container1">';
         $html .= '      <div class="leftcolumn1">';
-        $html .= '          <div class="card">';
-        $html .= '              <h1>Hier zal ik vertellen wat ik voor opdacrhten, stages en werk heb gedaan.</h1>';
+        $html .= '          <div class="card" style="--color: #0f0;">';
+        $html .= '              <h1>Hier zal ik vertellen wat ik voor opdrachten, stages en werk heb gedaan.</h1>';
         $html .= '          </div>';
         $html .= '      </div>';
         $html .= '  <div class="rightcolumn1">';
@@ -259,6 +259,7 @@ class ContentController
         $html .= '              <h2 id=werkcard>Werk</h2>';
         $html .= '              <div class="nestedcard">';
         $html .= '                  <h3>Krantenwijk</h3>';
+        $html .= '    <h6>5 februari tot 14 juni</h6>';
         $html .= '                  <p>
                                     Mijn eerste baan was vrij bekend.<br>
                                     De krantenwijk was een eenvoudige klus die ik elke donderdag met mijn vader en mijn zusje deed. <br><br>
@@ -269,11 +270,14 @@ class ContentController
         $html .= '  </div>';
         $html .= '              <div class="nestedcard">';
         $html .= '                  <h3 id=doppioinfo>Doppio Espresso</h3>';
+        $html .= '    <h6>januari 2020 tot juni 2020</h6>';
         $html .= '                  <p>
+
                                     </p>';
         $html .= '  </div>';
         $html .= '              <div class="nestedcard">';
         $html .= '                  <h3 id=>Pathe Utrecht Leidscherijn</h3>';
+        $html .= '    <h6>5 februari tot 14 juni</h6>';
         $html .= '                  <p>
                                     </p>';
         $html .= '  </div>';
@@ -391,13 +395,11 @@ class ContentController
         if ($admincheck == true) {
             $html = '';
             $html .= '<div class="row">';
-            $html .= '<div class="leftcolumn">';
-            $html .= '  <div class="homecard">';
+            $html .= '  <div class="tablereadcard">';
             $html .= '    <h2>welkom admin</h2>';
             $res = $this->Functions->readall();
             $html .= $this->Functions->adminreadfunction($res);
             $html .= '  </div>';
-            $html .= '</div>';
             $html .= '</div>';
             $html .= '</div>';
             $html .= '</div>';
@@ -432,6 +434,7 @@ class ContentController
             $html .= '<div class="row">';
             $html .= '<div class="leftcolumn">';
             $html .= '  <div class="homecard">';
+            $html .= '    <button onclick="history.back()">Go Back</button>';
             $html .= $this->Functions->adminreadfunction($res);
             $html .= '  </div>';
             $html .= '</div>';
