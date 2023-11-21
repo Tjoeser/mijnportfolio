@@ -97,6 +97,7 @@ body {
   padding-left: 20px;
 }
 
+
 .row1 {
   /* display: flex; */
   flex-wrap: wrap;
@@ -114,6 +115,22 @@ body {
   width: 100%;
 }
 
+.fakeimg1 {
+  width: 300px;
+  height: 200px;
+}
+
+.rightcolumn2 {
+  flex: 1;
+  width: 100%;
+}
+
+.leftcolumn2 {
+  flex: 5;
+  /* Grow to fill available space */
+  width: max-content;
+}
+
 /* Add a card effect for articles */
 .card {
   background-color: #778da9;
@@ -127,7 +144,6 @@ body {
   padding: 20px;
   margin-top: 20px;
   border-radius: 10px;
-  /* z-index: 1; */
 }
 
 .homecard {

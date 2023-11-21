@@ -90,6 +90,7 @@ class ContentController
         $html .= '  </div>';
         $html .= '</div>';
         $html .= '</div>';
+
         echo $html;
     }
 
@@ -173,7 +174,7 @@ class ContentController
         $html .= '  <div class="card">';
         $html .= '    <h2 id="stagecard">Stage</h2>';
         $html .= '  <div class="nestedcard">';
-        $html .= '    <h3>Mijn VMBO stages</h3>';
+        $html .= '    <h3 id=doppiostage>Mijn VMBO stages</h3>';
         $html .= '  <div class="nestedinnestedcard">';
         $html .= '    <h4>Doppio Espresso</h4>';
         $html .= '    <h6>september 2019 tot januari 2020 - januari 2020 tot juni 2020</h6>';
@@ -248,6 +249,7 @@ class ContentController
         $html .= '  <div class="rightcolumn1">';
         $html .= '      <div class="rightcard">';
         $html .= '    <div class="link"><a target="_blank" href="https://www.doppio-espresso.nl/">Bezoek de website van Doppio Espresso!</a></div>';
+        $html .= '    <div class="link"><a href="#doppioinfo">Klik hier om informatie te krijgen over mijn ervaring met werken bij Doppio Espresso!</a></div>';
         $html .= '    <div class="link"><a target="_blank" href="https://www.movactor.nl/">Bezoek de website van Movactor!</a></div>';
         $html .= '    <div class="link"><a target="_blank" href="https://www.stennizworkshops.nl/">Bezoek de Stenniz Workshops website!</a></div>';
         $html .= '      </div>';
@@ -259,7 +261,7 @@ class ContentController
         $html .= '              <h2 id=werkcard>Werk</h2>';
         $html .= '              <div class="nestedcard">';
         $html .= '                  <h3>Krantenwijk</h3>';
-        $html .= '    <h6>5 februari tot 14 juni</h6>';
+        $html .= '    <h6>agusutus 2018 tot juni 2022</h6>';
         $html .= '                  <p>
                                     Mijn eerste baan was vrij bekend.<br>
                                     De krantenwijk was een eenvoudige klus die ik elke donderdag met mijn vader en mijn zusje deed. <br><br>
@@ -272,22 +274,45 @@ class ContentController
         $html .= '                  <h3 id=doppioinfo>Doppio Espresso</h3>';
         $html .= '    <h6>januari 2020 tot juni 2020</h6>';
         $html .= '                  <p>
-
+        Dit was mijn eerste baan die ik beschouw als een echte baan.<br><br>
+        Deze kans werd mij aangeboden na een half jaar stage te hebben gelopen, zoals ik eerder heb aangegeven.<br><br>
+        Ik heb hier ongeveer een half jaartje gewerkt, totdat door corona het verstandiger leek om iets anders te gaan zoeken. <br>
+        In totaal ben ik bijna een jaar werkzaam geweest.<br><br>
+        Mijn taken bestonden uit tafels schoonmaken, serveren, bestellingen opnemen, en op speciale dagen mocht ik zelfs de broodjes klaarmaken.<br>
+        Ook werd ik tussendoor geïntroduceerd in het zetten van koffie en thee met een speciaal apparaat.<br><br>
+        Dit was een interessante leerervaring waar ik altijd dankbaar voor zal zijn. <br>
+        Maar ik heb wel ontdekt dat de horeca niet echt iets voor mij is. <br><br>
+        Ook merkte ik dat de begeleiders mij nog steeds als stagiair zagen en ik dus nog steeds stagiairtaken kreeg.<br>
+        Dat vond ik wel jammer.<br><br>
+        Maar goed, zoals ik al zei, heb ik geen spijt van mijn tijd daar.<br>
                                     </p>';
         $html .= '  </div>';
         $html .= '              <div class="nestedcard">';
         $html .= '                  <h3 id=>Pathe Utrecht Leidscherijn</h3>';
-        $html .= '    <h6>5 februari tot 14 juni</h6>';
+        $html .= '    <h6>5 februari 2022 tot het heden</h6>';
         $html .= '                  <p>
+        Mijn tweede baan, waar ik momenteel nog werk, is bij Pathe.<br><br>
+        Al sinds ik voor het eerst stages moest zoeken voor de middelbare school dacht ik aan Pathe.<br>
+        Maar mijn ouders zeiden: "Nee, zoek een stage die past bij horeca of ICT."<br><br>
+        Nou, dat is ook helemaal goed gekomen, want die heb ik namelijk ook gedaan.<br><br>
+        Maar toen ik een tijdje niet meer werkzaam was, dacht ik: "Nu wil ik wel weer iets gaan doen."<br>
+        En toen herinnerde ik me opeens waar ik al die tijd zo graag stage wilde lopen.<br><br>
+        Dus ik ben meteen gaan mailen, en in een mum van tijd stond ik op de werkvloer.<br><br>
+        Het werk bij Pathe bestaat vooral uit schoonmaken, en dat betekent van de zalen, de vloer, de toiletten, de prullenbakken en de bar.<br><br>
+        Dan kom ik bij mijn volgende punt, en dat is het soort werk dat je kunt doen: Service, F&B, Portier en Kassa. <br>
+        Ook hebben we nog EVENT diensten waarin een bedrijf een zaal heeft gehuurd, en wij als werknemers ervoor zorgen dat het een prettig bezoek is.<br>
+        Verder betekent Service dus dat we vooral schoonmaken en de zalen in- en uitgaan en klaarzetten voor de volgende voorstelling.<br>
+        Bar is waar wij de drankjes en snacks verkopen aan de bezoekers, en dat betekent dus ook veel lachen en zwaaien.<br>
+        En Portier en Kassa zijn meer het verkopen en scannen van kaartjes en eventuele andere vormen van klantenservice.<br><br>
+        Ik heb het bij Pathe enorm naar mijn zin en heb daar mijn beste vrienden ontmoet.<br><br>
+        Dus als conclusie kan ik vertellen dat ik hier heel veel heb geleerd om sociaal en open te zijn tegenover collegas en klanten, en dus ook andere soorten van arbeid die in de praktijk wel van pas kunnen komen.<br>
                                     </p>';
         $html .= '  </div>';
         $html .= '  </div>';
         $html .= '  </div>';
         $html .= '  <div class="rightcolumn1">';
         $html .= '      <div class="rightcard">';
-        $html .= '      <p>
-                            heloo
-                            </p>';
+        $html .= '    <div class="link"><a href="#doppiostage">Om terug tegaan naar de informatie over mijn stage bij Doppio Espresso!</a></div>';
         $html .= '      </div>';
         $html .= '  </div>';
         $html .= '</div>';
@@ -295,15 +320,131 @@ class ContentController
         echo $html; 
     }
 
+    public function mijnschool()
+    {
+        $html = '';
+        $html .= '<div class="row">';
+        $html .= '  <div class="card">';
+        $html .= '    <h2>Mijn school</h2>';
+        $html .= '  <div class="nestedcard">';
+        $html .= '    <h2>Basis Onderwijs</h2>';
+        $html .= '<div class="row1">';
+        $html .= '      <div class="column-container1">';
+        $html .= '      <div class="leftcolumn2">';
+        $html .= '    <h4>OBS Vleuterweide</h4>';
+        $html .= '    <h6>augustus 2009 tot juni 2017</h6>';
+        $html .= '    <p>
+        Mijn basisschooltijd was een beetje chaotisch. <br><br>
+        Aan het einde van groep 2 moest ik opeens naar een ander gebouw en werden de klassen opgesplitst.<br><br>
+        Vandaar de twee fotos aan de zijkant, waarbij de bovenste bekend stond als de roze school en de onderste als de zwarte.<br>
+        Heel knap hoe we die namen hebben bedacht.<br><br>
+        Vervolgens heb ik dus van groep 3 tot en met groep 8 op de "zwarte" school gezeten.<br>
+        In de basis school gebeurt natuurlijk niet veel spannends, dus ik heb niet per se iets interessants te vertellen, behalve dat ik hier al duidelijke tekenen liet zien van werken met ICT.<br><br>
+        Zo hielp ik iedereen met hun mobiele problemen en dergelijke.<br><br>
+        Dus dat was al een grappige teaser naar hoe de rest van mijn carrière eruit zou zien.<br>
+        </p>';
+        $html .= '  </div>';
+        $html .= '  <div class="rightcolumn2">';
+        $html .= '    <img src="media/fotos/obsvleuterweide1.jpg" alt="Een foto van mijn basis school die niet kon inladen">';
+        $html .= '    <img src="media/fotos/obsvleuterweide2.jpg" alt="Een andere foto van mijn basis school die niet kon inladen">';
+        $html .= '  </div>';
+        $html .= '  </div>';
+        $html .= '  </div>';
+        $html .= '  </div>';
+        $html .= '  <div class="nestedcard">';
+        $html .= '    <h2>VMBO</h2>';
+        $html .= '<div class="row1">';
+        $html .= '      <div class="column-container1">';
+        $html .= '      <div class="leftcolumn2">';
+        $html .= '    <h4>Wellant College</h4>';
+        $html .= '    <h6>augustus 2017 tot juni 2021</h6>';
+        $html .= '    <p>
+        Mijn middelbare school heb ik op kader niveau gedaan, wat mij werd aangeraden aan het einde van groep 8. <br>
+        We waren vanaf het begin al overtuigd dat het Wellant College in Montfoort (nu bekend als Yuverta) perfect voor mij zou zijn. <br>
+        En dat klopte.<br><br>
+        Ik heb 4 jaar op die school gezeten en succesvol mijn examens afgerond. <br><br>
+        Het Wellant staat natuurlijk bekend als een boerenschool, dus als u hulp nodig heeft om te kijken of uw koe overgewicht heeft, ben ik de man.<br><br>
+        Maar naast dat heb ik ook veel ervaring opgedaan in praktijkvakken zoals: Food, Techniek, Bloem en Design, Dier, Groen, en als laatste hadden we nog het IT lab. <br>
+        Helaas heb ik bijna geen tijd daar kunnen doorbrengen, maar alle andere praktijkvakken waren erg leuk en leerzaam.<br><br>
+        Natuurlijk had ik ook de standaard theorievakken zoals Wiskunde, Nederlands, Engels, Rekenen, Biologie, NASK, een beetje Duits en nog Mens en Maatschappij.<br><br>
+        Mijn derde en vierde jaar hier zijn een beetje overhoop gegooid door corona en dat was allemaal niet zo prettig. <br>
+        Maar tijdens de lockdown kreeg ik de kans om even te pauzeren en te reflecteren op wie ik ben, wie ik wil zijn, en wat ik moet doen om daar te komen.<br><br>
+        Na al dat gedoe kon ik gelukkig weer terug naar school, waar ik in één keer mijn diploma heb gehaald en meteen ben doorgegaan naar mijn MBO-opleiding Software Developer op het ROC.<br><br>
+        Nu vind ik het wel jammer dat ik geen gala heb gehad, maar ik hoop een herkansing te krijgen op het ROC.<br>
+        </p>';
+        $html .= '  </div>';
+        $html .= '  <div class="rightcolumn2">';
+        $html .= '    <img class=fakeimg1 src="media/fotos/wellantcollege.jpg" alt="Een foto van mijn middelbare school die niet kon inladen">';
+        $html .= '    <img class=fakeimg1 src="media/fotos/yuverta.jpg" alt="Nog een foto van mijn middelbare school die niet kon inladen">';
+        $html .= '  </div>';
+        $html .= '  </div>';
+        $html .= '  </div>';
+        $html .= '  </div>';
+        $html .= '  <div class="nestedcard">';
+        $html .= '    <h2>MBO</h2>';
+        $html .= '<div class="row1">';
+        $html .= '      <div class="column-container1">';
+        $html .= '      <div class="leftcolumn2">';
+        $html .= '    <h4>ROC Midden Nederland</h4>';
+        $html .= '    <h6>augustus 2021 tot juni 2024</h6>';
+        $html .= '    <p>
+        Over het ROC gesproken, daar heb ik natuurlijk ook een verhaaltje over.<br>
+        Maar dat verhaal is nog niet af, want ik ben nog steeds bezig.<br><br>
+        Ik ben hier dus begonnen toen corona net weer aan het zakken was, en dat was wel heel erg fijn. <br><br>
+        Wat betreft schoolervaring is het ROC echt heel fijn; het voelde meteen alsof ik hier was om wat te gaan leren en niet zomaar stil te zitten.<br><br>
+        Mijn verwachting was vooral dat ik uit mijn hoofd zou leren hoe ik moet programmeren, dat ik bij wijze van spreken nooit meer zou moeten googelen tijdens het developen. <br>
+        Nu heb ik geleerd dat dat helemaal niet nodig is. <br><br>
+        Ik heb juist nu geleerd hoe ik mezelf talen en trucjes moet leren in plaats van 3 jaar lang op school zitten en dan alles in mijn hoofd hebben zitten.<br><br>
+        Het eerste jaar was eerst heel erg gefocust op lessen. <br>
+        Deze lessen bestonden uit: Back-End, Front-End, Projecten, Projectmanagement, ICT_Skills en een beetje Python.<br><br>
+        Ook hadden we nog theoretische lessen zoals Nederlands, Rekenen en Engels.<br><br>
+        Dit was eigenlijk hoe jaar 1 eruitzag - heel simpel maar leerzaam en legde een sterke basis voor de aankomende jaren.<br><br><br>
+        Hierna begon leerjaar 2, waar de eerste helft van het jaar bestond uit stage lopen.<br>
+        Dit deed ik bij Stenniz Workshops (<a style="text-decoration:none; color:gray;" href="index.php?op=mijnwerk&#stennizworkshops">voor meer informatie daarover klik hier</a>). <br><br>
+        Het tweede helft van het tweede jaar was ik weer terug op school. <br>
+        Alleen was nu alles anders. 
+        Dat ziet u ook op de 2e foto, daar is de binnekant helemaal omgebouwd om een klantoor te simuleren.<br><br>
+        Lessen waren nu bijna elke dag hetzelfde, en de lessen bestonden uit werken aan een websitepakket genaamd Jarvis/Bitacademy. <br>
+        Dit was een heel leerzaam pakket, maar het was gewoon niet heel handig om dit op school te komen doen. <br>
+        Het zou perfect zijn om vanuit huis te werken met dit pakket, maar dat deden wij natuurlijk niet. <br><br>
+        Deze periode van de opleiding genoot ik niet zo van, de moed zakte me hier een beetje in de schoenen.<br><br><br>
+        Maar toen kwam het derde jaar, waarvan ik in de eerste helft weer lessen volg en de tweede helft weer stage moet gaan lopen, waar heb ik nog niet zeker gevonden.<br><br>
+        In de eerste helft van dit jaar hebben ze een beetje de problemen van vorig jaar gecorrigeerd. <br>
+        We werken nu amper in Jarvis, waar ik heel blij mee ben.<br>
+        We volgen nu dus gewoon weer lessen van docenten die voor in het lokaal staan. <br><br>
+        Wie had gedacht dat je dat zo erg kon missen.<br><br>
+        En dan komen we bij nu, het moment dat ik deze website schrijf in de hoop dat een stagebedrijf het leest en mij wilt aannemen.<br><br>
+        Dus...<br><br>
+        Work In Progress.<br>
+        </p>';
+        $html .= '  </div>';
+        $html .= '  <div class="rightcolumn2">';
+        $html .= '    <img class=fakeimg1 src="media/fotos/ROC.jpg" alt="Een foto van mijn opleiding die niet kon inladen">';
+        $html .= '    <img class=fakeimg1 src="media/fotos/roc2.jpg" alt="Een andere foto van mijn opleiding die niet kon inladen">';
+        $html .= '  </div>';
+        $html .= '  </div>';
+        $html .= '  </div>';
+        $html .= '  </div>';
+        $html .= '  </div>';
+        $html .= '</div>';
+        echo $html;
+    }
+
     public function overmij()
     {
+        $count = $this->Functions->currentAgeCount();
         $html = '';
         $html .= '<div class="row">';
         $html .= '<div class="leftcolumn">';
         $html .= '  <div class="card">';
         $html .= '    <h2>Over mij</h2>';
-        $count = $this->Functions->currentAgeCount();
-        $html .= '    <p>ik ben momenteel ' . $count . ' jaar oud</p>';
+        $html .= '    <p>
+        Nou, mijn naam is Thijs Rietveld.<br><br>
+        ik ben ' . $count . ' jaar oud.<br><br>
+        Deze portfolio-website gaat dus over mij. <br><br>
+        Maar naast mijn werk en schoolervaring heb ik natuurlijk veel meer te vertellen.<br>
+        
+        </p>';
         $html .= '  </div>';
         $html .= '</div>';
 
@@ -320,35 +461,12 @@ class ContentController
 
         $html .= '  <div class="card">';
         $html .= '    <h3>Mijn CV</h3>';
-        $html .= '    <div class="link"><a href="media\Curriculum Vitae Thijs Rietveld.pdf" download>Download mijn CV</a></div>';
+        $html .= '    <div class="link"><a href="media\pdf\Curriculum Vitae Thijs Rietveld.pdf" download>Download mijn CV</a></div>';
         $html .= '  </div>';
         $html .= '</div>';
         $html .= '</div>';
         echo $html;
     }
-
-    public function mijnschool()
-    {
-        $html = '';
-        $html .= '<div class="row">';
-        $html .= '<div class="leftcolumn">';
-        $html .= '  <div class="card">';
-        $html .= '    <h2>Mijn school</h2>';
-        $html .= '    <p>Some text..</p>';
-        $html .= '    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>';
-        $html .= '  </div>';
-        $html .= '</div>';
-
-        $html .= '<div class="rightcolumn">';
-        $html .= '  <div class="card">';
-        $html .= '    <img class="fakeimg" src="media/fotos/Afbeelding1.jpg" alt="Een foto van mij die niet kon inladen">';
-        $html .= '  </div>';
-
-        $html .= '</div>';
-        $html .= '</div>';
-        echo $html;
-    }
-
 
 
     public function contact()
@@ -357,7 +475,7 @@ class ContentController
         $html .= '<div class="row">';
         $html .= '<div class="leftcolumn">';
         $html .= '  <div class="card">';
-        $html .= '    <h2>De contact pagina</h2>';
+        $html .= '    <h2>Contact</h2>';
         $html .= '      <form action="index.php?op=contactprocess" method="post">';
         $html .= '          <label for="fname">Voornaam</label>';
         $html .= '          <input type="text" id="fname" name="fname" placeholder="Uw voornaam...">';
@@ -368,7 +486,7 @@ class ContentController
         $html .= '          <label for="email">E-mail</label>';
         $html .= '          <input type="text" id="email" name="email" placeholder="Uw e-mailadres...">';
         $html .= '          <label for="company">Bedrijf</label>';
-        $html .= '          <input type="text" id="company" name="company" placeholder="Uw bedrijfs naam...">';
+        $html .= '          <input type="text" id="company" name="company" placeholder="Uw bedrijfsnaam...">';
         $html .= '          <label for="subject">Vraag</label>';
         $html .= '          <textarea id="subject" name="subject" placeholder="Wat is uw vraag?..." style="height:200px"></textarea>';
         $html .= '          <input type="submit" value="Verstuur">';

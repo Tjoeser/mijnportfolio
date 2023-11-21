@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="media/styledark.css">
+    <link rel="stylesheet" href="media/styles.sass">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="icon" href="media/fotos/logo-no-background2-removebg-preview.png" type="image/x-icon"/>
+    <link rel="icon" href="media\fotos\favicon.ico" type="image/x-ico"/>
     <title>Thijs Rietveld</title>
 </head>
 <body>
