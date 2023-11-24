@@ -5,6 +5,7 @@
 <script src="misc/js/emailcopy.js"></script>
 <script src="misc/js/scroll.js"></script>
 <script src="misc/js/javascript.js"></script>
+<script src="misc/js/background.js"></script>
 
 </body>
 </html>

@@ -90,7 +90,6 @@ class ContentController
         $html .= '  </div>';
         $html .= '</div>';
         $html .= '</div>';
-
         echo $html;
     }
 
@@ -101,7 +100,7 @@ class ContentController
         $html .= '      <div class="column-container1">';
         $html .= '      <div class="leftcolumn1">';
         $html .= '          <div class="card" style="--color: #0f0;">';
-        $html .= '              <h1>Hier zal ik vertellen wat ik voor opdrachten, stages en werk heb gedaan.</h1>';
+        $html .= '              <h2>Hier zal ik vertellen wat ik voor opdrachten, stages en werk heb gedaan.</h2>';
         $html .= '          </div>';
         $html .= '      </div>';
         $html .= '  <div class="rightcolumn1">';
@@ -439,12 +438,45 @@ class ContentController
         $html .= '  <div class="card">';
         $html .= '    <h2>Over mij</h2>';
         $html .= '    <p>
-        Nou, mijn naam is Thijs Rietveld.<br><br>
-        ik ben ' . $count . ' jaar oud.<br><br>
-        Deze portfolio-website gaat dus over mij. <br><br>
+        Mijn naam is Thijs Rietveld.<br>
+        Ik ben ' . $count . ' jaar oud.<br><br>
+        Deze portfolio website gaat dus over mij. <br>
         Maar naast mijn werk en schoolervaring heb ik natuurlijk veel meer te vertellen.<br>
-        
         </p>';
+        $html .= '  <div class="nestedcard">';
+        $html .= "    <h2>Hobby's</h2>";
+        $html .= "    <p>
+        In mijn vrije tijd vind ik het heel leuk om te werken aan mijn eigen projecten.<br><br>
+        Denk bijvoorbeeld aan mijn eigen games ontwikkelen of buiten school aan school projecten werken.<br>
+        Naast web of games speel ik ook hier en daar met het ontwikkelen van applicaties.<br>
+        Ook kan ik deze website wel als een product van mijn hobby's zien.<br><br>
+        En naast alle mooie development dingetjes geniet ik ook wel als leuke spelletjes als God of War of The Last of Us.<br><br>
+        Zelf vind ik het ook heel belangrijk dat ik mijzelf op de hoogte hou van alle films en series en bezoek ik vaak mijn werk als een bezoeker inplaats van werknemer.<br><br>
+        Nogal standaard zou ik dus zeggen.<br>
+        </p>";
+        $html .= '  </div>';
+        $html .= '  <div class="nestedcard">';
+        $html .= "    <h2>Geschiedenis</h2>";
+        $html .= '    <p>
+        Als u kijkt op deze site zult u een hele timeline vinden van mijn school en werk ervaring tot nu.<br><br>
+        Dus daar zal ik u hier niet nogeens mee lastig vallen.<br>
+        Ik kan u wel vertellen over wat daar tussendoor gebeurden.<br>
+        <br><br>
+        Sinds mijn geboorte woon ik al in het zelfde huis in Utrecht.
+        Heel dichtbij mijn basisschool en het winkelcentrum dus dat was perfect als kind.<br>
+        Op een dag werdt ik wat ouder en was het verstandig als ik een keer wat verder van huis ging.<br><br>
+        Dus toen kwam het perfect uit dat ik naar Montfoort mocht fietsen elke dag voor mijn middelbareschool.<br>
+        Ook kon ik nu voor het eerst in mijn eentje op de bus wat ik echt heel leuk vond.<br><br>
+        Op deze school heb ik ook voor het eerst een opdracht gekregen om een game te gaan bouwen.<br>
+        Dat was ook wel heel leuk omdat ik hier toch echt wel aan software development zat te denken.<br><br>
+        Nouja toen was ik klaar met de middelbare en toen mocht ik opeens een hele andere route naar school nemen elke dag.<br>
+        En dan reflecteer je toch opeens hoe makkelijk het was om te zeuren over 5 minuten lopen naar school.<br><br>
+        Maarja dat hoort er ook allemaal bij denk ik.<br><br>
+        Nu zit ik dus op het ROC in Nieuwegein en probeer ik een beetje mezelf op te sommen op een websitje.<br><br>
+        Ik hoop dat dat een beetje gelukt is en u mijn nu heeft leren kennen.<br>
+        Maar als u nog vragen heeft kunt u altijd naar de contact pagina in gaan en het formulier invullen.<br>
+        </p>';
+        $html .= '  </div>';
         $html .= '  </div>';
         $html .= '</div>';
 

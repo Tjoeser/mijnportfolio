@@ -11,11 +11,25 @@ dark green #13472E */
 body {
   font-family: Arial;
   padding: 10px;
-  background: #0d1b2a;
   min-height: 98vh;
   display: flex;
   flex-direction: column;
   color: white;
+  background: #0d1b2a;
+}
+
+.crystal {
+  z-index: -1;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 220, 185, 0.8);
+  box-shadow: 0 0 20px rgba(255, 220, 185, 0.8),
+              0 0 40px rgba(255, 220, 185, 0.8),
+              0 0 60px rgba(255, 220, 185, 0.8),
+              0 0 80px rgba(255, 220, 185, 0.8),
+              0 0 0 8px rgba(255, 220, 185, .1);
+  border-radius: 50%;
 }
 
 /* Header/Blog Title */
