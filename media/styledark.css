@@ -19,6 +19,8 @@ body {
 }
 
 .crystal {
+  top: 10%;
+  left: 8%;
   z-index: -1;
   position: absolute;
   width: 20px;
