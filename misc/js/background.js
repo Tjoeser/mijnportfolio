@@ -1,7 +1,7 @@
 var MR = function (X) { return Math.random() * X }, TwL = TweenLite, G = document.querySelectorAll('.crystal');
 
 function BTweens() {
-    var W = window.innerWidth, H = window.innerHeight, C = 4000;
+    var W = window.innerWidth, H = window.innerHeight, C = 2000;
     for (var i = G.length; i--;) {
         var c = C, BA = [], GWidth = G[i].offsetWidth, GHeight = G[i].offsetHeight;
         while (c--) { 
