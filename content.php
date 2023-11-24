@@ -86,7 +86,7 @@ class ContentController
         $html .= '<div class="row">';
         $html .= '  <div class="homecard">';
         $html .= '    <h2>Welkom op mijn website</h2>';
-        $html .= '    <p>Ik heet u graag welkom en kijk gerust rond naar mijn vele prestaties en geschiedenis</p>';
+        $html .= '    <p>Ik heet u graag welkom en kijk gerust rond naar mijn geschiedenis en prestaties</p>';
         $html .= '  </div>';
         $html .= '</div>';
         $html .= '</div>';
@@ -120,7 +120,7 @@ class ContentController
                         </p>';
         $html .= '    <p>
                         Dit project is tot stand gekomen met de kennis die ik tijdens mijn lessen heb opgedaan.<br>
-                        Ik heb hulp gezocht door het doorlichten van mijn eigen code en een eenvoudigere versie ervan gemaakt voor een simpele "low traffic" site.<br><br>
+                        Ik heb geleerd van het doorlichten van mijn eigen code en er een eenvoudigere versie ervan gemaakt voor een simpele "low traffic" site.<br><br>
                         Daarnaast heeft Chat GPT me geholpen om mijn mailsysteem werkend te krijgen (dat bleek wat ingewikkelder dan gedacht).<br>
                         Het heeft zelfs wat CSS-styling bedacht voor mijn website, wat ik een leuke uitdaging vond.<br><br>
                         Al met al was dit project niet alleen leuk om te doen, maar het bracht ook onverwachte uitdagingen met zich mee.<br>
@@ -153,7 +153,7 @@ class ContentController
                         De repository is gemaakt door een mede-stagiair die al vertrokken was voordat ik begon.<br>
                         De website was nogal rommelig en de code was verre van perfect. <br>
                         De repository zelf was ook behoorlijk chaotisch.<br><br>
-                        Ik en twee klasgenoten, die ook mijn mede-stagiairs waren, hebben ons uiterste best gedaan om het geheel wat te verbeteren.<br>
+                        Twee klasgenoten, mede-stagiares, en ik hebben ons uiterste best gedaan om het geheel wat te verbeteren.<br>
                         </p>';
         $html .= '    <p>Ik ben niet bijzonder trots op deze repository, maar het was toch een belangrijke stap in mijn ontwikkeling</p>';
         $html .= ' </div>';
@@ -192,13 +192,13 @@ class ContentController
         $html .= '    <p>
                         Mijn tweede stage heeft zich volledig gericht op het gebied van ICT.<br><br>
                         In deze stage begon ik met het assisteren van mijn begeleider bij het draaiende houden van het "buurtplein".<br><br>
-                        Voor de duidelijkheid, ik en mijn baas werkten voor een bedrijf genaamd Movactor, dat samenwerkte met het bedrijf Buurtpleinen om locaties te creëren en te onderhouden. <br><br>
+                        Voor de duidelijkheid, mijn baas en ik werkten voor een bedrijf genaamd Movactor, dat samenwerkte met het bedrijf Buurtpleinen om locaties te creëren en te onderhouden. <br><br>
                         Buurtpleinen was als het ware de body, terwijl Movactor de brain was.<br><br>
                         Nadat ik mijn baas een tijdje had geholpen en tegelijkertijd mijn eigen workshop genaamd "Computerhulp" had opgezet, begon ik eindelijk met mijn eigen taken.<br><br>
                         In deze workshop was mijn hoofdtaak om mensen, voornamelijk ouderen, te helpen met hun ICT-gerelateerde problemen.<br>
                         De mensen stroomde nou niet perse binnen maar het was genoeg om elke dag wat te doen.<br><br>
                         Desondanks had ik na verloop van tijd een leuk aantal terugkerende gezichten in mijn workshop. <br>
-                        Dus, met zekerheid kan ik zeggen dat ik veel heb geleerd over geduldig omgaan met oudere mensen en hen helpen met hun ICT-problemen.<br><br>
+                        Dus ik kan wel zeggen dat ik veel heb geleerd over geduldig omgaan met oudere mensen en hen helpen met hun ICT-problemen.<br><br>
                         Ook hier kreeg ik een aanbod voor een terugkerende stageplek, maar helaas is dit vanwege de tweede golf van de coronapandemie niet doorgegaan.
                         </p>';
         $html .= '  </div>';
@@ -232,12 +232,12 @@ class ContentController
                         In het begin was ik een beetje teleurgesteld in het werk, ik had er namelijk meer van verwacht.<br><br>
                         Maar bij nader inzien heb ik er toch best wel van genoten en was het vooral prettig dat ik mijn programmeerkunsten kon laten zien bij een laagdrempelig bedrijf.<br><br>
                         Mijn stagebegeleider was een interessant figuur, maar ik ben toch blij met de tijd die ik met hem heb kunnen doorbrengen. <br>
-                        Communiceren met hem was namelijk best lastig en hij was gek genoeg heel achterdochtig over mij en mijn werk.<br><br>
+                        Communiceren met hem was namelijk best lastig en hij was gek genoeg heel achterdochtig.<br><br>
                         Uiteindelijk heb ik behoorlijk wat geleerd en mogen uitproberen. <br><br>
                         Dus ik ben tevreden.</p>';
         $html .= '  </div>';
         $html .= '  <div class="nestedinnestedcard">';
-        $html .= '    <h4 id="stennizworkshops">Mijn volgende stage</h4>';
+        $html .= '    <h4>Mijn volgende stage</h4>';
         $html .= '    <h6>5 februari tot 14 juni</h6>';
         $html .= '    <p>
                              Als u overweegt om mij als stagiair aan te nemen voor uw bedrijf, kan ik slechts één ding zeggen: als u het niet probeert, zult u het nooit weten...</p>';
@@ -263,10 +263,9 @@ class ContentController
         $html .= '    <h6>agusutus 2018 tot juni 2022</h6>';
         $html .= '                  <p>
                                     Mijn eerste baan was vrij bekend.<br>
-                                    De krantenwijk was een eenvoudige klus die ik elke donderdag met mijn vader en mijn zusje deed. <br><br>
+                                    De krantenwijk was een eenvoudige klus die ik elke donderdag deed.<br><br>
                                     Het was geen inspirerend werk, maar toch viel het wel mee.<br><br>
-                                    Helaas heb ik niet veel boeiends te vertellen.<br><br>
-                                    Ik heb dit 3 jaar volgehouden, en het is tot nu toe mijn langstlopende baan.<br>
+                                    Ik heb dit 3 jaar gedaan en het is tot nu toe mijn langstlopende baan.<br>
                                     </p>';
         $html .= '  </div>';
         $html .= '              <div class="nestedcard">';
@@ -276,9 +275,9 @@ class ContentController
         Dit was mijn eerste baan die ik beschouw als een echte baan.<br><br>
         Deze kans werd mij aangeboden na een half jaar stage te hebben gelopen, zoals ik eerder heb aangegeven.<br><br>
         Ik heb hier ongeveer een half jaartje gewerkt, totdat door corona het verstandiger leek om iets anders te gaan zoeken. <br>
-        In totaal ben ik bijna een jaar werkzaam geweest.<br><br>
+        Met de staige erbij ben ik hier dus bijna een jaar werkzaam geweest.<br><br>
         Mijn taken bestonden uit tafels schoonmaken, serveren, bestellingen opnemen, en op speciale dagen mocht ik zelfs de broodjes klaarmaken.<br>
-        Ook werd ik tussendoor geïntroduceerd in het zetten van koffie en thee met een speciaal apparaat.<br><br>
+        Ook werd ik tussendoor geïntroduceerd in de wereld van het zetten van koffie en thee met een speciaal apparaat.<br><br>
         Dit was een interessante leerervaring waar ik altijd dankbaar voor zal zijn. <br>
         Maar ik heb wel ontdekt dat de horeca niet echt iets voor mij is. <br><br>
         Ook merkte ik dat de begeleiders mij nog steeds als stagiair zagen en ik dus nog steeds stagiairtaken kreeg.<br>
@@ -289,23 +288,24 @@ class ContentController
         $html .= '              <div class="nestedcard">';
         $html .= '                  <h3 id=>Pathe Utrecht Leidscherijn</h3>';
         $html .= '    <h6>5 februari 2022 tot het heden</h6>';
-        $html .= '                  <p>
+        $html .= "                  <p>
         Mijn tweede baan, waar ik momenteel nog werk, is bij Pathe.<br><br>
         Al sinds ik voor het eerst stages moest zoeken voor de middelbare school dacht ik aan Pathe.<br>
-        Maar mijn ouders zeiden: "Nee, zoek een stage die past bij horeca of ICT."<br><br>
+        Maar mijn ouders zeiden: 'Nee, zoek een stage die past bij horeca of ICT.'<br><br>
         Nou, dat is ook helemaal goed gekomen, want die heb ik namelijk ook gedaan.<br><br>
-        Maar toen ik een tijdje niet meer werkzaam was, dacht ik: "Nu wil ik wel weer iets gaan doen."<br>
+        Maar toen ik een tijdje niet meer werkzaam was, dacht ik: 'Nu wil ik wel weer iets gaan doen.'<br>
         En toen herinnerde ik me opeens waar ik al die tijd zo graag stage wilde lopen.<br><br>
-        Dus ik ben meteen gaan mailen, en in een mum van tijd stond ik op de werkvloer.<br><br>
-        Het werk bij Pathe bestaat vooral uit schoonmaken, en dat betekent van de zalen, de vloer, de toiletten, de prullenbakken en de bar.<br><br>
-        Dan kom ik bij mijn volgende punt, en dat is het soort werk dat je kunt doen: Service, F&B, Portier en Kassa. <br>
-        Ook hebben we nog EVENT diensten waarin een bedrijf een zaal heeft gehuurd, en wij als werknemers ervoor zorgen dat het een prettig bezoek is.<br>
+        Dus ik ben meteen contact gaan zoeken en in een mum van tijd stond ik op de werkvloer.<br><br>
+        Het werk bij Pathe bestaat vooral uit schoonmaken van de zalen, de vloer, de toiletten, de prullenbakken en de bar.<br><br>
+        De diensten waar je voor kan worden ingeroosterd zijn: Service, F&B, Portier en Kassa. <br>
+        Ook hebben we nog EVENT diensten waarin een bedrijf een zaal heeft gehuurd en wij als werknemers ervoor zorgen dat het een prettig bezoek is.<br>
         Verder betekent Service dus dat we vooral schoonmaken en de zalen in- en uitgaan en klaarzetten voor de volgende voorstelling.<br>
-        Bar is waar wij de drankjes en snacks verkopen aan de bezoekers, en dat betekent dus ook veel lachen en zwaaien.<br>
+        F&B is waar wij de drankjes en snacks verkopen aan de bezoekers en dat betekent dus ook veel lachen en zwaaien.<br>
         En Portier en Kassa zijn meer het verkopen en scannen van kaartjes en eventuele andere vormen van klantenservice.<br><br>
         Ik heb het bij Pathe enorm naar mijn zin en heb daar mijn beste vrienden ontmoet.<br><br>
-        Dus als conclusie kan ik vertellen dat ik hier heel veel heb geleerd om sociaal en open te zijn tegenover collegas en klanten, en dus ook andere soorten van arbeid die in de praktijk wel van pas kunnen komen.<br>
-                                    </p>';
+        Dus als conclusie kan ik vertellen dat ik hier heb geleerd om sociaal en open te zijn tegenover collega's en klanten.<br>
+        Daarnaast dus ook andere soorten van arbeid die in de praktijk wel van pas kunnen komen.<br>
+                                    </p>";
         $html .= '  </div>';
         $html .= '  </div>';
         $html .= '  </div>';
@@ -338,8 +338,8 @@ class ContentController
         Vandaar de twee fotos aan de zijkant, waarbij de bovenste bekend stond als de roze school en de onderste als de zwarte.<br>
         Heel knap hoe we die namen hebben bedacht.<br><br>
         Vervolgens heb ik dus van groep 3 tot en met groep 8 op de "zwarte" school gezeten.<br>
-        In de basis school gebeurt natuurlijk niet veel spannends, dus ik heb niet per se iets interessants te vertellen, behalve dat ik hier al duidelijke tekenen liet zien van werken met ICT.<br><br>
-        Zo hielp ik iedereen met hun mobiele problemen en dergelijke.<br><br>
+        In de basisschool gebeurt natuurlijk niet veel spannends dus ik heb niet per se iets interessants te vertellen, behalve dat ik hier al duidelijke tekenen liet zien van werken met ICT.<br><br>
+        Zo hielp ik iedereen met hun mobiele devices en dergelijke.<br><br>
         Dus dat was al een grappige teaser naar hoe de rest van mijn carrière eruit zou zien.<br>
         </p>';
         $html .= '  </div>';
@@ -364,12 +364,12 @@ class ContentController
         Ik heb 4 jaar op die school gezeten en succesvol mijn examens afgerond. <br><br>
         Het Wellant staat natuurlijk bekend als een boerenschool, dus als u hulp nodig heeft om te kijken of uw koe overgewicht heeft, ben ik de man.<br><br>
         Maar naast dat heb ik ook veel ervaring opgedaan in praktijkvakken zoals: Food, Techniek, Bloem en Design, Dier, Groen, en als laatste hadden we nog het IT lab. <br>
-        Helaas heb ik bijna geen tijd daar kunnen doorbrengen, maar alle andere praktijkvakken waren erg leuk en leerzaam.<br><br>
+        Helaas heb ik hier bijna geen tijd kunnen doorbrengen maar alle andere praktijkvakken waren erg leuk en leerzaam.<br><br>
         Natuurlijk had ik ook de standaard theorievakken zoals Wiskunde, Nederlands, Engels, Rekenen, Biologie, NASK, een beetje Duits en nog Mens en Maatschappij.<br><br>
         Mijn derde en vierde jaar hier zijn een beetje overhoop gegooid door corona en dat was allemaal niet zo prettig. <br>
         Maar tijdens de lockdown kreeg ik de kans om even te pauzeren en te reflecteren op wie ik ben, wie ik wil zijn, en wat ik moet doen om daar te komen.<br><br>
         Na al dat gedoe kon ik gelukkig weer terug naar school, waar ik in één keer mijn diploma heb gehaald en meteen ben doorgegaan naar mijn MBO-opleiding Software Developer op het ROC.<br><br>
-        Nu vind ik het wel jammer dat ik geen gala heb gehad, maar ik hoop een herkansing te krijgen op het ROC.<br>
+        Nu vind ik het wel jammer dat ik geen gala heb gehad maar ik hoop een herkansing te krijgen op het ROC.<br>
         </p>';
         $html .= '  </div>';
         $html .= '  <div class="rightcolumn2">';
@@ -389,30 +389,32 @@ class ContentController
         $html .= '    <p>
         Over het ROC gesproken, daar heb ik natuurlijk ook een verhaaltje over.<br>
         Maar dat verhaal is nog niet af, want ik ben nog steeds bezig.<br><br>
-        Ik ben hier dus begonnen toen corona net weer aan het zakken was, en dat was wel heel erg fijn. <br><br>
-        Wat betreft schoolervaring is het ROC echt heel fijn; het voelde meteen alsof ik hier was om wat te gaan leren en niet zomaar stil te zitten.<br><br>
-        Mijn verwachting was vooral dat ik uit mijn hoofd zou leren hoe ik moet programmeren, dat ik bij wijze van spreken nooit meer zou moeten googelen tijdens het developen. <br>
+        Ik ben hier dus begonnen toen corona net weer aan het zakken was en dat was wel heel erg fijn. <br><br>
+        Wat betreft schoolervaring is het ROC echt heel fijn. <br>
+        Het voelde meteen alsof ik hier was om wat te gaan leren en niet zomaar stil te zitten.<br><br>
+        Mijn verwachting was vooral dat ik uit mijn hoofd zou leren hoe ik moet programmeren en dat ik bij wijze van spreken nooit meer zou moeten googelen tijdens het developen. <br>
         Nu heb ik geleerd dat dat helemaal niet nodig is. <br><br>
         Ik heb juist nu geleerd hoe ik mezelf talen en trucjes moet leren in plaats van 3 jaar lang op school zitten en dan alles in mijn hoofd hebben zitten.<br><br>
         Het eerste jaar was eerst heel erg gefocust op lessen. <br>
-        Deze lessen bestonden uit: Back-End, Front-End, Projecten, Projectmanagement, ICT_Skills en een beetje Python.<br><br>
-        Ook hadden we nog theoretische lessen zoals Nederlands, Rekenen en Engels.<br><br>
+        Deze lessen bestonden uit: Back-End, Front-End, Projecten, Projectmanagement, ICT-Skills en een beetje Python.<br><br>
+        Ook hadden we nog theorie-lessen zoals Nederlands, Rekenen en Engels.<br><br>
         Dit was eigenlijk hoe jaar 1 eruitzag - heel simpel maar leerzaam en legde een sterke basis voor de aankomende jaren.<br><br><br>
         Hierna begon leerjaar 2, waar de eerste helft van het jaar bestond uit stage lopen.<br>
         Dit deed ik bij Stenniz Workshops (<a style="text-decoration:none; color:gray;" href="index.php?op=mijnwerk&#stennizworkshops">voor meer informatie daarover klik hier</a>). <br><br>
-        Het tweede helft van het tweede jaar was ik weer terug op school. <br>
-        Alleen was nu alles anders. 
-        Dat ziet u ook op de 2e foto, daar is de binnekant helemaal omgebouwd om een klantoor te simuleren.<br><br>
-        Lessen waren nu bijna elke dag hetzelfde, en de lessen bestonden uit werken aan een websitepakket genaamd Jarvis/Bitacademy. <br>
-        Dit was een heel leerzaam pakket, maar het was gewoon niet heel handig om dit op school te komen doen. <br>
-        Het zou perfect zijn om vanuit huis te werken met dit pakket, maar dat deden wij natuurlijk niet. <br><br>
+        De tweede helft van het tweede jaar was ik weer terug op school. <br>
+        Alleen was nu alles anders.
+        Dat ziet u ook op de 2e foto, daar is de binnenkant helemaal omgebouwd om een klantoor te simuleren.<br><br>
+        Lessen waren nu bijna elke dag hetzelfde en de lessen bestonden uit werken aan een websitepakket genaamd Jarvis/Bitacademy. <br>
+        Dit was een heel leerzaam pakket maar het was gewoon niet heel handig om dit op school te komen doen. <br>
+        Het zou perfect zijn om vanuit huis te werken met dit pakket maar dat deden wij natuurlijk niet. <br><br>
         Deze periode van de opleiding genoot ik niet zo van, de moed zakte me hier een beetje in de schoenen.<br><br><br>
-        Maar toen kwam het derde jaar, waarvan ik in de eerste helft weer lessen volg en de tweede helft weer stage moet gaan lopen, waar heb ik nog niet zeker gevonden.<br><br>
+        Maar toen kwam het derde jaar, waarvan ik in de eerste helft weer lessen volg en de tweede helft weer stage moet gaan lopen. 
+        Een stage plek heb ik alleen nog niet gevonden.<br><br>
         In de eerste helft van dit jaar hebben ze een beetje de problemen van vorig jaar gecorrigeerd. <br>
         We werken nu amper in Jarvis, waar ik heel blij mee ben.<br>
         We volgen nu dus gewoon weer lessen van docenten die voor in het lokaal staan. <br><br>
         Wie had gedacht dat je dat zo erg kon missen.<br><br>
-        En dan komen we bij nu, het moment dat ik deze website schrijf in de hoop dat een stagebedrijf het leest en mij wilt aannemen.<br><br>
+        En dan komen we bij nu, het moment dat ik deze website schrijf in de hoop dat een stagebedrijf het leest en mij wil aannemen.<br><br>
         Dus...<br><br>
         Work In Progress.<br>
         </p>';
@@ -450,31 +452,29 @@ class ContentController
         Denk bijvoorbeeld aan mijn eigen games ontwikkelen of buiten school aan school projecten werken.<br>
         Naast web of games speel ik ook hier en daar met het ontwikkelen van applicaties.<br>
         Ook kan ik deze website wel als een product van mijn hobby's zien.<br><br>
-        En naast alle mooie development dingetjes geniet ik ook wel als leuke spelletjes als God of War of The Last of Us.<br><br>
-        Zelf vind ik het ook heel belangrijk dat ik mijzelf op de hoogte hou van alle films en series en bezoek ik vaak mijn werk als een bezoeker inplaats van werknemer.<br><br>
-        Nogal standaard zou ik dus zeggen.<br>
+        En naast alle mooie development dingetjes geniet ik ook wel van leuke spelletjes als God of War of The Last of Us.<br><br>
+        Zelf vind ik het ook heel belangrijk dat ik op de hoogte blijf van alle films en series en bezoek ik vaak mijn werk als een bezoeker in plaats van als een werknemer.<br>
         </p>";
         $html .= '  </div>';
         $html .= '  <div class="nestedcard">';
         $html .= "    <h2>Geschiedenis</h2>";
         $html .= '    <p>
-        Als u kijkt op deze site zult u een hele timeline vinden van mijn school en werk ervaring tot nu.<br><br>
-        Dus daar zal ik u hier niet nogeens mee lastig vallen.<br>
-        Ik kan u wel vertellen over wat daar tussendoor gebeurden.<br>
-        <br><br>
-        Sinds mijn geboorte woon ik al in het zelfde huis in Utrecht.
+        Als u kijkt op deze site zult u een timeline vinden van mijn school en werk ervaring tot nu.<br><br>
+        Dus daar zal ik u hier niet nog eens mee lastig vallen.<br>
+        Ik kan u wel vertellen over wat daar tussendoor gebeurden.<br><br>
+        Sinds mijn geboorte woon ik al in hetzelfde huis in Vleuten.
         Heel dichtbij mijn basisschool en het winkelcentrum dus dat was perfect als kind.<br>
-        Op een dag werdt ik wat ouder en was het verstandig als ik een keer wat verder van huis ging.<br><br>
-        Dus toen kwam het perfect uit dat ik naar Montfoort mocht fietsen elke dag voor mijn middelbareschool.<br>
+        Op een dag werd ik wat ouder en was het verstandig als ik een keer wat verder van huis ging.<br><br>
+        Dus toen kwam het perfect uit dat ik naar Montfoort mocht fietsen elke dag voor mijn middelbare school.<br>
         Ook kon ik nu voor het eerst in mijn eentje op de bus wat ik echt heel leuk vond.<br><br>
         Op deze school heb ik ook voor het eerst een opdracht gekregen om een game te gaan bouwen.<br>
         Dat was ook wel heel leuk omdat ik hier toch echt wel aan software development zat te denken.<br><br>
-        Nouja toen was ik klaar met de middelbare en toen mocht ik opeens een hele andere route naar school nemen elke dag.<br>
+        Nou ja toen was ik klaar met de middelbare en toen mocht ik opeens een hele andere route naar school nemen elke dag.<br>
         En dan reflecteer je toch opeens hoe makkelijk het was om te zeuren over 5 minuten lopen naar school.<br><br>
-        Maarja dat hoort er ook allemaal bij denk ik.<br><br>
-        Nu zit ik dus op het ROC in Nieuwegein en probeer ik een beetje mezelf op te sommen op een websitje.<br><br>
-        Ik hoop dat dat een beetje gelukt is en u mijn nu heeft leren kennen.<br>
-        Maar als u nog vragen heeft kunt u altijd naar de contact pagina in gaan en het formulier invullen.<br>
+        Maar ja dat hoort er ook allemaal bij denk ik.<br><br>
+        Nu zit ik dus op het ROC in Nieuwegein en ben ik nu deze portfolio website aan het maken.<br><br>
+        Ik hoop dat dit een beetje gelukt is en u mij nu een beetje hebt leren kennen.<br>
+        Maar als u nog vragen heeft, kunt u altijd naar de contact pagina gaan en het formulier invullen.<br>
         </p>';
         $html .= '  </div>';
         $html .= '  </div>';
@@ -511,8 +511,8 @@ class ContentController
         $html .= '      <form action="index.php?op=contactprocess" method="post">';
         $html .= '          <label for="fname">Voornaam</label>';
         $html .= '          <input type="text" id="fname" name="fname" placeholder="Uw voornaam...">';
-        $html .= '          <label for="preposition">Tussenvoegsel</label>';
-        $html .= '          <input type="text" id="preposition" name="preposition" placeholder="Uw tussenvoegsel...">';
+        $html .= "          <label for='preposition'>Tussenvoegsel's</label>";
+        $html .= "          <input type='text' id='preposition' name='preposition' placeholder='Uw tussenvoegsel's...'>";
         $html .= '          <label for="lname">Acternaam</label>';
         $html .= '          <input type="text" id="lname" name="lname" placeholder="Uw achternaam...">';
         $html .= '          <label for="email">E-mail</label>';
@@ -527,7 +527,7 @@ class ContentController
         $html .= '</div>';
         $html .= '<div class="rightcolumn">';
         $html .= '  <div class="card">';
-        $html .= '    <p>U kunt mij ook een mailtje sturen op dit adress</p>';
+        $html .= '    <p>U kunt mij ook een mailtje sturen op dit adres</p>';
         $html .= '     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>';
         $html .= '     <button data-text="thijs0302@gmail.com" class="emailbutton">Kopieer mijn e-mailadres</button>';
         $html .= '     <p id="succesmessage">E-mailadres is succesvol gekopieerd</p>';
