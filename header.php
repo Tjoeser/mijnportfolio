@@ -8,29 +8,14 @@
   <link rel="stylesheet" href="media/starbackground.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
   <link rel="icon" href="media\fotos\favicon.ico" type="image/x-ico" />
   <title>Thijs Rietveld</title>
 </head>
 
 <body>
-
-  <div id="crystal1" class="crystal"></div>
-  <div id="crystal2" class="crystal"></div>
-  <div id="crystal3" class="crystal"></div>
-  <div id="crystal4" class="crystal"></div>
-  <div id="crystal5" class="crystal"></div>
-  <div id="crystal6" class="crystal"></div>
-  <div id="crystal7" class="crystal"></div>
-  <div id="crystal8" class="crystal"></div>
-  <div id="crystal9" class="crystal"></div>
-  <div id="crystal10" class="crystal"></div>
-  <div id="crystal11" class="crystal"></div>
-  <div id="crystal12" class="crystal"></div>
-  <div id="crystal13" class="crystal"></div>
-  <div id="crystal14" class="crystal"></div>
-  <div id="crystal15" class="crystal"></div>
-  <div id="crystal16" class="crystal"></div>
+<div class="bg-animation">
+        <div id="stars"></div>
+    </div>
 
   <div class="header">
     <h1>Mijn Portfolio Website</h1>

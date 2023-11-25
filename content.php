@@ -340,7 +340,7 @@ class ContentController
         Vervolgens heb ik dus van groep 3 tot en met groep 8 op de "zwarte" school gezeten.<br>
         In de basisschool gebeurt natuurlijk niet veel spannends dus ik heb niet per se iets interessants te vertellen, behalve dat ik hier al duidelijke tekenen liet zien van werken met ICT.<br><br>
         Zo hielp ik iedereen met hun mobiele devices en dergelijke.<br><br>
-        Dus dat was al een grappige teaser naar hoe de rest van mijn carrière eruit zou zien.<br>
+        Dus dat was al een grappige teaser naar hoe de rest van mijn carrière eruit zou zien.
         </p>';
         $html .= '  </div>';
         $html .= '  <div class="rightcolumn2">';
@@ -512,7 +512,7 @@ class ContentController
         $html .= '          <label for="fname">Voornaam</label>';
         $html .= '          <input type="text" id="fname" name="fname" placeholder="Uw voornaam...">';
         $html .= "          <label for='preposition'>Tussenvoegsel's</label>";
-        $html .= "          <input type='text' id='preposition' name='preposition' placeholder='Uw tussenvoegsel's...'>";
+        $html .= "          <input type='text' id='preposition' name='preposition' placeholder='Uw tussenvoegsels...'>";
         $html .= '          <label for="lname">Acternaam</label>';
         $html .= '          <input type="text" id="lname" name="lname" placeholder="Uw achternaam...">';
         $html .= '          <label for="email">E-mail</label>';
@@ -557,7 +557,6 @@ class ContentController
         } else {
             $html = '';
             $html .= '<div class="row">';
-            $html .= '<div class="leftcolumn">';
             $html .= '  <div class="homecard">';
             $html .= '    <h2>Login</h2>';
             $html .= '      <form action="index.php?op=loginprocess" method="post">';
@@ -571,7 +570,6 @@ class ContentController
             $html .= '</div>';
             $html .= '</div>';
             $html .= '</div>';
-            $html .= '</div>';
             echo $html;
         }
     }
@@ -582,12 +580,10 @@ class ContentController
             $res = $this->Functions->read($id);
             $html = '';
             $html .= '<div class="row">';
-            $html .= '<div class="leftcolumn">';
             $html .= '  <div class="homecard">';
-            $html .= '    <button onclick="history.back()">Go Back</button>';
+            $html .= '    <button onclick="window.location.href=\'index.php?op=admin&case=true\'">Go Back</button>';
             $html .= $this->Functions->adminreadfunction($res);
             $html .= '  </div>';
-            $html .= '</div>';
             $html .= '</div>';
             $html .= '</div>';
             $html .= '</div>';

@@ -1,7 +1,7 @@
 var succesmessage = document.getElementById('succesmessage');
 succesmessage.style.display = 'none'; // Hide the paragraph
 
-$('.emailbutton').on('click', function (e) {
+$('.emailbutton, .emailbutton2').on('click', function (e) {
   console.log("infcuntion");
   e.preventDefault();
 

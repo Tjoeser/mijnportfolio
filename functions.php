@@ -39,12 +39,10 @@ class Functions
                 $emailErr = "Email is vereist";
                 $html = '';
                 $html .= '<div class="row">';
-                $html .= '<div class="leftcolumn">';
                 $html .= '  <div class="homecard">';
                 $html .= '    <p>' . $emailErr . '</p>';
                 $html .= '    <div class="link"><a href="index.php?op=contact">Terug</a></div>';
                 $html .= '  </div>';
-                $html .= '</div>';
                 $html .= '</div>';
                 $html .= '</div>';
                 $html .= '</div>';
@@ -70,12 +68,10 @@ class Functions
                 }
                 $html = '';
                 $html .= '<div class="row">';
-                $html .= '<div class="leftcolumn">';
                 $html .= '  <div class="homecard">';
                 $html .= '    <p>' . $emailErr . '</p>';
                 $html .= '    <div class="link"><a href="index.php?op=contact">Terug</a></div>';
                 $html .= '  </div>';
-                $html .= '</div>';
                 $html .= '</div>';
                 $html .= '</div>';
                 $html .= '</div>';
@@ -92,7 +88,6 @@ class Functions
         if ($username == $adminusername && $password == $adminpassword) {
             $html = '';
             $html .= '<div class="row">';
-            $html .= '<div class="leftcolumn">';
             $html .= '  <div class="homecard">';
             $html .= '    <p>U bent succesvol ingelogd admin</p>';
             $html .= '      <form action="index.php?op=admin&case=true" method="post">';
@@ -102,19 +97,16 @@ class Functions
             $html .= '</div>';
             $html .= '</div>';
             $html .= '</div>';
-            $html .= '</div>';
             echo $html;
         } else {
             $html = '';
             $html .= '<div class="row">';
-            $html .= '<div class="leftcolumn">';
             $html .= '  <div class="homecard">';
             $html .= '    <p>U bent geen admin</p>';
             $html .= '      <form action="index.php?op=admin" method="post">';
             $html .= '          <input type="submit" value="terug">';
             $html .= '      </form>';
             $html .= '  </div>';
-            $html .= '</div>';
             $html .= '</div>';
             $html .= '</div>';
             $html .= '</div>';
@@ -179,19 +171,21 @@ class Functions
             }
             $currentUrl = $_SERVER['REQUEST_URI'];
             if (strpos($currentUrl, 'id') == true) {
-                $html .= '     <td><button data-text="thijs0302@gmail.com" class="emailbutton">Kopieer mijn e-mailadres</button>';
+                $html .= '     <td>';
                 $html .= "<a class=\"crudfunctionbutton\" href='index.php?op=actions&act=update&id={$row[$uniquecolumn]}'><i class='fa fa-wrench'></i>Update</a>";
             } else {
                 $html .= "<td><a class=\"crudfunctionbutton\" href='index.php?op=actions&act=read&id={$row[$uniquecolumn]}'><i class='fa fa-pencil'></i> Read</a>";
             }
-            $html .= "<a class=\"crudfunctionbutton\" href='index.php?op=actions&act=delete&id={$row[$uniquecolumn]}'><i class='fa fa-trash'></i> Delete</a></td>";
+            $html .= "<a class=\"crudfunctionbutton\" href='index.php?op=actions&act=delete&id={$row[$uniquecolumn]}'><i class='fa fa-trash'></i> Delete</a>";
+            if (strpos($currentUrl, 'id') == true) {
+                $email = $row['email'];
+                $html .= '     <button data-text="' . $email . '" class="emailbutton2">Kopieer dit e-mailadres</button>';
+                $html .= '     <p id="succesmessage">E-mailadres is succesvol gekopieerd</p></td>';
+            }
             $html .= "<tr>";
         }
         $html .= "</table></div><br>";
-        // var_dump($row['email']);
-        // var_dump($key);
-        // var_dump($value);
-        // var_dump($uniquecolumn);
+
         return $html;
     }
 
@@ -228,8 +222,51 @@ class Functions
         return $res;
     }
 
-    public function update()
+    public function update($id)
     {
+        $sql = "SELECT * FROM contact_subs WHERE id = $id";
+        $result = $this->DataHandler->readsData($sql);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $res = $result->fetchAll();
+
+        $html = '';
+        $html .= '<div class="row">';
+        $html .= '  <div class="homecard">';
+        $html .= "<form action='' method='post'>";
+        $html .= "<label>fname</label>";
+        $html .= "<input type='text' name='fname' value='{$res[0]['fname']}'>";
+        $html .= "<label>preposition</label>";
+        $html .= "<input type='text' name='preposition' value='{$res[0]['preposition']}'>";
+        $html .= "<label>lname</label>";
+        $html .= "<input type='text' name='lname' value='{$res[0]['lname']}'>";
+        $html .= "<label>email</label>";
+        $html .= "<input type='text' name='email' value='{$res[0]['email']}'>";
+        $html .= "<label>company</label>";
+        $html .= "<input type='text' name='company' value='{$res[0]['company']}'>";
+        $html .= "<label>subject</label>";
+        $html .= "<input type='text' name='subject' value='{$res[0]['subject']}'>";
+        $html .= "<input type='hidden' name='id' value='{$res[0]['id']}'>";
+        $html .= "<input type='submit' name='submit' value='Opslaan'>";
+        $html .= "<a class='button' href='index.php?op=actions&act=read&id=$id'>back</a>";
+        $html .= "</form>";
+        $html .= "</div>";
+        $html .= "</div>";
+        echo $html;
+
+        if (isset($_POST['submit'])) {
+            $fname = isset($_REQUEST['fname']) ? $_REQUEST['fname'] : '';
+            $preposition = isset($_REQUEST['preposition']) ? $_REQUEST['preposition'] : '';
+            $lname = isset($_REQUEST['lname']) ? $_REQUEST['lname'] : '';
+            $email = isset($_REQUEST['email']) ? $_REQUEST['email'] : '';
+            $company = isset($_REQUEST['company']) ? $_REQUEST['company'] : '';
+            $subject = isset($_REQUEST['subject']) ? $_REQUEST['subject'] : '';
+            $sql = "UPDATE `contact_subs` SET `fname` = '" . $fname . "', `preposition` = '" . $preposition . "', `lname` = '" . $lname . "', `email` = '" . $email . "', `company` = '" . $company . "', `subject` = '" . $subject . "' WHERE id=" . $id;
+            $result = $this->DataHandler->readsData($sql);
+            $result->setFetchMode(PDO::FETCH_ASSOC);
+            header("Location: index.php?op=actions&act=read&id=$id");
+            $res = $result->fetchAll();
+            return $res;
+        }
     }
 
     public function delete($id)
@@ -239,11 +276,9 @@ class Functions
 
         $html = '';
         $html .= '<div class="row">';
-        $html .= '<div class="leftcolumn">';
         $html .= '  <div class="homecard">';
         $html .= '    <h2>Succesvol verwijderd u wordt zo terug gestuurd</h2>';
         $html .= '  </div>';
-        $html .= '</div>';
         $html .= '</div>';
         $html .= '</div>';
         echo $html;
