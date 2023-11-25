@@ -36,3 +36,9 @@ function sendback(){
      }, 2000);
 }
 
+// Add this script to your HTML file
+if (window.location.href.includes("/mijnwerk")) {
+    console.log
+    history.replaceState(null, null, "/index.php?op=mijnwerk");
+}
+

@@ -86,6 +86,7 @@ class Functions
         $adminpassword = ADMIN_PW;
 
         if ($username == $adminusername && $password == $adminpassword) {
+            $this->cookie("adminlogin", $username);
             $html = '';
             $html .= '<div class="row">';
             $html .= '  <div class="homecard">';
@@ -93,7 +94,7 @@ class Functions
             $html .= '      <form action="index.php?op=admin&case=true" method="post">';
             $html .= '          <input type="submit" value="verder">';
             $html .= '      </form>';
-            $html .= '  </div>';
+            $html .= '  </div>';    
             $html .= '</div>';
             $html .= '</div>';
             $html .= '</div>';
@@ -289,6 +290,30 @@ class Functions
          }, 1500);
       </script>
          <?php
+    }
+
+    public function cookie($cookietype, $username){
+        $cookie_name = $cookietype;
+        $cookie_value = $username;
+        if ($cookie_name == "visitorcookie"){
+            setcookie($cookie_name, $cookie_value, time() + (86400 * 14), "/"); // 86400 = 1 day
+        }else{
+            setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day 
+        }
+
+        // var_dump($_COOKIE);
+
+        // if(!isset($_COOKIE[$cookie_name])) {
+        //     echo "Cookie named '" . $cookie_name . "' is not set!";
+        //   } else {
+        //     echo "Cookie '" . $cookie_name . "' is set!<br>";
+        //     echo "Value is: " . $_COOKIE[$cookie_name];
+        //   }
+    }
+
+    public function deletecookie(){
+        setcookie("userLoggedIn", "", time() - 3600);
+        echo "Cookie is deleted.";
     }
 }
 ?>

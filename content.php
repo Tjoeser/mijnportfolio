@@ -43,8 +43,7 @@ class ContentController
                     $this->contact();
                     break;
                 case 'admin':
-                    $admincheck = $case;
-                    $this->admin($admincheck);
+                    $this->admin();
                     break;
                 case 'contactprocess':
                     $this->Functions->contactprocess();
@@ -82,6 +81,7 @@ class ContentController
 
     public function home()
     {
+        $this->Functions->cookie("visitorcookie","visitor");
         $html = '';
         $html .= '<div class="row">';
         $html .= '  <div class="homecard">';
@@ -540,9 +540,9 @@ class ContentController
     }
 
 
-    public function admin($admincheck)
+    public function admin()
     {
-        if ($admincheck == true) {
+        if (isset($_COOKIE['adminlogin'])) {
             $html = '';
             $html .= '<div class="row">';
             $html .= '  <div class="tablereadcard">';
