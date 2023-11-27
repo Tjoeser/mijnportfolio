@@ -439,12 +439,15 @@ class ContentController
         $html .= '<div class="leftcolumn">';
         $html .= '  <div class="card">';
         $html .= '    <h2>Over mij</h2>';
+        $html .= '  <div class="nestedcard">';
+        $html .= "    <h2>Ik ben</h2>";
         $html .= '    <p>
         Mijn naam is Thijs Rietveld.<br>
         Ik ben ' . $count . ' jaar oud.<br><br>
         Deze portfolio website gaat dus over mij. <br>
         Maar naast mijn werk en schoolervaring heb ik natuurlijk veel meer te vertellen.<br>
         </p>';
+        $html .= '  </div>';
         $html .= '  <div class="nestedcard">';
         $html .= "    <h2>Hobby's</h2>";
         $html .= "    <p>

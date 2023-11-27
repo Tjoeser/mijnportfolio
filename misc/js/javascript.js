@@ -11,7 +11,7 @@ document.addEventListener('keydown', function (event) {
                 } else {
                     // They clicked no
                 }
-            }else{
+            } else {
                 if (window.confirm('Wil je naar de home pagina?')) {
                     window.location = "index.php?";
                 } else {
@@ -30,10 +30,10 @@ function isOnAdminPage() {
     return window.location.href.indexOf("admin") !== -1;
 }
 
-function sendback(){
+function sendback() {
     setTimeout(() => {
         window.location.href = 'https://url.com';
-     }, 2000);
+    }, 2000);
 }
 
 // Add this script to your HTML file
@@ -42,3 +42,20 @@ if (window.location.href.includes("/mijnwerk")) {
     history.replaceState(null, null, "/index.php?op=mijnwerk");
 }
 
+function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
+function myFunction2() {
+    var x = document.getElementById("myLinks2");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}

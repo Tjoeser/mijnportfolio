@@ -20,7 +20,29 @@
   <div class="header">
     <h1>Mijn Portfolio Website</h1>
     <p>Van Thijs Rietveld</p>
+    <div id="fabars">
+    <a class="fa fa-bars" onclick="myFunction()"></a>
+    </div>
+  </a>
   </div>
+
+  <div class="mobilenav">
+  <div id="myLinks">
+  <a href="index.php?">Home</a>
+
+    <a href="index.php?op=mijnwerk">Mijn werk</a>
+    <a class="fa fa-caret-down" onclick="myFunction2()"></a>
+  <a href="index.php?op=mijnschool">Mijn School</a>
+  <a href="index.php?op=overmij">Over Mij</a>
+  <a href="index.php?op=contact">Contact</a>
+  <div id="myLinks2">
+      <a href="index.php?op=mijnwerk&#githubcard">Github Projecten</a>
+      <a href="index.php?op=mijnwerk&#stagecard">Stage</a>
+      <a href="index.php?op=mijnwerk&#werkcard">Werk</a>
+    </div>
+  </div>
+
+</div>
 
   <div class="topnav">
     <a href="index.php?">Home</a>
