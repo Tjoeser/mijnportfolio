@@ -21,25 +21,25 @@
     <h1>Mijn Portfolio Website</h1>
     <p>Van Thijs Rietveld</p>
     <div id="fabars">
-    <a class="fa fa-bars" onclick="myFunction()"></a>
+      <p>Mobile version<br>
+        Check de webversie die is iets mooier.
+      </p>
     </div>
   </a>
   </div>
 
   <div class="mobilenav">
-  <div id="myLinks">
+  <div id="mobilelinks">
   <a href="index.php?">Home</a>
-
-    <a href="index.php?op=mijnwerk">Mijn werk</a>
-    <a class="fa fa-caret-down" onclick="myFunction2()"></a>
-  <a href="index.php?op=mijnschool">Mijn School</a>
-  <a href="index.php?op=overmij">Over Mij</a>
-  <a href="index.php?op=contact">Contact</a>
-  <div id="myLinks2">
+  <a href="index.php?op=mijnwerk">Mijn werk </a>    <div style="position:relative; top:0px;"class="fa fa-caret-down" onclick="dropdownlinks()"></div>
+    <div id="mobilelinks2">
       <a href="index.php?op=mijnwerk&#githubcard">Github Projecten</a>
       <a href="index.php?op=mijnwerk&#stagecard">Stage</a>
       <a href="index.php?op=mijnwerk&#werkcard">Werk</a>
     </div>
+  <a href="index.php?op=mijnschool">Mijn School</a>
+  <a href="index.php?op=overmij">Over Mij</a>
+  <a href="index.php?op=contact">Contact</a>
   </div>
 
 </div>

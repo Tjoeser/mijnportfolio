@@ -36,26 +36,3 @@ function sendback() {
     }, 2000);
 }
 
-// Add this script to your HTML file
-if (window.location.href.includes("/mijnwerk")) {
-    console.log
-    history.replaceState(null, null, "/index.php?op=mijnwerk");
-}
-
-function myFunction() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-}
-
-function myFunction2() {
-    var x = document.getElementById("myLinks2");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-}

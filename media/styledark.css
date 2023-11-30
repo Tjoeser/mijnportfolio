@@ -3,6 +3,66 @@ green #92B19F
 gold #D09632
 dark green #13472E */
 
+@media screen and (max-width: 620px) {
+  .topnav{
+    display: none;
+  }
+  
+  .mobilenav {
+    background-color: #333;
+    position: relative;
+  }
+  
+  .mobilenav #mobilelinks {
+    display: flex;
+    justify-content: center;
+  }
+
+  .mobilenav #mobilelinks a{
+    background-color:#535353;
+    margin: 2px;
+  }
+
+  .mobilenav #mobilelinks2 {
+    background-color: #555;
+    display: none;
+  }
+
+  .mobilenav #mobilelinks2 a{
+    background-color:#646363;
+    margin: 5px;
+  }
+
+  .mobilenav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    padding: calc(15px + (100vw - 700px) * (15 - 30) / (700 -  1000));
+    text-decoration: none;
+  }
+
+  #fabars{
+    display: block;
+   }
+
+   #fabars2{
+    position: relative;
+   }
+
+  .leftcolumn{
+    width: 100%;
+  }
+  .rightcolumn{
+    display: none;
+  }
+
+  .leftcolumn1{
+    width: 100%;
+  }
+  .rightcolumn1{
+    display: none;
+  }
+}
 
 
 * {
@@ -180,28 +240,6 @@ body {
   border-radius: 10px;
   width: 100%;
 }
-
-
-/* Clear floats after the columns */
-/* .row::after {
-  content: "";
-  display: table;
-  clear: both;
-  flex: 1;
-} */
-
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 768px) {
-
-  .leftcolumn,
-  .rightcolumn {
-    flex: 100%;
-    /* Full width on smaller screens */
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 
 .link {
   background-color: #333;
@@ -406,63 +444,7 @@ button{
 #fabars{
  display: none;
 }
-.mobilenav #myLinks {
+.mobilenav #mobilelinks {
   display: none;
 }
 
-@media only screen and (max-width: 600px) {
-  .topnav{
-    display: none;
-  }
-  
-  .mobilenav {
-    width: 100%;
-    overflow: hidden;
-    background-color: #333;
-    position: relative;
-  }
-  
-  .mobilenav #myLinks {
-    width: 100%;
-    display: none;
-  }
-
-  .mobilenav #myLinks2 {
-    display: none;
-    background-color: #555;
-  }
-  .mobilenav #myLinks2:hover {
-    display: none;
-    background-color: #555;
-  }
-
-  .mobilenav a {
-    width: 100%;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-
-  #fabars{
-    display: block;
-   }
-
-   #fabars2{
-    position: relative;
-   }
-
-  .leftcolumn{
-    width: 100%;
-  }
-  .rightcolumn{
-    display: none;
-  }
-
-  .leftcolumn1{
-    width: 100%;
-  }
-  .rightcolumn1{
-    display: none;
-  }
-}
