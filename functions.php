@@ -13,6 +13,7 @@ class Functions
 
     public function __construct()
     {
+        date_default_timezone_set('Europe/Amsterdam');
         $currentUrl = $_SERVER['REQUEST_URI'];
         if (strpos($currentUrl, 'mijnportfolio') == true) {
             $this->DataHandler = new DataHandler("localhost", "mysql", "mijnportfolio_db", "root", "");
@@ -34,6 +35,7 @@ class Functions
             $email = $_REQUEST['email'];
             $company = $_REQUEST['company'];
             $subject = $_REQUEST['subject'];
+            $currentdate = date("H:i n-j Y");
 
             if (empty($email)) {
                 $emailErr = "Email is vereist";
@@ -57,7 +59,7 @@ class Functions
                     if (empty($fname) or empty($lname) or empty($email) or empty($company) or empty($subject)) {
                         $emailErr = "U mist een of meerdere velden";
                     } else {
-                        $sql = "INSERT INTO contact_subs (fname, preposition, lname, email, company, subject) VALUES('$fname', '$preposition', '$lname', '$email', '$company', '$subject')";
+                        $sql = "INSERT INTO contact_subs (fname, preposition, lname, email, company, subject, datetime) VALUES('$fname', '$preposition', '$lname', '$email', '$company', '$subject', '$currentdate')";
                         $this->DataHandler->createData($sql);
                     }
                 }
@@ -150,43 +152,92 @@ class Functions
         }
     }
 
-    public function adminreadfunction($result)
+    public function adminreadfunction($result, $case)
     {
         $uniquecolumn = "id";
         $tableheader = false;
-        $html = "<div class='content'>";
-        $html .= "<table>";
-        foreach ($result as $row) {
-            if ($tableheader == false) {
+        if ($case == 0){
+            $html = "<div class='content'>";
+            $html .= "<table>";
+            foreach ($result as $row) {
+                if ($tableheader == false) {
+                    $html .= "<tr>";
+                    foreach ($row as $key => $value) {
+                        $html .= "<th data-title='{$key}'>" . $key . "</th>";
+                    }
+                    $html .= "<th data-title='actions'>actions</th>";
+                    $html .= "</tr>";
+                    $tableheader = true;
+                }
                 $html .= "<tr>";
                 foreach ($row as $key => $value) {
-                    $html .= "<th data-title='{$key}'>" . $key . "</th>";
+                    $html .= "<td data-title='{$key}'>" . $value . "</td>";
                 }
-                $html .= "<th data-title='actions'>actions</th>";
-                $html .= "</tr>";
-                $tableheader = true;
+                $currentUrl = $_SERVER['REQUEST_URI'];
+                if (strpos($currentUrl, 'id') == true) {
+                    $html .= '     <td>';
+                    $html .= "<a class=\"crudfunctionbutton\" href='index.php?op=actions&act=update&id={$row[$uniquecolumn]}'><i class='fa fa-wrench'>Update</i></a>";
+                } else {
+                    $html .= "<td><a class=\"crudfunctionbutton\" href='index.php?op=actions&act=read&id={$row[$uniquecolumn]}'><i class='fa fa-pencil'>Read</i></a>";
+                }
+                $html .= "<a class=\"crudfunctionbutton\" href='index.php?op=actions&act=delete&id={$row[$uniquecolumn]}'><i class='fa fa-trash'>Delete</i></a>";
+                if (strpos($currentUrl, 'id') == true) {
+                    $email = $row['email'];
+                    $html .= '     <button data-text="' . $email . '" class="emailbutton2">Kopieer dit e-mailadres</button>';
+                    $html .= '     <p id="succesmessage">E-mailadres is succesvol gekopieerd</p></td>';
+                }
+                $html .= "<tr>";
             }
-            $html .= "<tr>";
-            foreach ($row as $key => $value) {
-                $html .= "<td data-title='{$key}'>" . $value . "</td>";
-            }
-            $currentUrl = $_SERVER['REQUEST_URI'];
-            if (strpos($currentUrl, 'id') == true) {
-                $html .= '     <td>';
-                $html .= "<a class=\"crudfunctionbutton\" href='index.php?op=actions&act=update&id={$row[$uniquecolumn]}'><i class='fa fa-wrench'></i>Update</a>";
-            } else {
-                $html .= "<td><a class=\"crudfunctionbutton\" href='index.php?op=actions&act=read&id={$row[$uniquecolumn]}'><i class='fa fa-pencil'></i> Read</a>";
-            }
-            $html .= "<a class=\"crudfunctionbutton\" href='index.php?op=actions&act=delete&id={$row[$uniquecolumn]}'><i class='fa fa-trash'></i> Delete</a>";
-            if (strpos($currentUrl, 'id') == true) {
-                $email = $row['email'];
-                $html .= '     <button data-text="' . $email . '" class="emailbutton2">Kopieer dit e-mailadres</button>';
-                $html .= '     <p id="succesmessage">E-mailadres is succesvol gekopieerd</p></td>';
-            }
-            $html .= "<tr>";
+            $html .= "</table></div><br>";
         }
-        $html .= "</table></div><br>";
-
+        if ($case == 1){
+            $columnsToSkip = ['id', 'columnName2', 'columnName3'];
+            
+            $html = "<div class='content'>";
+            $html .= "<table>";
+            foreach ($result as $row) {
+                if ($tableheader == false) {
+                    $html .= "<tr>";
+                    foreach ($row as $key => $value) {
+                        // Skip columns listed in $columnsToSkip array
+                        if (!in_array($key, $columnsToSkip)) {
+                            $html .= "<th data-title='{$key}'>" . $key . "</th>";
+                        }
+                    }
+                    $html .= "<th style='width:208px;' data-title='actions'>actions</th>";
+                    $html .= "</tr>";
+                    $tableheader = true;
+                }
+            
+                $html .= "<tr>";
+                foreach ($row as $key => $value) {
+                    // Skip columns listed in $columnsToSkip array
+                    if (!in_array($key, $columnsToSkip)) {
+                        $html .= "<td data-title='{$key}'>" . $value . "</td>";
+                    }
+                }
+            
+                $currentUrl = $_SERVER['REQUEST_URI'];
+                if (strpos($currentUrl, 'id') == true) {
+                    $html .= '     <td>';
+                    $html .= "<a class=\"crudfunctionbutton\" href='index.php?op=actions&act=update&id={$row[$uniquecolumn]}'><i class='fa fa-wrench'></i>Update</a>";
+                } else {
+                    $html .= "<td><a class=\"crudfunctionbutton\" href='index.php?op=actions&act=read&id={$row[$uniquecolumn]}'><i class='fa fa-pencil'></i> Read</a>";
+                }
+            
+                $html .= "<a class=\"crudfunctionbutton\" href='index.php?op=actions&act=delete&id={$row[$uniquecolumn]}'><i class='fa fa-trash'></i> Delete</a>";
+            
+                if (strpos($currentUrl, 'id') == true) {
+                    $email = $row['email'];
+                    $html .= '     <button data-text="' . $email . '" class="emailbutton2">Kopieer dit e-mailadres</button>';
+                    $html .= '     <p id="succesmessage">E-mailadres is succesvol gekopieerd</p></td>';
+                }
+            
+                $html .= "<tr>";
+            }
+            $html .= "</table></div><br>";
+            
+        }
         return $html;
     }
 
@@ -216,7 +267,7 @@ class Functions
 
     public function readall()
     {
-        $sql = "SELECT * FROM contact_subs";
+        $sql = "SELECT id, fname, lname, company, subject FROM contact_subs";
         $result = $this->DataHandler->readsData($sql);
         $result->setFetchMode(PDO::FETCH_ASSOC);
         $res = $result->fetchAll();
@@ -245,7 +296,7 @@ class Functions
         $html .= "<label>company</label>";
         $html .= "<input type='text' name='company' value='{$res[0]['company']}'>";
         $html .= "<label>subject</label>";
-        $html .= "<input type='text' name='subject' value='{$res[0]['subject']}'>";
+        $html .= "<input type='text' name='subject' style='height:200px' value='{$res[0]['subject']}'>";
         $html .= "<input type='hidden' name='id' value='{$res[0]['id']}'>";
         $html .= "<input type='submit' name='submit' value='Opslaan'>";
         $html .= "<a class='button' href='index.php?op=actions&act=read&id=$id'>back</a>";
