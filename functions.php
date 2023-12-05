@@ -35,7 +35,8 @@ class Functions
             $email = $_REQUEST['email'];
             $company = $_REQUEST['company'];
             $subject = $_REQUEST['subject'];
-            $currentdate = date("H:i n-j Y");
+            $currentdate = date("H:i j-n-Y");
+
 
             if (empty($email)) {
                 $emailErr = "Email is vereist";
