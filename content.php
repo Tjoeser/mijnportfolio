@@ -440,7 +440,7 @@ class ContentController
         $html .= '  <div class="card">';
         $html .= '    <h2>Over mij</h2>';
         $html .= '  <div class="nestedcard">';
-        $html .= "    <h2>Ik ben</h2>";
+        $html .= "    <h2>Korte introductie</h2>";
         $html .= '    <p>
         Mijn naam is Thijs Rietveld.<br>
         Ik ben ' . $count . ' jaar oud.<br><br>
@@ -551,7 +551,7 @@ class ContentController
             $html .= '  <div class="tablereadcard">';
             $html .= '    <h2>welkom admin</h2>';
             $res = $this->Functions->readall();
-            $html .= $this->Functions->adminreadfunction($res);
+            $html .= $this->Functions->adminreadfunction($res, 0);
             $html .= '  </div>';
             $html .= '</div>';
             $html .= '</div>';
@@ -585,7 +585,7 @@ class ContentController
             $html .= '<div class="row">';
             $html .= '  <div class="homecard">';
             $html .= '    <button onclick="window.location.href=\'index.php?op=admin&case=true\'">Go Back</button>';
-            $html .= $this->Functions->adminreadfunction($res);
+            $html .= $this->Functions->adminreadfunction($res, 1);
             $html .= '  </div>';
             $html .= '</div>';
             $html .= '</div>';
