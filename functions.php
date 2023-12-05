@@ -29,57 +29,65 @@ class Functions
     public function contactprocess()
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $fname = $_REQUEST['fname'];
-            $preposition = $_REQUEST['preposition'];
-            $lname = $_REQUEST['lname'];
-            $email = $_REQUEST['email'];
-            $company = $_REQUEST['company'];
-            $subject = $_REQUEST['subject'];
+            $fname = $_POST['fname'];
+            $preposition = $_POST['preposition'];
+            $lname = $_POST['lname'];
+            $email = $_POST['email'];
+            $company = $_POST['company'];
+            $subject = $_POST['subject'];
             $currentdate = date("H:i j-n-Y");
-
-
+        
             if (empty($email)) {
                 $emailErr = "Email is vereist";
-                $html = '';
-                $html .= '<div class="row">';
-                $html .= '  <div class="homecard">';
-                $html .= '    <p>' . $emailErr . '</p>';
-                $html .= '    <div class="link"><a href="index.php?op=contact">Terug</a></div>';
-                $html .= '  </div>';
-                $html .= '</div>';
-                $html .= '</div>';
-                $html .= '</div>';
-                echo $html;
             } else {
                 $email = $this->test_input($email);
-                // check if e-mail address is well-formed
+        
+                // Check if email address is well-formed
                 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                     $emailErr = "Geen geldig e-mailadres";
                 } else {
                     $emailErr = "Email is succesvol verzonden";
-                    if (empty($fname) or empty($lname) or empty($email) or empty($company) or empty($subject)) {
+        
+                    // Check if other required fields are not empty
+                    if (empty($fname) || empty($lname) || empty($email) || empty($company) || empty($subject)) {
                         $emailErr = "U mist een of meerdere velden";
                     } else {
-                        $sql = "INSERT INTO contact_subs (fname, preposition, lname, email, company, subject, datetime) VALUES('$fname', '$preposition', '$lname', '$email', '$company', '$subject', '$currentdate')";
-                        $this->DataHandler->createData($sql);
+                        // Establish a connection to your database (replace with your actual connection details)
+                        $mysqli = new mysqli("hostname", "username", "password", "database");
+        
+                        // Check the connection
+                        if ($mysqli->connect_error) {
+                            die("Connection failed: " . $mysqli->connect_error);
+                        }
+        
+                        // Use a prepared statement with parameter binding
+                        $stmt = $mysqli->prepare("INSERT INTO contact_subs (fname, preposition, lname, email, company, subject, datetime) VALUES(?, ?, ?, ?, ?, ?, ?)");
+                        $stmt->bind_param("sssssss", $fname, $preposition, $lname, $email, $company, $subject, $currentdate);
+                        $stmt->execute();
+                        $stmt->close();
+        
+                        // Close the database connection
+                        $mysqli->close();
                     }
                 }
+        
                 if ($emailErr == "Email is succesvol verzonden") {
                     $fullname = $fname . ' ' . $preposition . ' ' . $lname;
                     $content = 'Bedrijf: ' . $company . "\n" . 'Vraag: ' . $subject;
                     $this->Sendemail($email, $fullname, $content);
                 }
-                $html = '';
-                $html .= '<div class="row">';
-                $html .= '  <div class="homecard">';
-                $html .= '    <p>' . $emailErr . '</p>';
-                $html .= '    <div class="link"><a href="index.php?op=contact">Terug</a></div>';
-                $html .= '  </div>';
-                $html .= '</div>';
-                $html .= '</div>';
-                $html .= '</div>';
-                echo $html;
             }
+        
+            $html = '';
+            $html .= '<div class="row">';
+            $html .= '  <div class="homecard">';
+            $html .= '    <p>' . $emailErr . '</p>';
+            $html .= '    <div class="link"><a href="index.php?op=contact">Terug</a></div>';
+            $html .= '  </div>';
+            $html .= '</div>';
+            $html .= '</div>';
+            $html .= '</div>';
+            echo $html;
         }
     }
 
