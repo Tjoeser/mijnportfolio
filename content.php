@@ -580,6 +580,7 @@ class ContentController
 
     public function adminread($id)
     {
+            var_dump(date("H:i j-n-Y"));
             $res = $this->Functions->read($id);
             $html = '';
             $html .= '<div class="row">';
