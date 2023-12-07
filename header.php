@@ -30,33 +30,31 @@
 
   <div class="mobilenav">
   <div id="mobilelinks">
-  <a href="index.php?">Home</a>
-  <a href="index.php?op=mijnwerk">Mijn werk </a>    <div style="position:relative; top:0px;"class="fa fa-caret-down" onclick="dropdownlinks()"></div>
+  <a href="index.php?#home">Home</a>
+  <a href="index.php?#mijnwerk">Mijn werk </a>    <div style="position:relative; top:0px;"class="fa fa-caret-down" onclick="dropdownlinks()"></div>
     <div id="mobilelinks2">
       <a href="index.php?op=mijnwerk&#githubcard">Github Projecten</a>
       <a href="index.php?op=mijnwerk&#stagecard">Stage</a>
       <a href="index.php?op=mijnwerk&#werkcard">Werk</a>
     </div>
-  <a href="index.php?op=mijnschool">Mijn School</a>
-  <a href="index.php?op=overmij">Over Mij</a>
-  <a href="index.php?op=contact">Contact</a>
+  <a href="index.php?#mijnschool">Mijn School</a>
+  <a href="index.php?#overmij">Over Mij</a>
+  <a href="index.php?#contact">Contact</a>
   </div>
 
 </div>
 
-  <div class="topnav">
-    <a href="index.php?">Home</a>
-    <div class="dropdown">
-      <button onclick="window.location.href='index.php?op=mijnwerk'" class="dropbtn">Mijn werk
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="index.php?op=mijnwerk&#githubcard">Github Projecten</a>
-        <a href="index.php?op=mijnwerk&#stagecard">Stage</a>
-        <a href="index.php?op=mijnwerk&#werkcard">Werk</a>
-      </div>
-    </div>
-    <a href="index.php?op=mijnschool">Mijn School</a>
-    <a href="index.php?op=overmij">Over Mij</a>
-    <a href="index.php?op=contact">Contact</a>
-  </div>
+  <nav class="topnav">
+    <ul>
+    <li><a href="index.php?#home">Home</a></li>
+    <li><a href="index.php?#mijnwerk">Mijn werk</a></li>
+      <ul class="dropdown-content">
+        <li><a href="index.php?#githubcard">Github Projecten</a></li>
+        <li><a href="index.php?#stagecard">Stage</a></li>
+        <li><a href="index.php?#werkcard">Werk</a></li>
+      </ul>
+    <li><a href="index.php?#mijnschool">Mijn School</a></li>
+    <li><a href="index.php?#overmij">Over Mij</a></li>
+    <li><a href="index.php?#contact">Contact</a></li>
+    </ul>
+</nav>

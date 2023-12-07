@@ -30,18 +30,6 @@ class ContentController
             $case = isset($_GET['case']) ? $_GET['case'] : '';
 
             switch ($op) {
-                case 'mijnwerk':
-                    $this->mijnwerk();
-                    break;
-                case 'overmij':
-                    $this->overmij();
-                    break;
-                case 'mijnschool':
-                    $this->mijnschool();
-                    break;
-                case 'contact':
-                    $this->contact();
-                    break;
                 case 'admin':
                     $this->admin();
                     break;
@@ -83,6 +71,7 @@ class ContentController
     {
         $this->Functions->cookie("visitorcookie","visitor");
         $html = '';
+        $html .= '<div id="home">';
         $html .= '<div class="row">';
         $html .= '  <div class="homecard">';
         $html .= '    <h2>Welkom op mijn website</h2>';
@@ -90,12 +79,8 @@ class ContentController
         $html .= '  </div>';
         $html .= '</div>';
         $html .= '</div>';
-        echo $html;
-    }
-
-    public function mijnwerk()
-    {
-        $html = '';
+        $html .= '</div>';
+        $html .= '<div class="mijnwerk">';
         $html .= '<div class="row1">';
         $html .= '      <div class="column-container1">';
         $html .= '      <div class="leftcolumn1">';
@@ -316,12 +301,8 @@ class ContentController
         $html .= '  </div>';
         $html .= '</div>';
         $html .= '</div>';
-        echo $html; 
-    }
-
-    public function mijnschool()
-    {
-        $html = '';
+        $html .= '</div>';
+        $html .= '<div id="mijnschool">';
         $html .= '<div class="row">';
         $html .= '  <div class="card">';
         $html .= '    <h2>Mijn school</h2>';
@@ -428,13 +409,9 @@ class ContentController
         $html .= '  </div>';
         $html .= '  </div>';
         $html .= '</div>';
-        echo $html;
-    }
-
-    public function overmij()
-    {
+        $html .= '</div>';
+        $html .= '<div id="overmij">';
         $count = $this->Functions->currentAgeCount();
-        $html = '';
         $html .= '<div class="row">';
         $html .= '<div class="leftcolumn">';
         $html .= '  <div class="card">';
@@ -500,13 +477,8 @@ class ContentController
         $html .= '  </div>';
         $html .= '</div>';
         $html .= '</div>';
-        echo $html;
-    }
-
-
-    public function contact()
-    {
-        $html = '';
+        $html .= '</div>';
+        $html .= '<div id="contact">';
         $html .= '<div class="row">';
         $html .= '<div class="leftcolumn">';
         $html .= '  <div class="card">';
@@ -539,8 +511,25 @@ class ContentController
         $html .= '</div>';
         $html .= '</div>';
         $html .= '</div>';
-        echo $html;
+        echo $html; 
     }
+
+    // public function mijnwerk()
+    // {
+    // }
+
+    // public function mijnschool()
+    // {
+    // }
+
+    // public function overmij()
+    // {
+    // }
+
+
+    // public function contact()
+    // {
+    // }
 
 
     public function admin()

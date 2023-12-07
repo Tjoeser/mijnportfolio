@@ -7,6 +7,7 @@ dark green #13472E */
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -44,6 +45,71 @@ body {
 .topnav {
   overflow: hidden;
   background-color: #333;
+  position: sticky; 
+  top: 0;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a,
+.dropdown-content {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown-content li:nth-of-type(-n + 1) {
+  float: down;
+}
+.dropdown-content {
+  position: relative;
+  top: 13.6rem;
+}
+
+li .dropdown-content {
+  visibility: hidden;
+  opacity: 0;
+  width: 8rem;
+  position: absolute;
+  top: 40px;
+  transition: all 0.5s ease;
+  margin-top: 1.5rem;
+  display: none;
+}
+
+li a:hover,
+.dropdown-content:hover .li:hover {
+  background-color: green;
+}
+
+li:hover > ul,
+li:focus-within > ul,
+li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}
+
+.active {
+  background-color: #4caf50;
 }
 
 /* Style the topnav links */
