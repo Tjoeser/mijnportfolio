@@ -73,31 +73,20 @@ class ContentController
         $html = '';
         $html .= '<div id="home">';
         $html .= '<div class="row">';
-        $html .= '  <div class="homecard">';
+        $html .= '  <div class="homehomecard">';
         $html .= '    <h2>Welkom op mijn website</h2>';
         $html .= '    <p>Ik heet u graag welkom en kijk gerust rond naar mijn geschiedenis en prestaties</p>';
+        $html .= '      <a class="downarrow" href=index.php?#mijnwerk><i class="fa fa-arrow-down"></i></a>';
         $html .= '  </div>';
         $html .= '</div>';
-        $html .= '</div>';
-        $html .= '</div>';
-        $html .= '<div class="mijnwerk">';
+
+
+        $html .= '<div id="mijnwerk">';
         $html .= '<div class="row1">';
         $html .= '      <div class="column-container1">';
         $html .= '      <div class="leftcolumn1">';
-        $html .= '          <div class="card" style="--color: #0f0;">';
-        $html .= '              <h2>Hier zal ik vertellen wat ik voor opdrachten, stages en werk heb gedaan.</h2>';
-        $html .= '          </div>';
-        $html .= '      </div>';
-        $html .= '  <div class="rightcolumn1">';
-        $html .= '      <div class="rightcard">';
-        $html .= "         <p>De links naar alle pagina's die zijn genoemd in deze tekst bevinden zich in de volgende kaartjes.</p>";
-        $html .= '      </div>';
-        $html .= '  </div>';
-        $html .= '  </div>';
-        $html .= '      <div class="column-container1">';
-        $html .= '      <div class="leftcolumn1">';
         $html .= '  <div class="card">';
-        $html .= '    <h2 id="githubcard">Github Projecten</h2>';
+        $html .= '    <h2 class="centerh" id="githubcard">Github Projecten</h2>';
         $html .= '  <div class="nestedcard">';
         $html .= '    <h3>Mijn Portfolio Website</h3>';
         $html .= '    <p>Ik wil graag beginnen met u mijn nieuwste project te laten zien, namelijk mijn eigen portfolio website.<br>
@@ -156,11 +145,11 @@ class ContentController
         $html .= '      <div class="column-container1">';
         $html .= '      <div class="leftcolumn1">';
         $html .= '  <div class="card">';
-        $html .= '    <h2 id="stagecard">Stage</h2>';
+        $html .= '    <h2 class="centerh" id="stagecard">Stage</h2>';
         $html .= '  <div class="nestedcard">';
-        $html .= '    <h3 id=doppiostage>Mijn VMBO stages</h3>';
+        $html .= '    <h3 class="centerh" id=doppiostage>Mijn VMBO stages</h3>';
         $html .= '  <div class="nestedinnestedcard">';
-        $html .= '    <h4>Doppio Espresso</h4>';
+        $html .= '    <h4 class="centerp">Doppio Espresso</h4>';
         $html .= '    <h6>september 2019 tot januari 2020 - januari 2020 tot juni 2020</h6>';
         $html .= '    <p>
                         Mijn allereerste stage op het VMBO was gericht op de horeca. <br><br>
@@ -172,7 +161,7 @@ class ContentController
                         </p>';
         $html .= '  </div>';
         $html .= '  <div class="nestedinnestedcard">';
-        $html .= '    <h4>Movactor/Buurtplein Doorslag</h4>';
+        $html .= '    <h4 class="centerp">Movactor/Buurtplein Doorslag</h4>';
         $html .= '    <h6>september 2020 tot juli 2021</h6>';
         $html .= '    <p>
                         Mijn tweede stage heeft zich volledig gericht op het gebied van ICT.<br><br>
@@ -188,7 +177,7 @@ class ContentController
                         </p>';
         $html .= '  </div>';
         $html .= '  <div class="nestedinnestedcard">';
-        $html .= '    <h4>Kruidvat</h4>';
+        $html .= '    <h4 class="centerp">Kruidvat</h4>';
         $html .= '    <h6>januari 2020 tot feburauri 2020</h6>';
         $html .= '    <p>
                         Mijn derde stage werd enigszins chaotisch geregeld vanwege de tweede golf van de coronapandemie.<br><br>
@@ -200,9 +189,9 @@ class ContentController
         $html .= '  </div>';
         $html .= '  </div>';
         $html .= '  <div class="nestedcard">';
-        $html .= '    <h3>Mijn MBO stages</h3>';
+        $html .= '    <h3 class="centerh">Mijn MBO stages</h3>';
         $html .= '  <div class="nestedinnestedcard">';
-        $html .= '    <h4 id="stennizworkshops">Stenniz Workshops</h4>';
+        $html .= '    <h4 class="centerp" id="stennizworkshops">Stenniz Workshops</h4>';
         $html .= '    <h6>29 augustus 2022 tot 3 februari 2023</h6>';
         $html .= '    <p>
                         Mijn stage bij Stenniz Workshops (ook bekend als Stenniz Music en Stenniz Games) was een interessante stage op meerdere vlakken.<br><br>
@@ -222,7 +211,7 @@ class ContentController
                         Dus ik ben tevreden.</p>';
         $html .= '  </div>';
         $html .= '  <div class="nestedinnestedcard">';
-        $html .= '    <h4>Mijn volgende stage</h4>';
+        $html .= '    <h4 class="centerp">Mijn volgende stage</h4>';
         $html .= '    <h6>5 februari tot 14 juni</h6>';
         $html .= '    <p>
                              Als u overweegt om mij als stagiair aan te nemen voor uw bedrijf, kan ik slechts één ding zeggen: als u het niet probeert, zult u het nooit weten...</p>';
@@ -242,9 +231,9 @@ class ContentController
         $html .= '      <div class="column-container1">';
         $html .= '      <div class="leftcolumn1">';
         $html .= '          <div class="card">';
-        $html .= '              <h2 id=werkcard>Werk</h2>';
+        $html .= '              <h2 class="centerh" id=werkcard>Werk</h2>';
         $html .= '              <div class="nestedcard">';
-        $html .= '                  <h3>Krantenwijk</h3>';
+        $html .= '                  <h3 class="centerh">Krantenwijk</h3>';
         $html .= '    <h6>agusutus 2018 tot juni 2022</h6>';
         $html .= '                  <p>
                                     Mijn eerste baan was vrij bekend.<br>
@@ -254,7 +243,7 @@ class ContentController
                                     </p>';
         $html .= '  </div>';
         $html .= '              <div class="nestedcard">';
-        $html .= '                  <h3 id=doppioinfo>Doppio Espresso</h3>';
+        $html .= '                  <h3 class="centerh" id=doppioinfo>Doppio Espresso</h3>';
         $html .= '    <h6>januari 2020 tot juni 2020</h6>';
         $html .= '                  <p>
         Dit was mijn eerste baan die ik beschouw als een echte baan.<br><br>
@@ -271,7 +260,7 @@ class ContentController
                                     </p>';
         $html .= '  </div>';
         $html .= '              <div class="nestedcard">';
-        $html .= '                  <h3 id=>Pathe Utrecht Leidscherijn</h3>';
+        $html .= '                  <h3 class="centerh">Pathe Utrecht Leidscherijn</h3>';
         $html .= '    <h6>5 februari 2022 tot het heden</h6>';
         $html .= "                  <p>
         Mijn tweede baan, waar ik momenteel nog werk, is bij Pathe.<br><br>
@@ -302,12 +291,14 @@ class ContentController
         $html .= '</div>';
         $html .= '</div>';
         $html .= '</div>';
+
+
         $html .= '<div id="mijnschool">';
         $html .= '<div class="row">';
         $html .= '  <div class="card">';
-        $html .= '    <h2>Mijn school</h2>';
+        $html .= '    <h2 class="centerh">Mijn school</h2>';
         $html .= '  <div class="nestedcard">';
-        $html .= '    <h2>Basis Onderwijs</h2>';
+        $html .= '    <h2 class="centerh">Basis Onderwijs</h2>';
         $html .= '<div class="row1">';
         $html .= '      <div class="column-container1">';
         $html .= '      <div class="leftcolumn2">';
@@ -332,7 +323,7 @@ class ContentController
         $html .= '  </div>';
         $html .= '  </div>';
         $html .= '  <div class="nestedcard">';
-        $html .= '    <h2>VMBO</h2>';
+        $html .= '    <h2 class="centerh">VMBO</h2>';
         $html .= '<div class="row1">';
         $html .= '      <div class="column-container1">';
         $html .= '      <div class="leftcolumn2">';
@@ -361,7 +352,7 @@ class ContentController
         $html .= '  </div>';
         $html .= '  </div>';
         $html .= '  <div class="nestedcard">';
-        $html .= '    <h2>MBO</h2>';
+        $html .= '    <h2 class="centerh">MBO</h2>';
         $html .= '<div class="row1">';
         $html .= '      <div class="column-container1">';
         $html .= '      <div class="leftcolumn2">';
@@ -410,14 +401,16 @@ class ContentController
         $html .= '  </div>';
         $html .= '</div>';
         $html .= '</div>';
+
+
         $html .= '<div id="overmij">';
         $count = $this->Functions->currentAgeCount();
         $html .= '<div class="row">';
         $html .= '<div class="leftcolumn">';
         $html .= '  <div class="card">';
-        $html .= '    <h2>Over mij</h2>';
+        $html .= '    <h2 class="centerh">Over mij</h2>';
         $html .= '  <div class="nestedcard">';
-        $html .= "    <h2>Korte introductie</h2>";
+        $html .= '    <h2 class="centerh">Korte introductie</h2>';
         $html .= '    <p>
         Mijn naam is Thijs Rietveld.<br>
         Ik ben ' . $count . ' jaar oud.<br><br>
@@ -426,7 +419,7 @@ class ContentController
         </p>';
         $html .= '  </div>';
         $html .= '  <div class="nestedcard">';
-        $html .= "    <h2>Hobby's</h2>";
+        $html .= "    <h2 class='centerh'>Hobby's</h2>";
         $html .= "    <p>
         In mijn vrije tijd vind ik het heel leuk om te werken aan mijn eigen projecten.<br><br>
         Denk bijvoorbeeld aan mijn eigen games ontwikkelen of buiten school aan school projecten werken.<br>
@@ -437,7 +430,7 @@ class ContentController
         </p>";
         $html .= '  </div>';
         $html .= '  <div class="nestedcard">';
-        $html .= "    <h2>Geschiedenis</h2>";
+        $html .= '    <h2 class="centerh">Geschiedenis</h2>';
         $html .= '    <p>
         Als u kijkt op deze site zult u een timeline vinden van mijn school en werk ervaring tot nu.<br><br>
         Dus daar zal ik u hier niet nog eens mee lastig vallen.<br>
@@ -459,18 +452,15 @@ class ContentController
         $html .= '  </div>';
         $html .= '  </div>';
         $html .= '</div>';
-
         $html .= '<div class="rightcolumn">';
         $html .= '  <div class="card">';
         $html .= '    <img class="fakeimg" src="media/fotos/Afbeelding1.jpg" alt="Een foto van mij die niet kon inladen">';
         $html .= '  </div>';
-
         $html .= '  <div class="card">';
         $html .= '    <h3>Mijn sociale links</h3>';
         $html .= '    <div class="link"><a target="_blank" href="https://www.linkedin.com/in/thijs-r/">Linked-In</a></div>';
         $html .= '    <div class="link"><a target="_blank" href="https://github.com/Tjoeser">Github</a></div>';
         $html .= '  </div>';
-
         $html .= '  <div class="card">';
         $html .= '    <h3>Mijn CV</h3>';
         $html .= '    <div class="link"><a href="media\pdf\Curriculum Vitae Thijs Rietveld.pdf" download>Download mijn CV</a></div>';
@@ -478,11 +468,14 @@ class ContentController
         $html .= '</div>';
         $html .= '</div>';
         $html .= '</div>';
+        $html .= '</div>';
+
+
         $html .= '<div id="contact">';
         $html .= '<div class="row">';
         $html .= '<div class="leftcolumn">';
         $html .= '  <div class="card">';
-        $html .= '    <h2>Contact</h2>';
+        $html .= '    <h2 class="centerh">Contact</h2>';
         $html .= '      <form action="index.php?op=contactprocess" method="post">';
         $html .= '          <label for="fname">Voornaam</label>';
         $html .= '          <input type="text" id="fname" name="fname" placeholder="Uw voornaam...">';
