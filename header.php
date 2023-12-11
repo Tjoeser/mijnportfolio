@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="media/starbackground.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="icon" href="media\fotos\favicon.ico" type="image/x-ico" />
+  <link rel="icon" href="media\fotos\icons8-portfolio-100.png" type="image/x-ico" />
   <title>Thijs Rietveld</title>
 </head>
 
