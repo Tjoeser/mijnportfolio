@@ -71,17 +71,18 @@ class ContentController
     {
         $this->Functions->cookie("visitorcookie","visitor");
         $html = '';
-        $html .= '<div id="home">';
+        $html = '<div class="main-content">';
+        $html .= '<section id="home">';
         $html .= '<div class="row">';
         $html .= '  <div class="homehomecard">';
         $html .= '    <h2>Welkom op mijn website</h2>';
         $html .= '    <p>Ik heet u graag welkom en kijk gerust rond naar mijn geschiedenis en prestaties</p>';
         $html .= '      <a class="downarrow" href=index.php?#mijnwerk><i class="fa fa-arrow-down"></i></a>';
         $html .= '  </div>';
-        $html .= '</div>';
+        $html .= '</section>';
 
 
-        $html .= '<div id="mijnwerk">';
+        $html .= '<section id="mijnwerk">';
         $html .= '<div class="row1">';
         $html .= '      <div class="column-container1">';
         $html .= '      <div class="leftcolumn1">';
@@ -290,10 +291,10 @@ class ContentController
         $html .= '  </div>';
         $html .= '</div>';
         $html .= '</div>';
-        $html .= '</div>';
+        $html .= '</section>';
 
 
-        $html .= '<div id="mijnschool">';
+        $html .= '<section id="mijnschool">';
         $html .= '<div class="row">';
         $html .= '  <div class="card">';
         $html .= '    <h2 class="centerh">Mijn school</h2>';
@@ -400,10 +401,10 @@ class ContentController
         $html .= '  </div>';
         $html .= '  </div>';
         $html .= '</div>';
-        $html .= '</div>';
+        $html .= '</section>';
 
 
-        $html .= '<div id="overmij">';
+        $html .= '<section id="overmij">';
         $count = $this->Functions->currentAgeCount();
         $html .= '<div class="row">';
         $html .= '<div class="leftcolumn">';
@@ -468,10 +469,10 @@ class ContentController
         $html .= '</div>';
         $html .= '</div>';
         $html .= '</div>';
-        $html .= '</div>';
+        $html .= '</section>';
 
 
-        $html .= '<div id="contact">';
+        $html .= '<section id="contact">';
         $html .= '<div class="row">';
         $html .= '<div class="leftcolumn">';
         $html .= '  <div class="card">';
@@ -503,6 +504,7 @@ class ContentController
         $html .= '</div>';
         $html .= '</div>';
         $html .= '</div>';
+        $html .= '</section>';
         $html .= '</div>';
         echo $html; 
     }
