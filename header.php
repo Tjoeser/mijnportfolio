@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
 <div class="bg-animation">
   <div id="stars"></div>
 </div>
@@ -39,9 +40,10 @@
 
 </div>
 
+
 <nav class="topnav">
   <ul>
-    <li><a href="index.php?#home">Home</a></li>
+  <li><a href="index.php?#home" class="active">Home</a></li>
     <li id="mijnwerkbutton">
       <a href="index.php?#mijnwerk">Mijn werk</a>
       <ul class="dropdown-content">

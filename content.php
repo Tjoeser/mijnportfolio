@@ -74,10 +74,12 @@ class ContentController
         $html = '<div class="main-content">';
         $html .= '<section id="home">';
         $html .= '<div class="row">';
+        $html .= '<div class="homecontainer">';
         $html .= '  <div class="homehomecard">';
         $html .= '    <h2>Welkom op mijn website</h2>';
         $html .= '    <p>Ik heet u graag welkom en kijk gerust rond naar mijn geschiedenis en prestaties</p>';
         $html .= '      <a class="downarrow" href=index.php?#mijnwerk><i class="fa fa-arrow-down"></i></a>';
+        $html .= '  </div>';
         $html .= '  </div>';
         $html .= '</section>';
 

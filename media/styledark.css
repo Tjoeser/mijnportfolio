@@ -49,9 +49,10 @@ body {
 
 .downarrow{
   cursor: pointer;
-  top: 50px;
-  width: 10px;
-  height: 10px;
+  top: 150px;
+  width: 50px;
+  height: 50px;
+  padding: 20px;
   position: relative;
   transition: top 1s;
   text-decoration: none;
@@ -59,7 +60,7 @@ body {
 }
 
 .downarrow:hover{
-  top: 40px;
+  top: 140px;
 }
 
 /* Style the top navigation bar */
@@ -198,13 +199,18 @@ li a:hover,
 }
 
 .homehomecard {
+  flex: 1;
   text-align: center;
   background-color: #778da94d;
   padding: 100px;
   width: 100%;
-  height: 55vh;
   margin-top: 20px;
   border-radius: 10px;
+}
+
+.homecontainer{
+  min-height: 70vh;
+  display: flex;
 }
 
 .homecard {
@@ -393,7 +399,6 @@ section:last-of-type {
 
 .active {
   color: #778DA9; 
-  /* font-weight: 600; */
   border-bottom: #778DA9 solid 2px;
 
 }
