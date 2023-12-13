@@ -89,7 +89,7 @@ class ContentController
         $html .= '      <div class="column-container1">';
         $html .= '      <div class="leftcolumn1">';
         $html .= '  <div class="card">';
-        $html .= '    <h2 class="centerh" id="githubcard">Github Projecten</h2>';
+        $html .= '    <h2 class="centerh1" id="githubcard">Github Projecten</h2>';
         $html .= '  <div class="nestedcard">';
         $html .= '    <h3>Mijn Portfolio Website</h3>';
         $html .= '    <p>Ik wil graag beginnen met u mijn nieuwste project te laten zien, namelijk mijn eigen portfolio website.<br>
@@ -148,7 +148,7 @@ class ContentController
         $html .= '      <div class="column-container1">';
         $html .= '      <div class="leftcolumn1">';
         $html .= '  <div class="card">';
-        $html .= '    <h2 class="centerh" id="stagecard">Stage</h2>';
+        $html .= '    <h2 class="centerh1" id="stagecard">Stage</h2>';
         $html .= '  <div class="nestedcard">';
         $html .= '    <h3 class="centerh" id=doppiostage>Mijn VMBO stages</h3>';
         $html .= '  <div class="nestedinnestedcard">';
@@ -234,7 +234,7 @@ class ContentController
         $html .= '      <div class="column-container1">';
         $html .= '      <div class="leftcolumn1">';
         $html .= '          <div class="card">';
-        $html .= '              <h2 class="centerh" id=werkcard>Werk</h2>';
+        $html .= '              <h2 class="centerh1" id=werkcard>Werk</h2>';
         $html .= '              <div class="nestedcard">';
         $html .= '                  <h3 class="centerh">Krantenwijk</h3>';
         $html .= '    <h6>agusutus 2018 tot juni 2022</h6>';
@@ -299,7 +299,7 @@ class ContentController
         $html .= '<section id="mijnschool">';
         $html .= '<div class="row">';
         $html .= '  <div class="card">';
-        $html .= '    <h2 class="centerh">Mijn school</h2>';
+        $html .= '    <h2 class="centerh1">Mijn school</h2>';
         $html .= '  <div class="nestedcard">';
         $html .= '    <h2 class="centerh">Basis Onderwijs</h2>';
         $html .= '<div class="row1">';
@@ -411,7 +411,7 @@ class ContentController
         $html .= '<div class="row">';
         $html .= '<div class="leftcolumn">';
         $html .= '  <div class="card">';
-        $html .= '    <h2 class="centerh">Over mij</h2>';
+        $html .= '    <h2 class="centerh1">Over mij</h2>';
         $html .= '  <div class="nestedcard">';
         $html .= '    <h2 class="centerh">Korte introductie</h2>';
         $html .= '    <p>
@@ -478,7 +478,7 @@ class ContentController
         $html .= '<div class="row">';
         $html .= '<div class="leftcolumn">';
         $html .= '  <div class="card">';
-        $html .= '    <h2 class="centerh">Contact</h2>';
+        $html .= '    <h2 class="centerh1">Contact</h2>';
         $html .= '      <form action="index.php?op=contactprocess" method="post">';
         $html .= '          <label for="fname">Voornaam</label>';
         $html .= '          <input type="text" id="fname" name="fname" placeholder="Uw voornaam...">';

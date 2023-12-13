@@ -35,3 +35,5 @@ function sendback() {
         window.location.href = 'https://url.com';
     }, 2000);
 }
+
+

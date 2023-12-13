@@ -209,7 +209,7 @@ li a:hover,
 }
 
 .homecontainer{
-  min-height: 70vh;
+  min-height: 65vh;
   display: flex;
 }
 
@@ -402,6 +402,15 @@ section:last-of-type {
   border-bottom: #778DA9 solid 2px;
 
 }
+
+
+.darklighttoggle{
+  position: relative;
+  float: right;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
 
 @media screen and (max-width: 620px) {
   .topnav{

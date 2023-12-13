@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="media/styledark.css">
-  <link rel="stylesheet" href="media/starbackground.css">
+  <link id="background" rel="stylesheet" href="media/starbackground.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="icon" href="media\fotos\icons8-portfolio-100.png" type="image/x-ico" />
@@ -17,6 +17,7 @@
 <div class="bg-animation">
   <div id="stars"></div>
 </div>
+<i class="cloud"></i>​
 
   <div class="header">
     <h1>Mijn Portfolio Website</h1>
@@ -55,7 +56,9 @@
     <li><a href="index.php?#mijnschool">Mijn School</a></li>
     <li><a href="index.php?#overmij">Over Mij</a></li>
     <li><a href="index.php?#contact">Contact</a></li>
+    <img name="darklighttoggle" class="darklighttoggle" src="media\svg\moon-regular.svg">
   </ul>
 </nav>
+
 
 
