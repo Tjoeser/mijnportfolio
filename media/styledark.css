@@ -10,7 +10,13 @@ dark green #13472E */
 .centerp{
   text-align: center;
 }
+.centerh1{
+  text-align: center;
+}
 
+.centerp1{
+  text-align: center;
+}
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -138,7 +144,6 @@ li a:hover,
 .leftcolumn1 {
   flex: 3;
   /* Grow to fill available space */
-  width: 75%;
 }
 
 /* Right column */
@@ -405,6 +410,7 @@ section:last-of-type {
 
 
 .darklighttoggle{
+  cursor: pointer;
   position: relative;
   float: right;
   margin-right: 15px;

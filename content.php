@@ -470,7 +470,6 @@ class ContentController
         $html .= '  </div>';
         $html .= '</div>';
         $html .= '</div>';
-        $html .= '</div>';
         $html .= '</section>';
 
 
@@ -495,6 +494,7 @@ class ContentController
         $html .= '          <input type="submit" value="Verstuur">';
         $html .= '      </form>';
         $html .= '  </div>';
+        $html .= '  </div>';
         $html .= '</div>';
         $html .= '<div class="rightcolumn">';
         $html .= '  <div class="card">';
@@ -503,8 +503,6 @@ class ContentController
         $html .= '     <button data-text="thijs0302@gmail.com" class="emailbutton">Kopieer mijn e-mailadres</button>';
         $html .= '     <p id="succesmessage">E-mailadres is succesvol gekopieerd</p>';
         $html .= '  </div>';
-        $html .= '</div>';
-        $html .= '</div>';
         $html .= '</div>';
         $html .= '</section>';
         $html .= '</div>';

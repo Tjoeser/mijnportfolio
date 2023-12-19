@@ -31,7 +31,7 @@ body {
   display: flex;
   flex-direction: column;
   color: #333; /* Text color in light mode */
-  background-image: -webkit-linear-gradient(hsla(240,75%,75%,.6), hsla(300,75%,75%,.2));
+  background-image: radial-gradient(circle 150px at 25% 33%, white, yellow, lightyellow, aqua);
 }
 
 /* Header/Blog Title */
@@ -74,7 +74,7 @@ body {
 
 /* Style the top navigation bar */
 .topnav {
-  background-color: #fff; /* Light background color */
+  background-color: #8a8a8a; /* Light background color */
   position: sticky;
   top: 0;
   z-index: 2;
@@ -85,7 +85,8 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #fff; /* Light background color */
+  background-color: #8a8a8a; /* Light background color */
+
 }
 
 li {
@@ -95,7 +96,7 @@ li {
 li a,
 .dropdown-content {
   display: block;
-  color: #333; /* Text color in light mode */
+  color: white; /* Text color in light mode */
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -204,7 +205,7 @@ li a:hover,
   color: white;
   flex: 1;
   text-align: center;
-  background-color: #333333 ;
+  background-color: #33333300 ;
   padding: 100px;
   width: 100%;
   margin-top: 20px;
@@ -405,6 +406,7 @@ section:last-of-type {
 }
 
 .darklighttoggle {
+  cursor: pointer;
   position: relative;
   float: right;
   margin-right: 15px;

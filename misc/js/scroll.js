@@ -7,7 +7,7 @@ function handleSticky() {
 
         if (cardTop < scrollThreshold) {
             card.style.position = 'sticky';
-            card.style.top = '50px';
+            card.style.top = '68px';
             card.style.zIndex = '1';
         } else {
             card.style.position = 'static';
