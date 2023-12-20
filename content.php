@@ -481,7 +481,6 @@ class ContentController
         $html .= '  </div>';
         $html .= '</div>';
         $html .= '</div>';
-        $html .= '</div>';
         $html .= '</section>';
 
         $html .= '<section id="contact">';
@@ -514,9 +513,9 @@ class ContentController
         $html .= '     <button data-text="thijs0302@gmail.com" class="emailbutton">Kopieer mijn e-mailadres</button>';
         $html .= '     <p id="succesmessage">E-mailadres is succesvol gekopieerd</p>';
         $html .= '  </div>';
-        $html .= '</div>';
         $html .= '</section>';
-        $html .= '</div>';
+        $html .= '  </div>';
+
         echo $html;
     }
 
