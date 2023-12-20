@@ -3,26 +3,24 @@ green #92B19F
 gold #D09632
 dark green #13472E
 */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: white;
+}
 
 .centerh {
-  color: black;
   text-align: center;
 }
 
 .centerh1{
-  color: white;
   text-align: center;
 }
 
 .centerp {
-  color: black;
   text-align: center;
 }
 
-* {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
 
 body {
   font-family: Arial;
@@ -30,8 +28,12 @@ body {
   min-height: 98vh;
   display: flex;
   flex-direction: column;
-  color: #333; /* Text color in light mode */
-  background-image: radial-gradient(circle 150px at 25% 33%, white, yellow, lightyellow, aqua);
+  /* color: #333; Text color in light mode */
+  background: linear-gradient(
+    0deg,
+    #c49952 0%,
+    rgba(205, 237, 246, 1) 100%
+  );
 }
 
 /* Header/Blog Title */
@@ -188,14 +190,14 @@ li a:hover,
 
 /* Add a card effect for articles */
 .card {
-  background-color: #333333 ;
+  background-color: #333333ab ;
   padding: 20px;
   margin-top: 20px;
   border-radius: 10px;
 }
 
 .rightcard {
-  background-color: #333333 ;
+  background-color: #333333ab ;
   padding: 20px;
   margin-top: 20px;
   border-radius: 10px;
@@ -205,7 +207,7 @@ li a:hover,
   color: white;
   flex: 1;
   text-align: center;
-  background-color: #33333300 ;
+  background-color: #333333ab ;
   padding: 100px;
   width: 100%;
   margin-top: 20px;
@@ -225,7 +227,8 @@ li a:hover,
 }
 
 .nestedcard {
-  background-color: #fff; /* Light background color */
+  background-color: #333333; /* Light background color */
+  color: white;
   margin-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
@@ -234,7 +237,7 @@ li a:hover,
 }
 
 .nestedinnestedcard {
-  background-color: #ccc;
+  background-color: #36454F;
   color: #333; /* Text color in light mode */
   margin-top: 10px;
   padding-left: 10px;
@@ -252,7 +255,7 @@ li a:hover,
 }
 
 .link {
-  background-color: #fff; /* Light background color */
+  background-color: #8a8a8a; /* Light background color */
   width: 100%;
   text-decoration: none;
   color: #DAA520;
@@ -261,7 +264,7 @@ li a:hover,
 /* Style the topnav links */
 .link a {
   display: block;
-  color: #333; /* Text color in light mode */
+  color: white; /* Text color in light mode */
   text-align: center;
   text-decoration: none;
   padding: 20px;

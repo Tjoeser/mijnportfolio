@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mijn portfolio-website neemt u mee door al mijn werk en opdrachten">
+  <meta name="keywords" content="Portfolio,Thijs,Rietveld,ThijsRietveld,thijsrietveld,Thijs Rietveld,thijs rietveld,">
+  <meta name="author" content="Thijs Rietveld">
   <link rel="stylesheet" href="media/styledark.css">
   <link id="background" rel="stylesheet" href="media/starbackground.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">

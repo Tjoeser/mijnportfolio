@@ -29,7 +29,12 @@ body {
   display: flex;
   flex-direction: column;
   color: white;
-  background: #0d1b2a;
+  background: linear-gradient(
+    0deg,
+    #09131d 0%,
+    #0d1b2a 100%
+  );
+  /* background: #0d1b2a; */
 }
 
 /* Header/Blog Title */

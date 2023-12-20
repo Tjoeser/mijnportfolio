@@ -69,7 +69,7 @@ class ContentController
 
     public function home()
     {
-        $this->Functions->cookie("visitorcookie","visitor");
+        $this->Functions->cookie("visitorcookie", "visitor");
         $html = '';
         $html = '<div class="main-content">';
         $html .= '<section id="home">';
@@ -119,6 +119,16 @@ class ContentController
                         Daarom kan ik met zekerheid zeggen dat dit een leerzame opdracht was.
                         </p>';
         $html .= '  </div>';
+        $html .= '  <div class="nestedinnestedcard">';
+        $html .= '    <h4>React-Native MVC</h4>';
+        $html .= '    <p>
+                        Vervolgens heb ik ook nog dezelfde opdracht gemaakt, maar dan in React Native.<br><br>
+                        Dit was voor het eerst dat we met React Native werkten, wat een hele leuke en licht ingewikkelde opdracht was. <br>
+                        Maar daar ben ik natuurlijk gewoon overheen gekomen.<br><br>
+                        Het is dus hetzelfde principe, maar dan in de vorm van een app in plaats van een site.<br>
+                        Ook vindt u de repository hier rechts in het linkblok.
+                        </p>';
+        $html .= '  </div>';
         $html .= '  </div>';
         $html .= '  <div class="nestedcard">';
         $html .= '    <h3>Stenniz workshop stage</h3>';
@@ -139,7 +149,8 @@ class ContentController
         $html .= '  <div class="rightcolumn1">';
         $html .= '      <div class="rightcard">';
         $html .= '    <div class="link"><a target="_blank" href="https://github.com/Tjoeser/mijnportfolio">Mijn Portfolio bekijken op Github</a></div>';
-        $html .= '    <div class="link"><a target="_blank" href="https://github.com/Tjoeser/3eJaarSchool">Mijn examen jaar opdrachten bekijken op Github</a></div>';
+        $html .= '    <div class="link"><a target="_blank" href="https://github.com/Tjoeser/MVC">Mijn MVC opdracht bekijken op Github</a></div>';
+        $html .= '    <div class="link"><a target="_blank" href="https://github.com/Tjoeser/react-native_mvc">Mijn react native MVC opdracht bekijken op Github</a></div>';
         $html .= '    <div class="link"><a target="_blank" href="https://github.com/Tjoeser/mvc_stagesite">Mijn werk aan de stage repository bekijken op Github</a></div>';
         $html .= '    <div class="link"><a href="#stennizworkshops">Voor meer informatie over de Stenniz Workshop stage kunt u hier kijken!</a></div>';
         $html .= '      </div>';
@@ -470,8 +481,8 @@ class ContentController
         $html .= '  </div>';
         $html .= '</div>';
         $html .= '</div>';
+        $html .= '</div>';
         $html .= '</section>';
-
 
         $html .= '<section id="contact">';
         $html .= '<div class="row">';
@@ -506,7 +517,7 @@ class ContentController
         $html .= '</div>';
         $html .= '</section>';
         $html .= '</div>';
-        echo $html; 
+        echo $html;
     }
 
     // public function mijnwerk()
@@ -560,20 +571,20 @@ class ContentController
             echo $html;
         }
     }
-    
+
 
     public function adminread($id)
     {
-            $res = $this->Functions->read($id);
-            $html = '';
-            $html .= '<div class="row">';
-            $html .= '  <div class="homecard">';
-            $html .= '    <button onclick="window.location.href=\'index.php?op=admin&case=true\'">Go Back</button>';
-            $html .= $this->Functions->adminreadfunction($res, 1);
-            $html .= '  </div>';
-            $html .= '</div>';
-            $html .= '</div>';
-            $html .= '</div>';
-            echo $html;
+        $res = $this->Functions->read($id);
+        $html = '';
+        $html .= '<div class="row">';
+        $html .= '  <div class="homecard">';
+        $html .= '    <button onclick="window.location.href=\'index.php?op=admin&case=true\'">Go Back</button>';
+        $html .= $this->Functions->adminreadfunction($res, 1);
+        $html .= '  </div>';
+        $html .= '</div>';
+        $html .= '</div>';
+        $html .= '</div>';
+        echo $html;
     }
 }
