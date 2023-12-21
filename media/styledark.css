@@ -60,7 +60,7 @@ body {
 
 .downarrow{
   cursor: pointer;
-  top: 150px;
+  top: 80px;
   width: 50px;
   height: 50px;
   padding: 20px;
@@ -71,7 +71,7 @@ body {
 }
 
 .downarrow:hover{
-  top: 140px;
+  top: 70px;
 }
 
 /* Style the top navigation bar */
@@ -219,7 +219,7 @@ li a:hover,
 }
 
 .homecontainer{
-  min-height: 65vh;
+  min-height: 50vh;
   display: flex;
 }
 
@@ -418,10 +418,23 @@ section:last-of-type {
   cursor: pointer;
   position: relative;
   float: right;
-  margin-right: 15px;
-  margin-top: 15px;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
+.darklighttoggle:hover{
+  background-color: white;
+  /* background-image: url('./svg/moon-regular-dark.svg'); */
+}
+
+#translatebutton{
+  cursor: pointer;
+  position: relative;
+  float: right;
+}
 
 @media screen and (max-width: 620px) {
   .topnav{

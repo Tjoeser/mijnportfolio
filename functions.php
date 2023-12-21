@@ -5,20 +5,24 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 require_once 'Datahandler.php';
-
 class Functions
 {
 
     private $DataHandler;
+    private $live;
+
 
     public function __construct()
     {
         date_default_timezone_set('Europe/Amsterdam');
         $currentUrl = $_SERVER['REQUEST_URI'];
+
         if (strpos($currentUrl, 'mijnportfolio') == true) {
-            $this->DataHandler = new DataHandler("localhost", "mysql", "mijnportfolio_db", "root", "");
+            $this->live = false;
+            $this->DataHandler = new DataHandler(DB_HOST, DB_DRIVER, DB_NAME, DB_USERNAME, DB_PASSWORD);
         } else {
-            $this->DataHandler = new DataHandler("localhost", "mysql", "ideweshv_mijnportfolio_db", "ideweshv_ThijsRietveld", "a)lIH6z.mX0V81");
+            $this->live = true;
+            $this->DataHandler = new DataHandler(DB_HOST_LIVE, DB_DRIVER_LIVE, DB_NAME_LIVE, DB_USERNAME_LIVE, DB_PASSWORD_LIVE);
         }
     }
 
@@ -93,10 +97,8 @@ class Functions
 
     public function loginprocess($username, $password)
     {
-        $adminusername = ADMIN_UN;
-        $adminpassword = ADMIN_PW;
-
-        if ($username == $adminusername && $password == $adminpassword) {
+        // var_dump($this->live);
+        if ($username == ADMIN_UN && $password == ADMIN_PW) {
             $this->cookie("adminlogin", $username);
             $html = '';
             $html .= '<div class="row">';
@@ -138,19 +140,17 @@ class Functions
     public function Sendemail($email, $fullname, $content)
     {
         $mail = new PHPMailer();
-        $AppPassword = APP_PW;
-        $username = APP_UN;
 
         $mail->isSMTP();
-        $mail->Host = 'ams21.stablehost.com';
+        $mail->Host = APP_HOST;
         $mail->SMTPAuth = true;
-        $mail->Username = "contactmail@thijsrietveld.com";
-        $mail->Password = "a)lIH6z.mX0V81"; // Use the App Password
+        $mail->Username = APP_UN;
+        $mail->Password = APP_PW; // Use the App Password
         $mail->SMTPSecure = 'ssl/tls'; // or 'ssl' for SSL
         $mail->Port = 587;
 
         $mail->setFrom($email, $fullname); // Set "From" to your Gmail address
-        $mail->addAddress('contactmail@thijsrietveld.com', 'Thijs Rietveld'); // Recipient's address
+        $mail->addAddress(APP_EMAIL, APP_RECIEVER); // Recipient's address
 
         $mail->isHTML(false); // Set to true for HTML emails
         $mail->Subject = 'Contact Form Submission from ' . $email;
@@ -360,15 +360,6 @@ class Functions
         }else{
             setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day 
         }
-
-        // var_dump($_COOKIE);
-
-        // if(!isset($_COOKIE[$cookie_name])) {
-        //     echo "Cookie named '" . $cookie_name . "' is not set!";
-        //   } else {
-        //     echo "Cookie '" . $cookie_name . "' is set!<br>";
-        //     echo "Value is: " . $_COOKIE[$cookie_name];
-        //   }
     }
 
     public function deletecookie(){

@@ -8,6 +8,10 @@
 <script src="misc/js/javascript.js"></script>
 <script src="misc/js/pagescroll.js"></script>
 <script src="misc/js/darktoggle.js"></script>
+<script src="misc/js/translate.js"></script>
+
+
+
 
 </body>
 </html>

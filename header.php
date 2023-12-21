@@ -41,6 +41,9 @@
       </p>
     </div>
   </a>
+  <div id="google_translate_element"></div>
+
+
   </div>
 
   <div class="mobilenav">
@@ -69,7 +72,9 @@
     <li><a href="index.php?#mijnschool">Mijn School</a></li>
     <li><a href="index.php?#overmij">Over Mij</a></li>
     <li><a href="index.php?#contact">Contact</a></li>
-    <img name="darklighttoggle" class="darklighttoggle" src="media\svg\moon-regular.svg">
+
+    <img name="darklighttoggle" class="darklighttoggle" src="media\svg\moon-regular-dark.svg">
+    <li id="translatebutton" class="icon"><a href="javascript:void(0);" onmouseover="hover(this)" onclick="googleTranslateElementInit()">ENG</a></li>
   </ul>
 </nav>
 
