@@ -481,6 +481,7 @@ class ContentController
         $html .= '  </div>';
         $html .= '</div>';
         $html .= '</div>';
+        $html .= '</div>';
         $html .= '</section>';
 
         $html .= '<section id="contact">';
