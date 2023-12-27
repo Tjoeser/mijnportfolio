@@ -30,6 +30,9 @@ class ContentController
             $case = isset($_GET['case']) ? $_GET['case'] : '';
 
             switch ($op) {
+                case 'contact':
+                    $this->contact();
+                    break;
                 case 'admin':
                     $this->admin();
                     break;
@@ -71,7 +74,7 @@ class ContentController
     {
         $this->Functions->cookie("visitorcookie", "visitor");
         $html = '';
-        $html = '<div class="main-content">';
+        $html .= '<div class="main-content">';
         $html .= '<section id="home">';
         $html .= '<div class="row">';
         $html .= '<div class="homecontainer">';
@@ -410,15 +413,11 @@ class ContentController
         $html .= '    <img class=fakeimg1 src="media/fotos/roc2.jpg" alt="Een andere foto van mijn opleiding die niet kon inladen">';
         $html .= '  </div>';
         $html .= '  </div>';
-        $html .= '  </div>';
-        $html .= '  </div>';
-        $html .= '  </div>';
         $html .= '</div>';
         $html .= '</section>';
 
-
-        $html .= '<section id="overmij">';
         $count = $this->Functions->currentAgeCount();
+        $html .= '<section id="overmij">';
         $html .= '<div class="row">';
         $html .= '<div class="leftcolumn">';
         $html .= '  <div class="card">';
@@ -484,38 +483,8 @@ class ContentController
         $html .= '</div>';
         $html .= '</section>';
 
-        $html .= '<section id="contact">';
-        $html .= '<div class="row">';
-        $html .= '<div class="leftcolumn">';
-        $html .= '  <div class="card">';
-        $html .= '    <h2 class="centerh1">Contact</h2>';
-        $html .= '      <form action="index.php?op=contactprocess" method="post">';
-        $html .= '          <label for="fname">Voornaam</label>';
-        $html .= '          <input type="text" id="fname" name="fname" placeholder="Uw voornaam...">';
-        $html .= "          <label for='preposition'>Tussenvoegsel's</label>";
-        $html .= "          <input type='text' id='preposition' name='preposition' placeholder='Uw tussenvoegsels...'>";
-        $html .= '          <label for="lname">Acternaam</label>';
-        $html .= '          <input type="text" id="lname" name="lname" placeholder="Uw achternaam...">';
-        $html .= '          <label for="email">E-mail</label>';
-        $html .= '          <input type="text" id="email" name="email" placeholder="Uw e-mailadres...">';
-        $html .= '          <label for="company">Bedrijf</label>';
-        $html .= '          <input type="text" id="company" name="company" placeholder="Uw bedrijfsnaam...">';
-        $html .= '          <label for="subject">Vraag</label>';
-        $html .= '          <textarea id="subject" name="subject" placeholder="Wat is uw vraag?..." style="height:200px"></textarea>';
-        $html .= '          <input type="submit" value="Verstuur">';
-        $html .= '      </form>';
-        $html .= '  </div>';
-        $html .= '  </div>';
-        $html .= '</div>';
-        $html .= '<div class="rightcolumn">';
-        $html .= '  <div class="card">';
-        $html .= '    <p>U kunt mij ook een mailtje sturen op dit adres</p>';
-        $html .= '     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>';
-        $html .= '     <button data-text="thijs0302@gmail.com" class="emailbutton">Kopieer mijn e-mailadres</button>';
-        $html .= '     <p id="succesmessage">E-mailadres is succesvol gekopieerd</p>';
-        $html .= '  </div>';
-        $html .= '</section>';
-        $html .= '  </div>';
+
+
 
         echo $html;
     }
@@ -533,43 +502,15 @@ class ContentController
     // }
 
 
-    // public function contact()
-    // {
-    // }
+    public function contact()
+    {
+        include "contact.php";
+    }
 
 
     public function admin()
     {
-        if (isset($_COOKIE['adminlogin'])) {
-            $html = '';
-            $html .= '<div class="row">';
-            $html .= '  <div class="tablereadcard">';
-            $html .= '    <h2>welkom admin</h2>';
-            $res = $this->Functions->readall();
-            $html .= $this->Functions->adminreadfunction($res, 0);
-            $html .= '  </div>';
-            $html .= '</div>';
-            $html .= '</div>';
-            $html .= '</div>';
-            echo $html;
-        } else {
-            $html = '';
-            $html .= '<div class="row">';
-            $html .= '  <div class="homecard">';
-            $html .= '    <h2>Login</h2>';
-            $html .= '      <form action="index.php?op=loginprocess" method="post">';
-            $html .= '          <label for="username">Gebruikersnaam</label>';
-            $html .= '          <input type="text" id="username" name="username" placeholder="Uw Gebruikersnaam...">';
-            $html .= '          <label for="password">Wachtwoord</label>';
-            $html .= '          <input type="text" id="password" name="password" placeholder="Uw wachtwoord...">';
-            $html .= '          <input type="submit" value="Verstuur">';
-            $html .= '      </form>';
-            $html .= '  </div>';
-            $html .= '</div>';
-            $html .= '</div>';
-            $html .= '</div>';
-            echo $html;
-        }
+        include "admin.php";
     }
 
 

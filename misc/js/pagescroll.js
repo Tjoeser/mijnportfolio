@@ -22,5 +22,9 @@ function navHighlighter() {
     } else {
       document.querySelector(".topnav a[href*=" + sectionId + "]").classList.remove("active");
     }
+    if (sectionId == 'contact'){
+      document.querySelector(".topnav a[href*=contact]").classList.add("active");
+      document.querySelector(".topnav a[href*=home]").classList.remove("active");
+    }
   });
 }

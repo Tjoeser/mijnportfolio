@@ -219,7 +219,7 @@ li a:hover,
 }
 
 .homecontainer{
-  min-height: 50vh;
+  min-height: 55vh;
   display: flex;
 }
 
@@ -283,6 +283,7 @@ li a:hover,
 
 
 input[type=text],
+input[type=password],
 select,
 textarea {
   width: 100%;
@@ -426,8 +427,9 @@ section:last-of-type {
 }
 
 .darklighttoggle:hover{
+  top: 1px;
   background-color: white;
-  /* background-image: url('./svg/moon-regular-dark.svg'); */
+  content:url("svg/moon-regular-dark.svg");
 }
 
 #translatebutton{

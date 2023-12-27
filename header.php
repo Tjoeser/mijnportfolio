@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
   <meta charset="UTF-8">
@@ -41,7 +41,7 @@
       </p>
     </div>
   </a>
-  <div id="google_translate_element"></div>
+
 
 
   </div>
@@ -71,10 +71,10 @@
     </li>
     <li><a href="index.php?#mijnschool">Mijn School</a></li>
     <li><a href="index.php?#overmij">Over Mij</a></li>
-    <li><a href="index.php?#contact">Contact</a></li>
+    <li><a href="index.php?op=contact">Contact</a></li>
 
     <img name="darklighttoggle" class="darklighttoggle" src="media\svg\moon-regular-dark.svg">
-    <li id="translatebutton" class="icon"><a href="javascript:void(0);" onmouseover="hover(this)" onclick="googleTranslateElementInit()">ENG</a></li>
+    <!-- <li id="translatebutton" class="icon"><a href="javascript:void(0);" onmouseover="hover(this)" onclick="translateToEnglish()">ENG</a></li> -->
   </ul>
 </nav>
 

@@ -10,6 +10,11 @@ class Functions
 
     private $DataHandler;
     private $live;
+    private $DB_HOST;
+    private $DB_DRIVER;
+    private $DB_NAME;
+    private $DB_USERNAME;
+    private $DB_PASSWORD;
 
 
     public function __construct()
@@ -19,10 +24,26 @@ class Functions
 
         if (strpos($currentUrl, 'mijnportfolio') == true) {
             $this->live = false;
-            $this->DataHandler = new DataHandler(DB_HOST, DB_DRIVER, DB_NAME, DB_USERNAME, DB_PASSWORD);
         } else {
             $this->live = true;
+        }
+
+
+        if ($this->live == true){
             $this->DataHandler = new DataHandler(DB_HOST_LIVE, DB_DRIVER_LIVE, DB_NAME_LIVE, DB_USERNAME_LIVE, DB_PASSWORD_LIVE);
+            $this->DB_HOST = DB_HOST_LIVE;
+            $this->DB_DRIVER = DB_DRIVER_LIVE;
+            $this->DB_NAME = DB_NAME_LIVE;
+            $this->DB_USERNAME = DB_USERNAME_LIVE;
+            $this->DB_PASSWORD = DB_PASSWORD_LIVE;
+        }
+        else{
+            $this->DataHandler = new DataHandler(DB_HOST, DB_DRIVER, DB_NAME, DB_USERNAME, DB_PASSWORD);
+            $this->DB_HOST = DB_HOST;
+            $this->DB_DRIVER = DB_DRIVER;
+            $this->DB_NAME = DB_NAME;
+            $this->DB_USERNAME = DB_USERNAME;
+            $this->DB_PASSWORD = DB_PASSWORD;
         }
     }
 
@@ -57,7 +78,7 @@ class Functions
                         $emailErr = "U mist een of meerdere velden";
                     } else {
                         // Establish a connection to your database (replace with your actual connection details)
-                        $mysqli = new mysqli("hostname", "username", "password", "database");
+                        $mysqli = new mysqli($this->DB_HOST, $this->DB_USERNAME, $this->DB_PASSWORD, $this->DB_NAME);
         
                         // Check the connection
                         if ($mysqli->connect_error) {
