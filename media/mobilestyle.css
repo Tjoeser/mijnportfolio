@@ -1,0 +1,579 @@
+:root {
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-gray: #ccc;
+    --color-dark-gray: #333;
+    --color-light-gray: #f2f2f2;
+    --color-dark-blue: #1b263b;
+    --color-gradient-start: #09131d;
+    --color-gradient-end: #0d1b2a;
+    --color-golden: #DAA520;
+    --color-card-bg: #778da94d;
+    --color-card-hover-bg: #778da938;
+    --color-nested-card-bg: #1b263b;
+    --color-link-bg: #E9DCC7;
+    --color-active: #778DA9;
+    --color-toggle-bg: #555;
+  }
+  
+  .centerh {
+    text-align: center;
+  }
+  
+  .centerp {
+    text-align: center;
+  }
+  
+  .centerh1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .centerp1 {
+    text-align: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: Arial;
+    margin: 0px;
+    margin-top: -20px;
+    min-height: 98vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background: linear-gradient(0deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%);
+  }
+  
+  .header {
+    padding: 0px;
+    text-align: center;
+    background: var(--color-dark-blue);
+  }
+  
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: var(--color-dark-blue);
+    margin-top: 20px;
+    flex-shrink: 0;
+  }
+  
+  .header h1 {
+    font-size: 50px;
+  }
+  
+  .downarrow {
+    cursor: pointer;
+    top: 80px;
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+    position: relative;
+    transition: top 1s;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .downarrow:hover {
+    top: 70px;
+  }
+  
+  .topnav {
+    background-color: var(--color-dark-gray);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--color-dark-gray);
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a,
+  .dropdown-content {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown-content li {
+    clear: both;
+    width: 100%;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 40px;
+  }
+  
+  #mijnwerkbutton:hover .dropdown-content {
+    display: block;
+  }
+  
+  li a:hover,
+  .dropdown-content a:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .leftcolumn {
+    float: left;
+    width: 75%;
+  }
+  
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+  }
+  
+  .row {
+    flex: 1;
+  }
+  
+  .leftcolumn1 {
+    flex: 3;
+  }
+  
+  .rightcolumn1 {
+    flex: 1;
+    padding-left: 20px;
+  }
+  
+  .row1 {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .column-container1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+  }
+  
+  .fakeimg1 {
+    width: 300px;
+    height: 200px;
+  }
+  
+  .rightcolumn2 {
+    flex: 1;
+    width: 100%;
+  }
+  
+  .leftcolumn2 {
+    flex: 5;
+  }
+  
+  .card {
+    background-color: var(--color-card-bg);
+    padding-top: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  
+  .rightcard {
+    background-color: var(--color-card-bg);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  
+  .homehomecard {
+    flex: 1;
+    text-align: center;
+    background-color: var(--color-card-bg);
+    padding: 100px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  
+  .homecontainer {
+    min-height: 55vh;
+    display: flex;
+  }
+  
+  .homecard {
+    background-color: var(--color-card-hover-bg);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  
+  .nestedcard {
+    background-color: var(--color-nested-card-bg);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    border: solid var(--color-golden);
+  }
+  
+  .nestedcard2 {
+    background-color: var(--color-nested-card-bg);
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .nestedinnestedcard {
+    background-color: #778da9;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border: solid transparent;
+  }
+  
+  .tablereadcard {
+    background-color: var(--color-card-hover-bg);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+  .link {
+    background-color: var(--color-dark-gray);
+    width: 100%;
+    text-decoration: none;
+    color: var(--color-golden);
+  }
+  
+  .link a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
+  }
+  
+  .link a:hover {
+    background-color: #ddd;
+    color: black;
+    padding: 17px;
+    border: solid var(--color-golden);
+  }
+  
+  input[type=text],
+  input[type=password],
+  input[type=number],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-gray);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: var(--color-dark-gray);
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    padding: 17px;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #ddd;
+    color: black;
+    padding: 16px;
+    border: solid var(--color-golden);
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .emailbutton {
+    background-color: var(--color-dark-gray);
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    padding: 17px;
+  }
+  
+  .emailbutton:hover {
+    background-color: #ddd;
+    color: black;
+    padding: 16px;
+    border: solid var(--color-golden);
+  }
+  
+  .emailbutton:focus {
+    background-color: var(--color-golden);
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    padding: 17px;
+  }
+  
+  .githublinks {
+    background-color: var(--color-link-bg);
+    padding: 20px;
+    margin-top: 20px;
+    position: fixed;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    color: black;
+    border: solid var(--color-dark-blue);
+    border-radius: 20px;
+  }
+  
+  th,
+  td {
+    text-align: left;
+    padding: 8px;
+    border: solid var(--color-dark-blue);
+  }
+  
+  tr:nth-child(even) {
+    background-color: var(--color-light-gray);
+  }
+  
+  th {
+    background-color: var(--color-dark-blue);
+    color: white;
+  }
+  
+  table a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  button {
+    background-color: var(--color-dark-blue);
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  #fabars {
+    display: none;
+  }
+  
+  .mobilenav #mobilelinks {
+    display: none;
+  }
+  
+  section:last-of-type {
+    min-height: 80vh;
+  }
+  
+  .active {
+    color: var(--color-active);
+    border-bottom: var(--color-active) solid 2px;
+  }
+  
+  .darklighttoggle {
+    cursor: pointer;
+    position: relative;
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .darklighttoggle:hover {
+    top: 1px;
+    background-color: white;
+    content: url("svg/moon-regular-dark.svg");
+  }
+  
+  #translatebutton {
+    cursor: pointer;
+    position: relative;
+    float: right;
+  }
+  
+  @media screen and (max-width: 620px) {
+    .topnav {
+      display: none;
+    }
+  
+    .mobilenav {
+      overflow: hidden;
+      background-color: var(--color-dark-gray);
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+  
+    .mobilenav #mobilelinks {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .mobilenav #mobilelinks a {
+      margin: 8px;
+    }
+  
+    .mobilenav #mobilelinks2 {
+      background-color: #555;
+      display: none;
+    }
+  
+    .mobilenav #mobilelinks2 a {
+      background-color: #646363;
+      margin: 5px;
+    }
+  
+    .mobilenav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      padding: calc(15px + (100vw - 700px) * (15 - 30) / (700 - 1000));
+      text-decoration: none;
+    }
+  
+    #fabars {
+      display: block;
+    }
+  
+    #fabars2 {
+      position: relative;
+    }
+  
+    .leftcolumn {
+      width: 100%;
+    }
+  
+    .rightcolumn {
+      display: none;
+    }
+  
+    .leftcolumn1 {
+      width: 100%;
+    }
+  
+    .rightcolumn1 {
+      display: none;
+    }
+  
+    img {
+      display: none;
+    }
+  
+    .homehomecard {
+      padding: 0;
+    }
+  }
+  
+  .card {
+    /* margin: 10px; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1);
+  }
+  
+  .container {
+    padding: 2px 16px;
+    background-color: #ffffff00;
+  }
+  
+  .carddivver {
+    /* display: flex; */
+    align-items: start;
+  }
+  
+  .carddivhor {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contentcollapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  
+  .collapsible {
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .collapsible:after {
+    content: '\02C5';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-row div {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .form-row div:last-child {
+    margin-right: 0;
+  }
+  
+  .form-row label,
+  .form-row input {
+    display: block;
+    width: 100%;
+  }
+  
+  .date {
+    color: #c49952;
+  }
+  
+
+  #mobilecontactform{
+    padding: 10px;
+  }

@@ -318,14 +318,15 @@ class ContentController
         $html .= '<section id="contact">';
         $html .= '<div class="row">';
         $html .= '<div class="leftcolumn">';
-        $html .= '<div class="card">';
+        $html .= '<div id="mobilecontactform" class="card">';
         $html .= '<h2 class="centerh1">Contact</h2>';
         $html .= '<form action="index.php?op=contactprocess" method="post">';
+        $html .= '<div style="display:none;">';
+        $html .= '<input type="text" name="website" placeholder="Leave empty">';
+        $html .= '</div>';
         $html .= '<div class="form-row">'; // Wrapper for "Voornaam", "Tussenvoegsels", and "Achternaam"
         $html .= '<div><label for="fname">Voornaam</label>';
         $html .= '<input type="text" id="fname" name="fname" placeholder="Uw voornaam..."></div>';
-        $html .= '<div><label for="preposition">Tussenvoegsels</label>';
-        $html .= '<input type="text" id="preposition" name="preposition" placeholder="Uw tussenvoegsels..."></div>';
         $html .= '<div><label for="lname">Achternaam</label>';
         $html .= '<input type="text" id="lname" name="lastname" placeholder="Uw achternaam..."></div>';
         $html .= '</div>'; // End wrapper for name fields

@@ -46,15 +46,16 @@ class Functions
         }
     }
 
-    public function __destruct()
-    {
-    }
+    public function __destruct() {}
 
     public function contactprocess()
     {
+        if (!empty($_POST['website'])) {
+            exit; // Stop further processing
+        }
+
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $fname = $_POST['fname'];
-            $preposition = $_POST['preposition'];
             $lname = $_POST['lastname'];
             $email = $_POST['email'];
             $company = $_POST['company'];
@@ -85,8 +86,8 @@ class Functions
                         }
 
                         // Use a prepared statement with parameter binding
-                        $stmt = $mysqli->prepare("INSERT INTO contact_subs (fname, preposition, lname, email, company, subject, datetime) VALUES(?, ?, ?, ?, ?, ?, ?)");
-                        $stmt->bind_param("sssssss", $fname, $preposition, $lname, $email, $company, $subject, $currentdate);
+                        $stmt = $mysqli->prepare("INSERT INTO contact_subs (fname, lname, email, company, subject, datetime) VALUES(?, ?, ?, ?, ?, ?)");
+                        $stmt->bind_param("ssssss", $fname, $lname, $email, $company, $subject, $currentdate);
                         $stmt->execute();
                         $stmt->close();
 
@@ -96,7 +97,7 @@ class Functions
                 }
 
                 if ($emailErr == "Email is succesvol verzonden") {
-                    $fullname = $fname . ' ' . $preposition . ' ' . $lname;
+                    $fullname = $fname . ' ' . $lname;
                     $content = 'Bedrijf: ' . $company . "\n" . 'Vraag: ' . $subject;
                     $this->Sendemail($email, $fullname, $content);
                 }
@@ -300,7 +301,8 @@ class Functions
 
     public function readall()
     {
-        $sql = "SELECT id, fname, lname, company, subject FROM contact_subs";
+        $sql = "SELECT id, fname, lname, company, datetime, subject FROM contact_subs ORDER BY id DESC";
+
         $result = $this->DataHandler->readsData($sql);
         $result->setFetchMode(PDO::FETCH_ASSOC);
         $res = $result->fetchAll();
@@ -308,7 +310,7 @@ class Functions
     }
     public function readallTrips()
     {
-        $sql = "SELECT id, year, location, country FROM fam_rietveld_trips";
+        $sql = "SELECT id, year, location, country FROM fam_rietveld_trips ORDER BY id DESC";
         $result = $this->DataHandler->readsData($sql);
         $result->setFetchMode(PDO::FETCH_ASSOC);
         $res = $result->fetchAll();
@@ -328,8 +330,6 @@ class Functions
         $html .= "<form action='' method='post'>";
         $html .= "<label>fname</label>";
         $html .= "<input type='text' name='fname' value='{$res[0]['fname']}'>";
-        $html .= "<label>preposition</label>";
-        $html .= "<input type='text' name='preposition' value='{$res[0]['preposition']}'>";
         $html .= "<label>lname</label>";
         $html .= "<input type='text' name='lname' value='{$res[0]['lname']}'>";
         $html .= "<label>email</label>";
@@ -348,12 +348,11 @@ class Functions
 
         if (isset($_POST['submit'])) {
             $fname = isset($_REQUEST['fname']) ? $_REQUEST['fname'] : '';
-            $preposition = isset($_REQUEST['preposition']) ? $_REQUEST['preposition'] : '';
             $lname = isset($_REQUEST['lname']) ? $_REQUEST['lname'] : '';
             $email = isset($_REQUEST['email']) ? $_REQUEST['email'] : '';
             $company = isset($_REQUEST['company']) ? $_REQUEST['company'] : '';
             $subject = isset($_REQUEST['subject']) ? $_REQUEST['subject'] : '';
-            $sql = "UPDATE `contact_subs` SET `fname` = '" . $fname . "', `preposition` = '" . $preposition . "', `lname` = '" . $lname . "', `email` = '" . $email . "', `company` = '" . $company . "', `subject` = '" . $subject . "' WHERE id=" . $id;
+            $sql = "UPDATE `contact_subs` SET `fname` = '" . $fname . "', `lname` = '" . $lname . "', `email` = '" . $email . "', `company` = '" . $company . "', `subject` = '" . $subject . "' WHERE id=" . $id;
             $result = $this->DataHandler->readsData($sql);
             $result->setFetchMode(PDO::FETCH_ASSOC);
             header("Location: index.php?op=actions&act=read&id=$id");
@@ -422,29 +421,28 @@ class Functions
             $year = $_POST['year'];
             $location = $_POST['location'];
             $country = $_POST['country'];
-    
+
             // Establish a connection to your database (replace with your actual connection details)
             $mysqli = new mysqli($this->DB_HOST, $this->DB_USERNAME, $this->DB_PASSWORD, $this->DB_NAME);
-    
+
             // Check the connection
             if ($mysqli->connect_error) {
                 die("Connection failed: " . $mysqli->connect_error);
             }
-    
+
             // Use a prepared statement with parameter binding
             $stmt = $mysqli->prepare("INSERT INTO fam_rietveld_trips (year, location, country) VALUES(?, ?, ?)");
             $stmt->bind_param("iss", $year, $location, $country); // Corrected the type definition string and parameter order
             $stmt->execute();
             $stmt->close();
-    
+
             // Close the database connection
             $mysqli->close();
-    
+
             // Redirect back to the admin page
             header("Location: index.php?op=admin&content=trip");
             exit(); // Ensure no further code is executed after the redirect
         }
     }
-    
 }
 ?>

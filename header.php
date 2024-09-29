@@ -2,16 +2,25 @@
 <html lang="nl">
 
 <head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PD23GGWX');</script>
+<!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Mijn portfolio-website neemt u mee door al mijn werk en opdrachten">
   <meta name="keywords" content="Portfolio,Thijs,Rietveld,ThijsRietveld,thijsrietveld,Thijs Rietveld,thijs rietveld,">
   <meta name="author" content="Thijs Rietveld">
-  <link rel="stylesheet" href="media/styledark.css">
+  <link rel="stylesheet" href="media/styledark.css" media="(min-width: 769px)">
+  <link rel="stylesheet" href="media/mobilestyle.css" media="(max-width: 768px)">
+
   <link id="background" rel="stylesheet" href="media/starbackground.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="icon" href="media\fotos\icons8-portfolio-100.png" type="image/x-ico" />
+  <link rel="icon" href="media\fotos\TR_LOGO.ico" type="image/x-ico" />
   <title>Thijs Rietveld</title>
 </head>
 
@@ -26,7 +35,10 @@
 </script>
 
 <body>
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PD23GGWX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <div class="bg-animation">
   <div id="stars"></div>
 </div>
@@ -34,17 +46,7 @@
 
   <div class="header">
     <h1>Thijs Rietveld</h1>
-    <div id="fabars">
-      <p>Mobile version<br>
-        Check de webversie die is iets mooier.
-      </p>
-    </div>
-  </a>
-
-
-
   </div>
-
   <div class="mobilenav">
   <div id="mobilelinks">
   <!-- <a href="index.php?#home">Home</a> -->
