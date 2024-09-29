@@ -33,8 +33,7 @@
 <i class="cloud"></i>​
 
   <div class="header">
-    <h1>Mijn Portfolio Website</h1>
-    <p>Van Thijs Rietveld</p>
+    <h1>Thijs Rietveld</h1>
     <div id="fabars">
       <p>Mobile version<br>
         Check de webversie die is iets mooier.
@@ -48,10 +47,10 @@
 
   <div class="mobilenav">
   <div id="mobilelinks">
-  <a href="index.php?#home">Home</a>
+  <!-- <a href="index.php?#home">Home</a> -->
+  <a href="index.php?#overmij">Over mij</a>
   <a href="index.php?#mijnwerk">Mijn werk </a>
-  <a href="index.php?#mijnschool">Mijn School</a>
-  <a href="index.php?#overmij">Over Mij</a>
+  <a href="index.php?#mijnschool">Mijn school</a>
   <a href="index.php?#contact">Contact</a>
   </div>
 
@@ -60,7 +59,7 @@
 
 <nav class="topnav">
   <ul>
-  <li><a href="index.php?#home" class="active">Home</a></li>
+  <li><a href="index.php?#overmij">Over mij</a></li>
     <li id="mijnwerkbutton">
       <a href="index.php?#mijnwerk">Mijn werk</a>
       <ul class="dropdown-content">
@@ -69,12 +68,10 @@
         <li><a href="index.php?#werkcard">Werk</a></li>
       </ul>
     </li>
-    <li><a href="index.php?#mijnschool">Mijn School</a></li>
-    <li><a href="index.php?#overmij">Over Mij</a></li>
-    <li><a href="index.php?op=contact">Contact</a></li>
+    <li><a href="index.php?#mijnschool">Mijn school</a></li>
+    <li><a href="index.php?#contact">Contact</a></li>
 
     <img name="darklighttoggle" class="darklighttoggle" src="media\svg\moon-regular-dark.svg">
-    <!-- <li id="translatebutton" class="icon"><a href="javascript:void(0);" onmouseover="hover(this)" onclick="translateToEnglish()">ENG</a></li> -->
   </ul>
 </nav>
 

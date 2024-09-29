@@ -1,6 +1,9 @@
 
 <?php
 
+$content = isset($_POST['content']) ? $_POST['content'] : "contact";
+$contactbutton = '<button type="submit" name="content" value="trip">' . $content . '</button>';
+$tripbutton = '<button type="submit" name="content" value="trip">' . $content . '</button>';
 
 if (isset($_COOKIE['adminlogin'])) {
 $html = '';
@@ -8,7 +11,26 @@ $html .= '<section id="admin">';
     $html .= '<div class="row">';
         $html .= ' <div class="tablereadcard">';
             $html .= ' <h2>welkom admin</h2>';
-            $res = $this->Functions->readall();
+            if ($content == "contact"){
+                $html .= '<form method="POST" id="contentForm">';
+                $html .= '<button type="submit" name="content" value="trip">trip</button>';
+                $html .= '</form>';
+                $res = $this->Functions->readall();
+            }elseif ($content == "trip"){
+                $html .= '<form method="POST" id="contentForm">';
+                $html .= '<button type="submit" name="content" value="contact">contact</button>';
+                $html .= '   ';
+                $html .= '<button type="submit" name="content" value="add">Add trip</button>';
+                $html .= '</form>';
+                $res = $this->Functions->readallTrips();
+            }elseif ($content == "add"){
+                $html .= '<form method="POST" id="contentForm">';
+                $html .= '<button type="submit" name="content" value="contact">contact</button>';
+                $html .= '   ';
+                $html .= '<button type="submit" name="content" value="trip">trip</button>';
+                $html .= '</form>';
+                $res = '';
+            }
             $html .= $this->Functions->adminreadfunction($res, 0);
             $html .= ' </div>';
         $html .= '</div>';

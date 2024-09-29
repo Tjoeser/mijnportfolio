@@ -11,6 +11,7 @@ dark green #13472E */
   text-align: center;
 }
 .centerh1{
+  font-size: 30px;
   text-align: center;
 }
 
@@ -190,7 +191,7 @@ li a:hover,
 .leftcolumn2 {
   flex: 5;
   /* Grow to fill available space */
-  width: max-content;
+  /* width: max-content; */
 }
 
 /* Add a card effect for articles */
@@ -232,20 +233,24 @@ li a:hover,
 
 .nestedcard {
   background-color: #1b263b;
-  margin-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
+  margin: 10px;
   border: solid #CCBBB8;
+}
+
+.nestedcard2 {
+  background-color: #1b263b;
+  padding: 10px;
+  margin: 10px;
 }
 
 .nestedinnestedcard {
   background-color: #778da9;
   color: white;
-  margin-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
+  margin: 10px;
+  padding: 10px;
   border: solid transparent;
 }
 
@@ -284,6 +289,7 @@ li a:hover,
 
 input[type=text],
 input[type=password],
+input[type=number],
 select,
 textarea {
   width: 100%;
@@ -405,7 +411,7 @@ section:nth-of-type(2n) {
 }
 
 section:last-of-type {
-  height: 100vh;
+  min-height: 80vh;
 }
 
 .active {
@@ -505,4 +511,86 @@ section:last-of-type {
   .homehomecard{
     padding: 0;
   }
+}
+
+.card {
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
+}
+
+.container {
+  padding: 2px 16px;
+  background-color: #ffffff00;
+}
+
+.carddivver{
+  display: flex;
+  align-items: start;
+}
+
+.carddivhor{
+  display: flex;
+  flex-direction: column;
+}
+
+.contentcollapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible {
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* .active, .collapsible:hover {
+  background-color: #555;
+} */
+
+.collapsible:after {
+  content: '\02C5';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+/* 
+.active:after {
+  content: '\02C4';
+} */
+
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-row div {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.form-row div:last-child {
+  margin-right: 0;
+}
+
+.form-row label, .form-row input {
+  display: block;
+  width: 100%;
+}
+
+.date{
+  color: #c49952; 
 }
