@@ -174,47 +174,47 @@ class ContentController
         $html .= '                  <h3 class="centerh">Krantenwijk</h3>';
         $html .= '    <h6 class="date">agusutus 2018 tot juni 2022</h6>';
         $html .= '                  <p>
-                                        Mijn allereerste baan is een baan die voor velen bekend is.<br><br>
-                                        De krantenwijk.<br><br>
-                                        Dit heb ik elke donderdag gedaan voor 3 jaar.<br><br>
-                                        Niet zoveel over te melden, maar ik vond dat hij wel genoemd mocht worden, aangezien dit de baan is waar ik tot nu toe het langst aan heb gewerkt.<br><br>
+Mijn allereerste baan is een baan die voor velen bekend is.<br><br>
+De krantenwijk.<br><br>
+Dit heb ik elke donderdag gedaan voor 3 jaar.<br><br>
+Niet zoveel over te melden, maar ik vond dat hij wel genoemd mocht worden, aangezien dit de baan is waar ik tot nu toe het langst aan heb gewerkt.<br><br>
                                     </p>';
         $html .= '  </div>';
         $html .= '              <div class="nestedcard">';
         $html .= '                  <h3 class="centerh" id=doppioinfo>Doppio Espresso</h3>';
         $html .= '    <h6 class="date">januari 2020 tot juni 2020</h6>';
         $html .= "                  <p>
-                                        De eerste echte baan.<br><br>
-                                        Nadat ik hier stage heb gelopen, is mij een baan aangeboden.<br>
-                                        Deze nam ik graag aan, aangezien de stage mij prima afging.<br><br>
-                                        De werkzaamheden zouden nu ook uitbreiden.<br>
-                                        Zo zou ik nu echt koffie mogen maken en al het latte art dat erbij komt kijken.<br><br>
-                                        Ik werkte elke zondag van ongeveer 11:00 tot 18:00; toen werkte ik voornamelijk aan het bereiden van de broodjes.<br>
-                                        Dit vond ik enorm leuk, ook waren er salades en panini's die ik kon voorbereiden.<br><br>
-                                        Naast de koffie en de broodjes moest er uiteraard ook kassa worden gedraaid.<br>
-                                        Toentertijd was dit ontzettend nieuw voor mij; ondertussen is kassa geen moeite meer, dankzij Doppio uiteraard.<br>
-                                        Ik heb ook tafels schoongemaakt en de zaak geholpen sluiten.<br><br>
-                                        Uiteindelijk hebben we vanwege coronaomstandigheden besloten toch onze wegen te splitsen.<br><br>
+De eerste echte baan.<br><br>
+Nadat ik hier stage heb gelopen, is mij een baan aangeboden.<br>
+Deze nam ik graag aan, aangezien de stage mij prima afging.<br><br>
+De werkzaamheden zouden nu ook uitbreiden.<br>
+Zo zou ik nu echt koffie mogen maken en al het latte art dat erbij komt kijken.<br><br>
+Ik werkte elke zondag van ongeveer 11:00 tot 18:00; toen werkte ik voornamelijk aan het bereiden van de broodjes.<br>
+Dit vond ik enorm leuk, ook waren er salades en panini's die ik kon voorbereiden.<br><br>
+Naast de koffie en de broodjes moest er uiteraard ook kassa worden gedraaid.<br>
+Toentertijd was dit ontzettend nieuw voor mij; ondertussen is kassa geen moeite meer, dankzij Doppio uiteraard.<br>
+Ik heb ook tafels schoongemaakt en de zaak geholpen sluiten.<br><br>
+Uiteindelijk hebben we vanwege coronaomstandigheden besloten toch onze wegen te splitsen.<br><br>
                                     </p>";
         $html .= '  </div>';
         $html .= '              <div class="nestedcard">';
         $html .= '                  <h3 class="centerh">Pathe Utrecht Leidscherijn</h3>';
         $html .= '    <h6 class="date">5 februari 2022 tot 24 februari 2024 </h6>';
         $html .= "                  <p>
-                                        Mijn 2e baan die ik had, begon tijdens mijn opleiding op het ROC.<br><br>
-                                        Ik dacht al jaren over stage lopen bij Pathé; uiteindelijk had ik wel weer zin om te gaan werken en besloot ik een mail te sturen.<br>
-                                        Vervolgens ben ik snel door het traject heen gevlogen en voor ik het wist, stond ik op de werkvloer.<br><br>
-                                        Eindelijk een plek waar ik mijn passie tegenkom: films.<br>
-                                        Ook heb ik hier mijn beste vrienden ontmoet, die ik zo goed als dagelijks spreek.<br><br>
-                                        Het werk bestond uit: kassastaan, zalen schoonmaken, bezoekers helpen en nog veel meer.<br><br>
-                                        Achter de kassa verkocht ik kaartjes en hielp ik mensen met enkele problemen die ze hadden.<br>
-                                        Bij de bar verkochten we popcorn, drankjes en andere snacks, en uiteraard hygienisch werken.<br>
-                                        Bij de ingang van het pand stond ik portier, waar ik kaartjes scande en mensen begroette.<br>
-                                        Boven in het pand moesten alle 7 zalen goed schoon zijn en de bezoekers werden begroet aan het einde van de film.<br><br>
-                                        Ook hadden we wel eens events waarin een bedrijf een zaal kon huren voor wat voor ideeën dan ook.<br><br>
-                                        Dus ik heb heel veel ervaringen meegemaakt en heb dus echt een goed begrip van verschillende bezoekers ontvangen en handelen.<br><br>
-                                        Bij Pathé heb ik ook verschillende trainingen gekregen, waaronder agressietrainingen en veiligheidstrainingen.<br><br>
-                                        Dus ik ben zeer goed voorbereid, al zeg ik het zelf.<br><br>
+Mijn 2e baan die ik had, begon tijdens mijn opleiding op het ROC.<br><br>
+Ik dacht al jaren over stage lopen bij Pathé; uiteindelijk had ik wel weer zin om te gaan werken en besloot ik een mail te sturen.<br>
+Vervolgens ben ik snel door het traject heen gevlogen en voor ik het wist, stond ik op de werkvloer.<br><br>
+Eindelijk een plek waar ik mijn passie tegenkom: films.<br>
+Ook heb ik hier mijn beste vrienden ontmoet, die ik zo goed als dagelijks spreek.<br><br>
+Het werk bestond uit: kassastaan, zalen schoonmaken, bezoekers helpen en nog veel meer.<br><br>
+Achter de kassa verkocht ik kaartjes en hielp ik mensen met enkele problemen die ze hadden.<br>
+Bij de bar verkochten we popcorn, drankjes en andere snacks, en uiteraard hygienisch werken.<br>
+Bij de ingang van het pand stond ik portier, waar ik kaartjes scande en mensen begroette.<br>
+Boven in het pand moesten alle 7 zalen goed schoon zijn en de bezoekers werden begroet aan het einde van de film.<br><br>
+Ook hadden we wel eens events waarin een bedrijf een zaal kon huren voor wat voor ideeën dan ook.<br><br>
+Dus ik heb heel veel ervaringen meegemaakt en heb dus echt een goed begrip van verschillende bezoekers ontvangen en handelen.<br><br>
+Bij Pathé heb ik ook verschillende trainingen gekregen, waaronder agressietrainingen en veiligheidstrainingen.<br><br>
+Dus ik ben zeer goed voorbereid, al zeg ik het zelf.<br><br>
                                     </p>";
         $html .= '  </div>';
         $html .= '  </div>';
@@ -238,13 +238,13 @@ class ContentController
         $html .= '    <h4>OBS Vleuterweide</h4>';
         $html .= '    <h6 class="date">augustus 2009 tot juni 2017</h6>';
         $html .= '    <p>
-                        In mijn tijd op de basisschool heb ik 2 gebouwen gekend.<br><br>
-                        Tot en met groep 2 zat ik op de roze school.<br>
-                        Daarna ben ik verplaatst naar de zwarte school tot en met groep 8.<br><br>
-                        Ik ben hier mijn tijd ontzettend dankbaar, aangezien ze mij hebben leren lezen en schrijven.<br>
-                        Als dat niet was gelukt, dan had software best lastig geweest.<br><br>
-                        Hier heb ik de CITO-toets afgerond met niveau kader.<br><br>
-        </p>';
+In mijn tijd op de basisschool heb ik 2 gebouwen gekend.<br><br>
+Tot en met groep 2 zat ik op de roze school.<br>
+Daarna ben ik verplaatst naar de zwarte school tot en met groep 8.<br><br>
+Ik ben hier mijn tijd ontzettend dankbaar, aangezien ze mij hebben leren lezen en schrijven.<br>
+Als dat niet was gelukt, dan had software best lastig geweest.<br><br>
+Hier heb ik de CITO-toets afgerond met niveau kader.<br><br>
+                        </p>';
         $html .= '  </div>';
         $html .= '  <div class="rightcolumn2">';
         $html .= '    <img src="media/fotos/obsvleuterweide1.jpg" alt="Een foto van mijn basis school die niet kon inladen">';
@@ -261,17 +261,17 @@ class ContentController
         $html .= '    <h4>Wellant College</h4>';
         $html .= '    <h6 class="date">augustus 2017 tot juni 2021</h6>';
         $html .= '    <p>
-                        Nadat ik kader heb gekregen op de basisschool, zijn we gaan zoeken naar een geschikte middelbare school.<br>
-                        We waren eigenlijk meteen blij met het Wellant College in Montfoort, nu Yuverta genoemd.<br><br>
-                        Dit is uiteraard een boerenschool, maar ik en mijn ouders wisten dat een school waarin ik wat met mijn handen kon doen, de beste keuze was.<br><br>
-                        Montfoort was wel een goed stuk fietsen in vergelijking met de 5 minuten lopen van de basisschool.<br><br>
-                        De vakken bestonden uiteraard uit de standaard theorievakken: biologie, wiskunde, Nederlands, Engels, nask en mens en maatschappij.<br>
-                        Maar wat het Wellant uniek maakte, waren de praktijkvakken; deze vakken bestonden uit: dier, food, techniek, groen en bloem en design.<br><br>
-                        Erg unieke praktijkvakken waar ik met planten, eten en hout werkte.<br><br>
-                        De school duurde 4 jaar en nu ik erop terugkijk, mis ik het uiteraard wel.<br>
-                        Hier heb ik dan ook verschillende stages gelopen, maar door corona zijn de laatste 2 jaar een beetje overhoop gegooid.<br>
-                        Zo heb ik dus nooit een eindgala gehad en is het schoolreisje naar de Ardennen ook afgekapt.<br><br>
-        </p>';
+Nadat ik kader heb gekregen op de basisschool, zijn we gaan zoeken naar een geschikte middelbare school.<br>
+We waren eigenlijk meteen blij met het Wellant College in Montfoort, nu Yuverta genoemd.<br><br>
+Dit is uiteraard een boerenschool, maar ik en mijn ouders wisten dat een school waarin ik wat met mijn handen kon doen, de beste keuze was.<br><br>
+Montfoort was wel een goed stuk fietsen in vergelijking met de 5 minuten lopen van de basisschool.<br><br>
+De vakken bestonden uiteraard uit de standaard theorievakken: biologie, wiskunde, Nederlands, Engels, nask en mens en maatschappij.<br>
+Maar wat het Wellant uniek maakte, waren de praktijkvakken; deze vakken bestonden uit: dier, food, techniek, groen en bloem en design.<br><br>
+Erg unieke praktijkvakken waar ik met planten, eten en hout werkte.<br><br>
+De school duurde 4 jaar en nu ik erop terugkijk, mis ik het uiteraard wel.<br>
+Hier heb ik dan ook verschillende stages gelopen, maar door corona zijn de laatste 2 jaar een beetje overhoop gegooid.<br>
+Zo heb ik dus nooit een eindgala gehad en is het schoolreisje naar de Ardennen ook afgekapt.<br><br>
+                    </p>';
         $html .= '  </div>';
         $html .= '  <div class="rightcolumn2">';
         $html .= '    <img class=fakeimg1 src="media/fotos/wellantcollege.jpg" alt="Een foto van mijn middelbare school die niet kon inladen">';
@@ -290,21 +290,21 @@ class ContentController
         $html .= '    <h4>ROC Midden Nederland</h4>';
         $html .= '    <h6 class="date">augustus 2021 tot juni 2024</h6>';
         $html .= '    <p>
-                        Dan kom ik eindelijk bij de opleiding.<br><br>
-                        Het ROC Midden Nederland had de opleiding Software Development, wat ik heel interessant vond klinken.<br><br>
-                        Ik ben meteen contact gaan opnemen en kon uiteraard ook beginnen.<br>
-                        Het voelde meteen alsof ik nu echt ergens was waar ik zelf wilde zijn, niet iets dat moest maar iets wat ik wilde.<br><br>
-                        Het ROC was mooi en nieuw, en het eerste jaar heb ik heel erg genoten en geleerd.<br>
-                        Mijn 2e jaar begon ik met mijn eerste MBO-stage en nadat die klaar was, kwam ik de rest van het halfjaar in de klas afmaken.<br><br>
-                        Al was school jammer genoeg best veranderd tegen die tijd; ze hadden besloten om les te geven door middel van een pakket genaamd Bit Academy.<br>
-                        Dit was een hele goede website om online programmeeropdrachten te maken en te laten nakijken, ik miste echter de klassikale ervaring.<br><br>
-                        Vervolgens was het de helft van het 3e jaar ook weer op school, waarna ik het laatste halfjaar mijn 2e stage ben gaan doen.<br>
-                        Ik heb dus grotendeels van mijn eindexamens gemaakt in februari, wat wel vreemd was.<br><br>
-                        Mijn vakken tijdens de opleiding waren nog steeds deels theoretisch, bijvoorbeeld: Nederlands, rekenen en Engels.<br>
-                        Maar ook had ik in mijn eerste jaar vakken zoals: ICT-Skills, projecten, projectmanagement en Python, die ik ontzettend leuk vond.<br>
-                        Na mijn 1e jaar is dit dus helaas veranderd naar een vak dat de hele dag doorging, waarin we dus aan Jarvis werkten, wat een specifiek pakket was van Bit Academy.<br><br>
-                        Om het samen te vatten: ik heb leuke mensen ontmoet en mijn passie voor programmeren erg goed kunnen aanwakkeren.<br><br>
-        </p>';
+Dan kom ik eindelijk bij de opleiding.<br><br>
+Het ROC Midden Nederland had de opleiding Software Development, wat ik heel interessant vond klinken.<br><br>
+Ik ben meteen contact gaan opnemen en kon uiteraard ook beginnen.<br>
+Het voelde meteen alsof ik nu echt ergens was waar ik zelf wilde zijn, niet iets dat moest maar iets wat ik wilde.<br><br>
+Het ROC was mooi en nieuw, en het eerste jaar heb ik heel erg genoten en geleerd.<br>
+Mijn 2e jaar begon ik met mijn eerste MBO-stage en nadat die klaar was, kwam ik de rest van het halfjaar in de klas afmaken.<br><br>
+Al was school jammer genoeg best veranderd tegen die tijd; ze hadden besloten om les te geven door middel van een pakket genaamd Bit Academy.<br>
+Dit was een hele goede website om online programmeeropdrachten te maken en te laten nakijken, ik miste echter de klassikale ervaring.<br><br>
+Vervolgens was het de helft van het 3e jaar ook weer op school, waarna ik het laatste halfjaar mijn 2e stage ben gaan doen.<br>
+Ik heb dus grotendeels van mijn eindexamens gemaakt in februari, wat wel vreemd was.<br><br>
+Mijn vakken tijdens de opleiding waren nog steeds deels theoretisch, bijvoorbeeld: Nederlands, rekenen en Engels.<br>
+Maar ook had ik in mijn eerste jaar vakken zoals: ICT-Skills, projecten, projectmanagement en Python, die ik ontzettend leuk vond.<br>
+Na mijn 1e jaar is dit dus helaas veranderd naar een vak dat de hele dag doorging, waarin we dus aan Jarvis werkten, wat een specifiek pakket was van Bit Academy.<br><br>
+Om het samen te vatten: ik heb leuke mensen ontmoet en mijn passie voor programmeren erg goed kunnen aanwakkeren.<br><br>
+                    </p>';
         $html .= '  </div>';
         $html .= '  <div class="rightcolumn2">';
         $html .= '    <img class=fakeimg1 src="media/fotos/ROC.jpg" alt="Een foto van mijn opleiding die niet kon inladen">';
@@ -323,6 +323,7 @@ class ContentController
         $html .= '<form action="index.php?op=contactprocess" method="post">';
         $html .= '<div style="display:none;">';
         $html .= '<input type="text" name="website" placeholder="Leave empty">';
+        $html .= '<input type="hidden" name="timestamp" value="' . time() . '">';
         $html .= '</div>';
         $html .= '<div class="form-row">'; // Wrapper for "Voornaam", "Tussenvoegsels", and "Achternaam"
         $html .= '<div><label for="fname">Voornaam</label>';

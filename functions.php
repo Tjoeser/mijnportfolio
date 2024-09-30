@@ -50,8 +50,21 @@ class Functions
 
     public function contactprocess()
     {
-        if (!empty($_POST['website'])) {
-            exit; // Stop further processing
+        $submissionTime = time() - $_POST['timestamp'];
+        if ($submissionTime < 10 || $submissionTime > 3600 || !empty($_POST['website'])) {
+            $emailErr = "Sorry, u heeft het formulier te snel na het laden van de website ingevuld en verstuurd.<br><br>
+            Daarom ga ik ervan uit dat u een bot bent, en wordt de mail niet verwerkt.";            
+            $html = '';
+            $html .= '<div class="row">';
+            $html .= '  <div class="homecard">';
+            $html .= '    <p>' . $emailErr . '</p>';
+            $html .= '    <div class="link"><a href="index.php?op=contact">Terug</a></div>';
+            $html .= '  </div>';
+            $html .= '</div>';
+            $html .= '</div>';
+            $html .= '</div>';
+            echo $html;
+            exit;
         }
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
