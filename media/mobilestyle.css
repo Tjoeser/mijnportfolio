@@ -13,7 +13,6 @@
     --color-nested-card-bg: #1b263b;
     --color-link-bg: #E9DCC7;
     --color-active: #778DA9;
-    --color-toggle-bg: #555;
   }
   
   .centerh {
@@ -403,23 +402,6 @@
     border-bottom: var(--color-active) solid 2px;
   }
   
-  .darklighttoggle {
-    cursor: pointer;
-    position: relative;
-    float: right;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  .darklighttoggle:hover {
-    top: 1px;
-    background-color: white;
-    content: url("svg/moon-regular-dark.svg");
-  }
-  
   #translatebutton {
     cursor: pointer;
     position: relative;
@@ -576,4 +558,9 @@
 
   #mobilecontactform{
     padding: 10px;
+  }
+
+  #mobilecarddivver{
+    display: flex;
+    flex-direction: column-reverse;
   }

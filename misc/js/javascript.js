@@ -39,5 +39,19 @@ function sendback() {
 function hover(element) {
     console.log(element);
     element.setAttribute('src', 'http://dummyimage.com/100x100/eb00eb/fff');
-  }
-  
+}
+
+
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent default anchor behavior
+
+      const target = this.getAttribute('data-target'); // Get target ID
+      const section = document.getElementById(target); // Find the target section
+      section.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the section
+
+      // Update the URL without showing index.php
+      const newUrl = window.location.origin + window.location.pathname + '#' + target;
+      history.pushState(null, null, newUrl); // Update the URL in the address bar
+    });
+  });
