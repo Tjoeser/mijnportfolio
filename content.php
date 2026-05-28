@@ -354,17 +354,6 @@ Om het samen te vatten: ik heb leuke mensen ontmoet en mijn passie voor programm
 		$html .= '<input type="submit" value="Verstuur">';
 		$html .= '</form>';
 
-		$html .= '</div>';
-		$html .= '</div>';
-		$html .= '<div class="rightcolumn">';
-		$html .= '<div class="card">';
-		$html .= '<p>U kunt mij ook een mailtje sturen op dit adres</p>';
-		$html .= '<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>';
-		$html .= '<button data-text="thijs0302@gmail.com" class="emailbutton">Kopieer mijn e-mailadres</button>';
-		$html .= '<p id="succesmessage">E-mailadres is succesvol gekopieerd</p>';
-		$html .= '</div>';
-		$html .= '</section>';
-		$html .= '  </div>';
 
 
 
